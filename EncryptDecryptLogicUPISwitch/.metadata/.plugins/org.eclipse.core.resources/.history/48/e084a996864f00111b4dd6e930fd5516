@@ -1,0 +1,60 @@
+package com.auisy.utility;
+
+import java.security.MessageDigest;
+import java.util.Base64;
+
+public class SHA256Conversion {
+	public static String sha256(String input) throws Exception {
+		MessageDigest digest = MessageDigest.getInstance("SHA-256");
+		byte[] hash = digest.digest(input.getBytes("UTF-8"));
+		return Base64.getEncoder().encodeToString(hash);
+	}
+	public static void main(String[] args) {
+		try {
+			System.out.println("Checksum Convert into sha256 :" + "\n" + sha256("M0000932026546994443400333500.00gatla_dplnQZ@paytm") + "\n");
+			
+			String plainText = "{\n"
+					+ "  \"merchantTxnId\": \"2026546994443400333\", \n"
+					+ "  \"auth_id\": \"M000093\", \n"
+					+ "  \"txn_timestamp\": \"2026-05-14 15:32:00\",\n"
+					+ "  \"txn_type\": \"Intent\", \n"
+					+ "  \"txn_ver\": \"111\", \n"
+					+ "  \"initiation_mode\": \"00\",\n"
+					+ "  \"checkSum\": \"d2c2323ecfafdc12c5e5ca888adc9bccef08dc0a85c95b014e17991799c2e3bc\",\n"
+					+ "  \"purpose_code\": \"00\",\n"
+					+ "  \"note\": \"Payment for order\",\n"
+					+ "  \"callbackUrl\": \"https://merchant.com/callback\",\n"
+					+ "  \"expiresIn\": 10,\n"
+					+ "  \"amount\": 500.00, \n"
+					+ "  \"reseller_auth_id\": \"000000\",\n"
+					+ "  \"reseller_txn_id\": \"0000000000000\", \n"
+					+ "  \"autoCapture\": true,\n"
+					+ "  \"pay_key\": \"gatla_dplnQZ@paytm\",\n"
+					+ "  \"description\": \"Payment via Intent\", \n"
+					+ "  \"txn_medium\": \"WEB\", \n"
+					+ "  \"customer\": {\n"
+					+ "    \"name\": \"Tejas Jawale\",\n"
+					+ "    \"email\": \"tejas.jawale@example.com\",\n"
+					+ "    \"phone\": \"+917420871899\"\n"
+					+ "  }\n"
+					+ "}";
+			String keyString = "zq7rA6Jp3go0TQ8nR8Ry4kz9Zb2vh4wT";
+			String encrypt = encrypt(plainText, keyString);
+			System.out.println("encryption Key :"+ "\n" + encrypt + "\n");
+
+			String checkencrypt2 = encrypt;
+
+			String dncryt2 = decrypt(checkencrypt2, keyString);
+
+			System.out.println("Check Decryption is Right :" + "\n" + dncryt2 + "\n");
+
+		//	System.out.println("Checksum Convert into sha256 :" + "\n" + sha256("M0000932026546994443400333500.00gatla_dplnQZ@paytm") + "\n");
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+	}
+
+	}
+
+}

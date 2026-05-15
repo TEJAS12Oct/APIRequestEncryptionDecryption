@@ -1,0 +1,50 @@
+package com.auisy.utility;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+
+import javax.crypto.Cipher;
+import javax.crypto.spec.GCMParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+
+public class AfterPaymentDone {
+
+	public static String decrypt(String cipherText, String keyString) throws Exception {
+		byte[] keyBytes = keyString.getBytes(StandardCharsets.UTF_8);
+		if (keyBytes.length != 32) {
+			throw new IllegalArgumentException("AES-256 key must be 32 bytes");
+		}
+
+		SecretKeySpec keySpec = new SecretKeySpec(keyBytes, "AES");
+
+		byte[] decoded = Base64.getDecoder().decode(cipherText);
+
+		byte[] iv = new byte[12];
+		byte[] encrypted = new byte[decoded.length - 12];
+		System.arraycopy(decoded, 0, iv, 0, 12);
+		System.arraycopy(decoded, 12, encrypted, 0, encrypted.length);
+
+		Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+		GCMParameterSpec spec = new GCMParameterSpec(128, iv);
+		cipher.init(Cipher.DECRYPT_MODE, keySpec, spec);
+
+		byte[] decrypted = cipher.doFinal(encrypted);
+		return new String(decrypted, StandardCharsets.UTF_8);
+	}
+	public static void main(String[] args) {
+		
+		try {
+			String MerchantTransactionKey = "zq7rA6Jp3go0TQ8nR8Ry4kz9Zb2vh4wT";
+			String checkEncryptAfterDone = "GaUKUopQXXHsWvIdPsbVyRW9H6za0T+h+oMm9Nyswec8z3uWzmXv/As7ohzy7h38XVXje46r0jANSGbuDyJ1R8pt715mna4IIVGSmVb7RyTpmzOe+UvQcQ16xXTV4PBTGJG9d09ozgXgb7JbzZZpGWZHhG2bKiV4ablzxciIyTr1SvrY0GDCl5ctSd0LQr/GR2LeTEOTr87bn6G78/YbpASImYVlhRSMYek5NibqEdqne2Q9C/4yju46uM5yNEfJZgvOqEAD3ipvEu5t6oKrohekrEzVFN1SxA/Cx5D+Q56VYyu4l6FgQUg1riykEDI5Vu7UDn/TSndkmkPOVz6QhFgzXj4WjcstfP9eyTc/lsge2RpLpfG4HYlvQjeTgae1c03HlyL8YbX2IFmSxDq/IroZsq9Q6Q2injOF1MZ2jAa4V27LyYoENKi61RhUXUL166m7lhoGevwqfT2tMs3v0wxboMC++EYvEDgPIvfUzA+OABw=";
+
+			String dncryt2= decrypt(checkEncryptAfterDone, MerchantTransactionKey);
+			System.out.println("Check Decryption is Right :" + "\n" + dncryt2 + "\n");
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}
