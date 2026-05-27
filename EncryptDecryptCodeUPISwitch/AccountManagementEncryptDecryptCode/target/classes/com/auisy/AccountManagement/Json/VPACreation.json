@@ -1,0 +1,25 @@
+{
+							  "customerId": "C00054",
+							  "requestId": "REQ2705202605",
+							  "tpapId": "TPSM000091",
+							  "mobileMobNum": "7412332147",
+							  "payerAddr": "Tejas12@upi",
+							  "deviceInfo": {
+							    "mobile": "7412332147",
+							    "os": "ANDROID",
+							    "appVersion": "2.3.1",
+							    "type": "MOBILE",
+							    "geoCode": "19.0760,72.8777",
+							    "location": "Mumbai",
+							    "ip": "49.205.45.12",
+							    "id": "DEVICE18232346758",
+							    "app": "com.upi.app",
+							    "capability": "UPI",
+							    "telecom": "AIRTEL"
+							  },
+							  "adf1": "",
+							  "adf2": "",
+							  "adf3": "",
+							  "adf4": "",
+							  "adf5": ""
+							}

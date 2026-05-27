@@ -1,0 +1,10 @@
+package com.auisy.AccountManagement.Encryption;
+
+public class RegisterMobileEncryption {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

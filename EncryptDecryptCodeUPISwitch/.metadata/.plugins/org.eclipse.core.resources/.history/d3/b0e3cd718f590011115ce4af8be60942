@@ -1,0 +1,55 @@
+package com.auisy.AccountManagement.Decryption;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+
+import javax.crypto.Cipher;
+import javax.crypto.spec.GCMParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+
+public class Decryption {
+
+	public static String decrypt(String cipherText, String keyString) throws Exception {
+		byte[] keyBytes = keyString.getBytes(StandardCharsets.UTF_8);
+		if (keyBytes.length != 32) {
+			throw new IllegalArgumentException("AES-256 key must be 32 bytes");
+		}
+
+		SecretKeySpec keySpec = new SecretKeySpec(keyBytes, "AES");
+
+		byte[] decoded = Base64.getDecoder().decode(cipherText);
+
+		byte[] iv = new byte[12];
+		byte[] encrypted = new byte[decoded.length - 12];
+		System.arraycopy(decoded, 0, iv, 0, 12);
+		System.arraycopy(decoded, 12, encrypted, 0, encrypted.length);
+
+		Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+		GCMParameterSpec spec = new GCMParameterSpec(128, iv);
+		cipher.init(Cipher.DECRYPT_MODE, keySpec, spec);
+
+		byte[] decrypted = cipher.doFinal(encrypted);
+		return new String(decrypted, StandardCharsets.UTF_8);
+	}
+
+	public static void main(String[] args) {
+
+		try {
+			// Every Tpap Auth-ID has Separate Transaction Key
+			//  Transaction Key
+			// String MerchantTransactionKey = "jP4vB2nk2IX1Xq8Wf6bz7Gn7vO7Su8ln"; // Drishti Give from Backend
+
+			String MerchantTransactionKey = "jP4vB2nk2IX1Xq8Wf6bz7Gn7vO7Su8ln";
+			String EncryptResponseAfterPaymentDone = "qbK7kR6NE0fpz/eZGVDg77hIHQTs+u4KQcOHZ1lKzyoNyUI3uWdCLkUuz3FzC4bPHFHks1XeoGacrVnDZdLv31MvlUwknYoyaYabiy7paHkFoxZ1FC1bly2VyZFSQ5FvnI4OTfgIUwpUSoguppHBTZ3eBYgsrRK7gmihAr5yk1AhwlIUVDhRUzyOlrv0M7mF2rYzdgbIH8fCU9KqbZVc+Q7CRDWtPehfgUWehYHTrLU2E5U8+UnMaQXZDj+wT4k9b2uTGmT0w5W+wozCQvmCiPDyDAQbMFzOBjbmVf3FjwEQdOBZB0fo8C1SFVRNeDdbvX+5wkvToJoj9tw=";
+
+			// For Decryption, We Need Request And Merchant Transaction Key
+			String Decrypt = decrypt(EncryptResponseAfterPaymentDone, MerchantTransactionKey);
+			System.out.println("After Decryption JSON API Response :" + "\n" + Decrypt + "\n");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

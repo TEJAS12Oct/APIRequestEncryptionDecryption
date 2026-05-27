@@ -1,0 +1,55 @@
+package com.example.demo.Intent;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+
+import javax.crypto.Cipher;
+import javax.crypto.spec.GCMParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+
+public class DecryptionIntent {
+
+	public static String decrypt(String cipherText, String keyString) throws Exception {
+		byte[] keyBytes = keyString.getBytes(StandardCharsets.UTF_8);
+		if (keyBytes.length != 32) {
+			throw new IllegalArgumentException("AES-256 key must be 32 bytes");
+		}
+
+		SecretKeySpec keySpec = new SecretKeySpec(keyBytes, "AES");
+
+		byte[] decoded = Base64.getDecoder().decode(cipherText);
+
+		byte[] iv = new byte[12];
+		byte[] encrypted = new byte[decoded.length - 12];
+		System.arraycopy(decoded, 0, iv, 0, 12);
+		System.arraycopy(decoded, 12, encrypted, 0, encrypted.length);
+
+		Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+		GCMParameterSpec spec = new GCMParameterSpec(128, iv);
+		cipher.init(Cipher.DECRYPT_MODE, keySpec, spec);
+
+		byte[] decrypted = cipher.doFinal(encrypted);
+		return new String(decrypted, StandardCharsets.UTF_8);
+	}
+	public static void main(String[] args) {
+		
+		try {
+			// Every Auth-ID has Separate Merchant Transaction Key
+			// Merchant Transaction Key
+			// String MerchantTransactionKey = "zq7rA6Jp3go0TQ8nR8Ry4kz9Zb2vh4wT";
+			// Path : Merchant Login => My Account => Transaction Key
+			
+			String MerchantTransactionKey = "jx2Au8Rt8gR8qA4zG4zh1HT6Lp7rT2MH";
+			String EncryptResponseAfterPaymentDone = "wc1KbVzImnn2cH1JsjanFIFuZ9JO1DNJc971mGQ1sHOfTHvDGbZEHoCERHGt1Hq5wQF0NAogeYRoNYSW/9vMfO1Mro5l7ZTWWg7W/M3EV0VZ8YYpTuZEHFYjQtGxfC/j9iVdJcIxybfNC0JQS7tkchadlxhlXXHsQuoh2vGOOE5jZkCWapT+B4o4cxP4nYfZShcV+YIfrnIsoJHioSpfMkMta/iDe3sK61L/M3o0POGgDzxjDlOfY8ocdhCiW+/cpb7SEdEWeD5szHLznFWmToGrTFrv0vA2sU02+ktTJ8UZ7msjmNGM4pT07qEVcc45+x4syXidvMIu10SFnMipeSdsfgqbLF8ej8D3FF3WWTDf4+DZOsxQqO/8ULFMkocpWDvqaC0siNj1VINJs1aCLQ5QfAS6MooeQ5cUqZJzJSo3wCuIIgToI7nuzfmzYon8CI2cUfuO4ju50C+hxQ+69viLlIZ0PnOIyIh1a7iBChpPeeg=";
+
+			// For Decryption, We Need Request And Merchant Transaction Key
+			String Decrypt = decrypt(EncryptResponseAfterPaymentDone, MerchantTransactionKey);
+			System.out.println("After Decryption JSON API Response :" + "\n" + Decrypt + "\n");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

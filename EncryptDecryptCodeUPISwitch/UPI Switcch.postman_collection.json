@@ -1,0 +1,1501 @@
+{
+  "info": {
+    "_postman_id": "7ea4c827-88a2-406f-8fbe-746ae05669a9",
+    "name": "UPI Switcch",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54338374",
+    "_collection_link": "https://go.postman.co/collection/54338374-7ea4c827-88a2-406f-8fbe-746ae05669a9?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Account Management",
+      "item": [
+        {
+          "name": "2.1 AccountList",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encDate\":\"MTvmGQUQhtc7o6k0Hbw+Sr+cFVS3p7vexppPokUSm2lJcBqGeFOF4bVNN3ZVvylOqitAW5t0N0A2KSAZ2FNheasvGtKtnKryeTtJjHTNqhDmwMD4F4ERh5oJIvANJzIzhMxrPkDwv+DqeR5gTihy1XbenZ5RVG/uHrKfr/7xFWj/S6QMSvloI2xojTTkHN7781j+wKkh7R7W2H+7D5rHkErzn++vnXPDB0eHjjPTRlGN1JtihQpNGX3vGB3IokyqRRgcWvS+fDrxY6Lt6mDVnakr5w1xRqOs/BTsI9QScbQHpmPSv7K6SmDoThptuACApUgn7Xbjlw7w6ETcUOT+XtoKHP8MGnZlwBDCafyghbFGWtAZFBd1BKIH5usF90sYW9W9ySwE9cDlfgeAgzUKpe9jMRbB3C/cYIvBGq8NrUQ8s4UX0wK7WDoDZ/rhJYm+PmhGYUJk0JCfoYjfU64W2Zsd15yfFpy733bKSMPAas3TJfxpBDiPibROKZ2jrsHzh6ygbekNUbgT13OVt3jVu65OHwmMASZViVeGSWqXjOIb8fLkS3XbyzkBqDLPA/eTi8cuPRGnijYPSkpEHFf6jbIRFBfGba8672EvGNj2NUTBCxKVWBPOIsNjoTajR4hcx2aP9pOpUOfLsUtM8QP6ls0lXoZrU5klTZYO5F6cDIT312kaUkbOiAT/RBkhaRM9ym2YQn38a0TxwzzEaJonjd+OGah/AYZ7C1ahss4UjWhlQbWOcZt+6oR9HNL0bFlkUX6Ohj+vo8XbzIlsHS2rKJCD/LLnUSV9M98ZntBbbiNLsAxZDd+P6/GFWbuaGAXqCkKorYC43NHgn30fYat736lP0OVGCLWGZ0FkJUydIwHPY47TP4zUEwAuuRSwES7YTEm1BnbMpB8Qk2NMjVUA+m/qMXSp5DwEcBp9hwj1bD8/LWd0m1KpLJD8Ivwop7wsjqUVd8n/BKy7+57xTk2dz1peW6HYkyYpH4Cw7U0ENqoxw9dapswF/MnlrGDRmZqTzrGYvWr/\",\r\n    \"AuthId\":\"TPSM000091\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerApi/v1/account/fetch",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerApi",
+                "v1",
+                "account",
+                "fetch"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2.2 Otp Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encDate\":\"++V2XUKxmtdbUhLmIQsrL1wYXKgpkJoMp8mQHIApFWyQQfNk2lqXLTqyODvXCkp1byITUY5+LDyuAPb+UoLnO1cWhl2PBISLVjgqlH+VyNn3qOc4UQlszyRsxYw8T9mSxM0Pz6DbVm15KKv2S+Shdb09Xkdhumhs7jimHIKYSUHfkOO3K54sDkVW/xwe4Uqm9HZ4JRDtoQdkbEr+p26GmuXiLNTRnd5KXK8Me7rdamvVtg0yOGVjoww9l4Q6lKn+OTgwRXOfyC8y0FzY37bkuL1SgW9c5p5+cZdnl2NeCh2EKuuXXunQLEfTTe93GxtJdErSa5eGfgzRDUT5EBPJeqiSi2nRgab3PqSe1sXu81zEuniaNZXEBBzG0t4qwJo7sAYZ8gnfASp9kk3Gt57k6kyaAPE2H70EaKbX/nsLwbv/sUqHJ0YApNOQKp4j/E/W/4FyEgWmBL5ZLhDTBtdSDFUrGC8b9f3NZTLsZRWkEbJYgAlPI2+XYxq2iGLy1pBw6xqZOOct+Q/lq+Aw1JDr9p94C7UcPqlYX12VmWN+p/JD8nNOHwzh+jiGECEHeS6RLXAzAXO+PiJH+ZJPNcaSu1FbqaFhpxPVDeVM7Eq4Yy9VkQZ9mPoEeHlJSpqyYFO+R4Rl4mJ9jn/38u+oXlCpAGve8WPt7gntQav/HQEPayYhqKmbmA8VRGpZYireTZcBBZypoxblYlp9dP7Xu7gVoeHOcsv1z/rubIceAqzlwKFBVLFXPIwi5nz0j8ybp5yYYezdf5kSyH4YOT1KmpgHP1HmMujnH+0QXuOkrJYUEj4jnhzCXWZux3maTb9DsFTQmD1I/sSXWup/1zbR1UrLS9QAmwPzPykwXaHNvFT2sfoznt/fMJwCaRmwnTXf9WFEwL0ixNXEOD+i2bGJzXiSxKrpr+dpAxJQZ1jcfOsQzPbioyuZ2ODiP4YDC6DH4mzo/pdfSA5p/aW6wID5T/lTmKMmGmqxza+mhk5wMDdmYrht1K6Czvo2OfsKLdheOJaoow/WCiQktc6fuF3pvwd0sFcrDre2N9Iwj1bOU4Gcy0SmaLv0uyGrZ1t8EtMhhiv7fSYiMH/wd0BxV2IQJ/Jv5TujkFtoplraJibg+6i+OHrtlsdUv64EKXn4hchFX0nrysvGlBSaS0pCi10TYzwvBIxLmzcwNXpe2grDJYzTwyZzVA==\",\r\n    \"AuthId\":\"TPSM000091\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerApi/v1/upi/getotp",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerApi",
+                "v1",
+                "upi",
+                "getotp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2.3 VPA Creation",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encDate\":\"O9WzeKU8LYPlROD8vqnDcZ0++EDht3nAT41wQLUw1nA+/kFvV26eh0i63MNXDkYXL8ZNrJzBnwS0QP/Ed4ar7r0/KoKNLX1FFrun/pc8KUxzva75KohPVL+KKCOqYvBHfu5/uSfBb9uQNPWR2wOafjRuLzjnk4P9N0YUHqwxodR/IGyNmZJVClPG2U74A2BTrA2ytOeVCR63wmzROxjSMlE2lK8DxY5ByemvxRmw2dnoa457NtM0fFmVlcNd7r8dnEI2qIolDL/E/xr3Q5novO1EE1+ClVtRg7mvp35MCSlcuNbuUEtVUSMQlcotOR+xz8JU4yyqhNeXGwnOfkieETEPMK7E8lbIJEMtiMwd0GFD1lk6bhs+r8VPWXGKcU9s6jP7XCDX9JI0BgMxFAvd7k+pQZOH728zpU1nHbMg78BbF2FKejYXgejIzgAMrCMj9FF13mj5tfjbAHnmvqDJ1O7L59g+PApRnpfPunsXFUMLh7UH4BPRvbafavKgRoKbzOcHXIttTzxrxYg/wy3CCr+yTx/MwsFVjmHLruSPX0RKb8u+UuSK6MVGRTfSFiHdg+EpfHN67JShGILxI5Zqsf0r7TedVtIhGnphfqGPLWABMm0waKa8hut6yMuL3y3Te2WR6hxHha6sj6rccrvMKKRn5MB6jpew+X5egB0rBZF1vQUz3f9THDxILFoIhj0w0Z5JhvBnBiUhQ0NJ5ToNBX3ws6jlY5FXWeOLCmjaDXA/JjMXw1HsaIHEP6kFG+Yu8kq64ZDfW7nh0ZptyNqGIdWdZhrFbu0HOU2g18jIV1FZIw==\",\r\n    \"AuthId\":\"TPSM000091\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerApi/v1/create/vpa",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerApi",
+                "v1",
+                "create",
+                "vpa"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2.4 Reg Mobile",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encDate\":\"1/7UaG+Xt1fy49fq7PZ9wo+IhoTIKX/f4SSueKFkovmcqL75EzrLbbMQj/qS8hjHLZwzdGChXIIOlAoWivvgYp8sEVlB/sM3ujcUo6tolhgjFCXKIj46WhtMbXwZnNMq2XjOr9ga89bQdU08uklw9pkZ9Www1jVjClju1HVag1+Fzu3X0d26lLNGg2W7plDA9Xxez6EltzvxrjTdffL6GX8a3OSClE24yBjabfQp329zivkpgdk+J0Lrt2D0JtmWlpKRWJZKINA40MIZhOMbvssD6lmUJ9OJubs66yxZ2r/ql/k6ylBOAoqzsd+XTVGsDhzf8/iV7lIOgnLJjZIrjpIOmPRfqaOpG9JzZce18fQY+0Xuu6qkwdsURdRrc8x/MYN0pc4fTcf0eA+TLjalr5B99kGTCr8Xo/s4d9xftZ1hywN+XTViQEeMeMIkJuAwwYU20BauE7jepXtno1+vOcRjiehv0mFfbc3ugirbC4RKISkhhl7F8zAKL53JXts2T9muzGDMtByWfQxQYtdLbpZqjUBxtrcYZA97R5aENV6eNNFiJmc+RPS7G0a2LvVwAucC/PuEiny8d9j4ltXfky0hPjst6gtg8+DRBkLKgRpKrVjTwVwUaQWX5W7ZzRPO4e3YGtTVMP4uY7fPo3tq36e9SYOvdvubOlH7y7ZhtZODZQWfatZG3dmVFhpRVvOfN52nMTcXLdmu46WCnmbGZNqpAFzrF5GsMbVjvEjK958MzRFCQAg7ERhtYGShnFSgDnlPeI5fyEc++2hf9Y9/yYedytRg+e/Jb4zdNopWAoT3L5IdUEBk+kv2WAFNVPyc2YrhG5OjTBUgMC6CCvb7FtXlbNCI9aBGMYM7S7fYxw9/XSNGeK4DAER6o/u2WQU4R8Qwd09z2z/MjNjwSBAO9onXBKBhkJ8vXQgzCJE5SW9zvvBUO6S71aJNylb4XfzfB3HInCha+NUL1yPVI+6KZJ3HVyqVSJsT5GmDyiPa9a1+/onlvjXbhAa7TCumGStFWb/lWsZ/1GrSzS3MGoFahQzOwNAJxtj90qGIP42ECVTcuPEbIaTxRLH1hdZic1hsT3DIfzKc/6ssKixlGSsjf2sw0emB8UZ6vCLWqZdCIPwEJ57Z1pq6IYf9mlyVx+L+GXPO1erWDD2U0KbAHaTlwoZ72iGfxqtsrYscoO+B/fvruptc98lGZvx37VoPJki/hoVXXSvEVhFT7IzvdKL/H2zEb/5PrErPp5qjfd3RKP+RVFx70BHDNHMP00k7E7mliFYT9hq9BrpwN7kY/v/F6y3IWTZAH5k9nxbuvR+J0VvmxMQ27aBZtwruoC9pmGO5oNWRPhpKQj6fFb/XrArjcPchoJAo9PatXZZXKMVqaBJFJtfDVKgdpayufhSTUZzPosQzTMdh1lXZZh+0q2FeoDw84ZEWUAfgE//p6DJ+Wh+46njbvpgSn+3u1fH0uJ2Zzaqa8jR1fFyWbX1RLpWH6PX7iZJGTgYHDIyWScfxsnto/TBHtfNYBp92G80vAPg=\",\r\n    \"AuthId\":\"TPSM000091\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerApi/v1/mobile/registration",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerApi",
+                "v1",
+                "mobile",
+                "registration"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2.5 Set Cardentials",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encDate\":\"ikP7pefxPfEnMjyOUKc0aLx+yzbGB8QUOZqG+zKzgedVPx2d0Ho+47nsXQ0drsh/V6VX827JNqr/JCOsyXUqWngwnyhSkqVyTaG5+OSGMX662Ynj7Omyw46IsfKgSXlcLdt7ZOUZTPlHUuxQJIO/DkIR+IHKT0ZLXWtemaB4DR0zDX4ZhWokY/eZtw7l8cujYPuHUiyUhmxUbhBj4NKBS3KnNc9bK1Mp5fBZEpvMb6T2hrt6K4fdO2wMli4jDDlGDk65PLp2nDrvdKqBohuH8otAqBh0DqQt2niUJp/KmwPPPSDHrJoS4ds9j+wO3ancyJE+ZZKKq7yCwB1q1xwGwdi1a1sNi/cxOuO9AUF1KbI8GRPl3i17nfKNhzM1sw6VbToXg06gAheHdFtI2pZIErLvZ35qN/+VyYFt87+F/5xkKsIDnGF+wITcOBVxpYiNDKotFCH7DKpeDDsXhgmd20OavPDaImG9Xe2jBp9pBjhImXlRYBEci9N5Gy8vIxKTag+AZLZWysiMf2BvsXH3EgSHF0qkqcxZyVqS/isOoMicUDHoG9Ges+5qZKGj7X/zs+aOtMe5hQpBnZNiqRUBwlElqyzODklP6aRVQ26NMcj10JJY8Nr+qKCucNOMiFbCZPcxBIU2chu8eiiyUxprL0rIXlCvT9BFXtvI5gh/omdY/ZPWbuXGd/73A1ZPEN/IFMPdyf96MHnyC7OXsVvgAQcqEgyTd1YB1yFBfJEtV25weYJsHV5Y6eAZnozgLorqMmFPbMivPKSFWfntYAejE8wDwgvApfh97q4t/ic/7IehwlgIOrXhUFKeePqPTNfIFVti40v9/MAQJJ0f2lg70ee1RF4Vc+zY52ua6dSKF0zeSjGAd6aTxMKx4axLqSqQyJb3F3YjTWjuc6LxL7O7b8T+Na8wB4MoJPQ2H5JDLh7hwm44i0YRBqizD2vFoJEpe98nRue52x/B1h47K/0tg724bntql7VBt3TT3lmdXLGg+7wNoaRhNSPOBcBKWf0Y/YZZahIUj49DDqmdfTx3ALCbnYeuaHFVPB7zu3vO5bMrHm2rSneOYNeU8hpaJ9lY9yP7iJd6kg56x/CrQLMA9KHi2BiwD+p0O0NWHZ1W+jCetgoWYegphyUnrK9+iOE9y2P5f2OLLA+d4m+6B0YL2u89ogUmUAWnrq6MBttPG/GGfIDODxP8\",\r\n    \"AuthId\":\"M000025\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerApi/v1/set/cardentials",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerApi",
+                "v1",
+                "set",
+                "cardentials"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "bank/fetch",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encDate\":\"TEPNFUaeipnG05lgG1rxQ51PrSy3MBJ6EzdwUvkg4GFI7ff5RHyybG0ZM6MTI+39bbNMYl0Telv5Axo/05ig2PoIV4nAEFoSZsl7heNvLqluLGBIpKRNjnR8025OY6COAh0UasxlQtjlKR3nQ/U6+88=\",\r\n    \"AuthId\":\"TPSM000080\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerApi/v1/bank/fetch",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerApi",
+                "v1",
+                "bank",
+                "fetch"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "psp/list",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encDate\":\"mEQNy9rap0mLmQbbO/9nhgL3AKrA67Cg2MMuRHqRvS9WDCFG0dnq0lDQsvKYD2/OAWzumaMv6H72DAABpBz5XBMh95kVbEUlkIGvhdZgXuaI2JOQSRMqTsFXNerH7DcB5ktOZuUWLKymSjGuFiGp2Q==\",\r\n    \"AuthId\":\"TPSM000080\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerApi/v1/psp/list",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerApi",
+                "v1",
+                "psp",
+                "list"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "key/list",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encDate\":\"1w7AvjLxKd3Ar34FZBA00/eRHt+PJPTxubjjUZbKusV8LeWmy03fmIjyCQKjrCmMhbIeguTXK0TYuQT/DOA637eCwukpGbm0vQvGjSVVzziCC7ns0vmzp85vpE3hYDZrqmAZYvf7dViGLGqFU+nI2w==\",\r\n    \"AuthId\":\"TPSM000080\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerApi/v1/key/list",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerApi",
+                "v1",
+                "key",
+                "list"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "verfiedEnties/list",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encDate\":\"Rw+BJzimWpIvEIAwvbmASyn3mEpO0OVeB7iWrnz27bd8YgZ1CgCR3qIna5PZZilba1Nukhirx5FWAsgPig9+jxcaMoiPHlH3y5/Z+T9lQhc2m0l7cdHZPhl1dPMGROTbqce/wneVqo79SGiOVDzq4p7MsuQhZMXilt+o\",\r\n    \"AuthId\":\"TPSM000080\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerApi/v1/verifiedEnties/list",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerApi",
+                "v1",
+                "verifiedEnties",
+                "list"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Manage/vae",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encDate\":\"8qXP5QNzsWiIsVXnpvtI1n5ZkUIJCZ0FqT5xD2FoYAlXfQ54kx7SQquyGLqAGsL0pF/ByxaUZM8ciUpWaJ2ykXDV35UjtPcbRQIkVvzOl/PtMmVYWFzQE56Mjt/ukc2v1zmnnaVirt+pkBpRiYJqgLRxKVchvZ9TRTQm1bllBFcSV/IQRMmnCMaJgySK/QvGxngMrVxOXogtZeC1Fv6yOehO8V+a08jh1wsSjSXaMzuFk2tcwwq4e3V65QEJ6mthDwI5yKBTgYFO7m3llCIyJtSQVvkJo7oICgFCbVCa2OCMFuii1LLaNj8b42dJvBOj5+5kbI0J2jGFUogjAnnCcj/7eW06PS896zoLQ9FBUGFTS1iSf45qlDL9PIrrstWWhdADJjRaW9hiowuwRjclA6M06uvpbGVZESkoItzBIYSjUJZOln1j+4tJsBJTsYXGUCMhfF8oTY1RVbb3/gCsW1lJsUsATMqigaJDqZ8QT5GsyROJv5ajTOIeYTKhuNBcVBOON6rjPwBJiie1Mpl4ssqgRp5Z/Jn+WJ8AUO2SOrRAW+uVjzeyQ1EpeUiHkqBh9BaSHv4GFI4YZe+fgJf4OXM6aFGgh0/w+91HoEv6I8IuTGtxhtcWGgRXC7cFynVmuaUjgZGw1bAhJYrIB9O+eM/QQ6ieX2oJhtgdEer1pw9f5IT9XxBRW9hpk6VRBTiFxamajeRMe0UEm8+qWk9+LSYr0fWdHZgnj4LugiHjTK5KqCrbnTJJ1t1KlfCdJ6k+/5vza0qebbpSL5qqmPGR+pCqbo1+CVRBLwIh1rLWeMOJViYBEqWxUdgh09woBZ7kmhav5F5YzLkbHzxpJKVMLam8QZ2ht9oIiElAup46oHuKzCR21KhAy1op/S6qKO1V0xRjBI8gI9LK6dfZ6khRplcibhHc2MVeonNRE9rzJgtKmB4YRSGO4yfcOX529qfey0Gp5wiNseNA20PFNUBIgjS0HBHI8nJH3Ikqjwh/l15+2S8=\",\r\n    \"AuthId\":\"TPSM000080\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerApi/v1/Manage/vae",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerApi",
+                "v1",
+                "Manage",
+                "vae"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "balance/enquiry",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encDate\":\"rzTC1/aQK38+GFF9o9fQgLsMn9u/3iVE6t9rihzJU3K7wCdnzsOZNduUCZ9aZJxDQAUrbjfz1nioYpwivqYwmoMdapJ20SVeY3wWp+aa42+Gs9CiH+tvW24Ufbp4hiSj5WAN3M+i89KkEkFlshrvvGJTZzUJQDFg4ialM8NpDkEM1d7pG8EJjghO38vC2TH1K+LyT6dW1QCFt5MZcfxtlPtKLKZUoT74In2EyE/lTk+Wv4xgnH8mQte4Hq8V5Sq8G80jT70DfIsV65FEg3yqncimcDNKWyjcvQGukjvJO2Rteugasviz7gE/X1w38+m48jlJm1bGEdnRAdaPmThxxlwJAEGdIx4Ca+YWa1wGjfy4Y8inJg+IbpuuILVOY4cdXnseG4Y4df2aDegKWWtXhI712AAeMY9Id0CzMIx0G/U8jFyHVxd5vlDNjHK5Sy9FAp+c1jH8MZOrL3cHL/trJ+/SVIqshPOMgSTe+YBqSIqYKpuTkIXqz9UgMImRLJ5PCUA5I6x5DqaVCc75XnjJlGfOm0f4HFqMG3RI/fsjQ/Qpvgk1YSIoJKQAPDvfajg/lq0yBnmQ2DtbD1RIxEnlm84uTfWCxYQW/w5ynpwM1kBbznFK+PQA2Vv2WP0kVkJQivEQsSDaDe2k4Fj3oO8UWYqxHgFZdn8KvOWqyNb9Ty51u/0LSJQ/UA8yoZyo/rPYwuvzO2YEDqzdk+CfvtqjZ1OTAL27Pvo1cU1vHQuasoW0EtM1BKMWbf0qBMPU70dHUxi2rUYDAvzINUNThPIiZce+9R9nL+/ZSLpfVy8XHe0MwIidmKCINPdvm1PhG0WBqOYHgltQOmMxHDfsyC153oqJosyXF2h4FOHltVPjs0jGq3uUdCNn65ffqn/lCtI3PcYD/AeOt1e9Sx8HEdyRMgc3dTWWyJHujT9yG45xtb909U/7XNiiii+Uod0V41opKWbyecjAojrlKXqj6/qLPhyyraoMDR6rgPij93f62UJbkUwVAoArLeHJbRkDFUr+Qkw6roXQ5Rf2ZQgrGp+jABeuZHRK+R4F+XB7tD/7pwEJ3f6n9xqg3CzZED+jLQWwHNIeMRFOQO9OlShZpDAvz+ZEkJQfkWo7KxiWryXF+0JraJ0o+tY+wsoSP2RsnmQf0HJeO38Nnn5roCFJsqJ+NoyLuwoN6btO29kee0p3HqP2EK1p4OTrvJTKcWETxn7BTa8GswtWG0St8XE1VqQhvIi/v9SZWHZcM4NfaMXTwRBwaJbPxE+AUfmcxAPRWKgEXIOyuhiFfK1w\",\r\n    \"AuthId\":\"TPSM000080\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerApi/v1/balance/enquiry",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerApi",
+                "v1",
+                "balance",
+                "enquiry"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "mandate/activity",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encDate\":\"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\",\r\n    \"AuthId\":\"TPSM000080\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerApi/v1/mandate/activity",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerApi",
+                "v1",
+                "mandate",
+                "activity"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/mandate/action",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encDate\":\"bCImv7C++KOVak5Ng3qtrzIrrGvVSF/QeSXc5MZGdkGePf89AdCjzBMKE3qKk8i60dG4Jl0emrP5EIvJswRmiCgRi3J7PelimZln29zuJ5PAWREabYDS5lnoPCsJKSJLebH4seyK8uBKA8cIZLvQS5jJ54wDx7GuF9QvzCS6FDw0iK+JsT4GnOy8zU5SUF8RCGWGrPM2csRyaEVwRJR0AlGQV/1xkDKlW3dv/AJ+WIbtIl65wdcIfU6PtDuPB1skigs8qzA1VC7/01vO8d23Cx99XEchxAfDtRiilZywtsGKGVGgfoqSZ4FWSAEL1AWT+ShTwlhfbuGYBpb0GHynHZLHfYtTi1LmhZmBpUOLiHsu7fDzJpXuu2yo1tVYIGionCDYurT3+cL8QvQ1SiHpy9l8NkKbIoWXW7E0LT+MwQGw33v5aN2jRI+pZtTn8msOv8tMxCrA9V0bCfZBDqfg+yf+ZxrPOwMSJfCeCs1ID4dhAJtQXARcSKrLJb8/PLN/H2688fHkgtFNGhDi124epVANG+M6hhXHGN/PSq36dL/XQcmxUJvNXy816CIGJyxKRzWB58apNPA+mmvZBLVzBT0h+Ttu7q/s8xg53tyZ35TZIVAn/g8zX/ikPZnXQ93Vle6Px58SUEOjkEiJlXkSCH/vuRJ2dUi5Nz0V7nc0BLdQt1TJ7pIQBdY/28MQTjwokdmiiTX0ierUFrIDwFe60l4kfLhXSkH9awMe8ftZ22XuBjWumiChWk17qDvP42pIoLH2huHwUT4axKWuWzq1dDoPEcHxentyJKkkZS6dsapcBSsjMUMJqc+hGl5TPAGnztQiEiUkjhepjm4BKXI3MFrRhcB3iXaJFT/CMM5K3Hnbe4n+mA63xAqdVzVnkwsC3JqaoDnHw1prP/iXMvTY2371ASVvyUKzv4c11Yw99qi5oJe4pDm9EDYCM5fyiQmPlFKvrKnhMQGetnaTD/d2Howgyau0dnvFQnfzxLm58rLmngk3+7dUGY2FnnVr5f1NDvB+vr3YNm08cEy9kX5G0nRSWopQPKmAck9r+Ca+AO35BcSvhxvimjsBtLGc0i6iJ4NW1TsJpGJRaU7+mqlJxvU7YLZq1yUOBZI0GmsIzMRZjQpL62eFyDJXNW509vnj6eraomN9m0f63GtFyCD3FsxDzaKol31gjTS7KQhdxiz+aY+gcrd7I/fZDQKbDXpAgw88l7HeHcpuXKoTC3wK+2iUDp4UHmoWl28c7nbsEsTgC8QOVQH1PxZUqdD4WCEsDaKXWAXn1vdcywRetoxrjpAy4dVniQeOIMsq0CyE5+eYodCM1YYyl4XoEY4QjS3wNFI1d13GW86IC2KSM1xZGlfgClakD74=\",\r\n    \"AuthId\":\"TPSM000080\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerApi/v1/mandate/action",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerApi",
+                "v1",
+                "mandate",
+                "action"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/mandate/pending",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encDate\":\"IeusYPVMp3xkYLeyqRm25sMJ4ziKG5HRhWy1DAT5Z6qtnRHwqLXRrPYnfIGw+I+oVYY8/DUs2LQlCMbx2hXbpEYD8CnoDBlsIhPJtZ0RSzteTznsKTLMtB+Am1cn932di+x2cGtccRqUuDCmbL6ILVIYMlM5X6rBP7ElSDauWgEBc/pPhFcdlay/KF63TsL6UOQuwoEdqptZ2TpXAVIu5iSQVBrCD3BvYm67Zl9y3AV588h2G7p9Dk4vrVI2ocOCZJt2p9x6WOO4jANvxzXYEstIj0X5aFCfjaAj5Wd9DQDkhdED03V2usemM+jzqpLatmuQrzWRucSvaasdcr10blZi0B03ynLbt/VEA0bsM5bH/LZQ5CumAw8lNVo6+UUq75pG75okN1tU5f+ZNo4C4Hrm5y3woJ7Pg4G/feZgcVE1veBKbZ+1gUKr4tf07/ags2OybKyn5T0yPERLh/wG3L7QsR7PnkLctceeeDCJir4ySzwI2gLq9JmW8QOYF8tNcCYlY7sllp5edfeFTEazncMbNiij8Ky4tohDcITm1Y+Sx9xXIp7yVujz86F2K3xeB+xF81FZ2yuTx1Tdcjn8sNfLIOwk73yCMfwEy7JwOoFuw2JX1eC5t97g1Xz8a2zGvjrTNmjc85AZqMZwYzTbr3pxP9tCWeDDhm7/f4qEVIEtILhJIhUZ5hzM6uXhyd700piba1e2JTaR7dk2PgAk7N57/He8oFIIvjBwyyNMnbbrQL2eps6VFo4KeZ7RpLHMHOfaTVNJnv5A568KeQAVknCqI8xx2I+LBZawwjPs/BgTsAaB1a8vKZ+S5fCygQdiij4=\",\r\n    \"AuthId\":\"TPSM000080\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerApi/v1/mandate/pending",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerApi",
+                "v1",
+                "mandate",
+                "pending"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/mandate/list",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encDate\":\"LczYX6NyMY2eofP9TNppLiakB2fp4joSD5Qq6WkIeBIgE+u2CRCi6Yw78vQT3UoZ3CJtqrMLjQKYby6FJeZkYC2++GZjuzU6494KLlgL/fxsn11dya7adIL/epURRQeuxLG/Jis4G9clbYCVq9Dif1OLYho31eknWLWL2pp65vyzMvTFwQYO+TLbEtta00SSskcZbE5CKGCCs+2AYAPPc0X9Qhjvhf08u6AARzDkwAuLw6bbenKsQjwqZkqWa95hVmTYLK5naF4Piz1cDC7YGp7fDLR+WRgmtfqzr9Tq8eovqbGyBfWW+pwGx8fygwndefPMM8jt06DFhPVnJzJ3rrya2DDe3oiA7xOLJOf2qr6W+e+yI0yxhauNhaim+LgtCV0nRPLKR59tJyNkc3Na++Vu1PVvdqtXjLzD7tgOZVFN+r6q1lk0o7E+c1YzhSSoPsM6+S9E6ZXhC+6VuGfF571GzE/AWFXLmNv4TQ6RZnTFwOpYlKU3E+LCtrBEovvUAgnEWF2yUgNDVYNuXHBJS5yeRkRfXkc/0dM+L7a0kRUfl1OXrJnINfzakox3i82Bybg5YeLeDJInYOVe+xk0Px+JaROP9AXksG8giYGpbq0PheevPpAPyppE5L4QVKn2M9qwqocR46h8XkCyDyFYM35DZyLH4JYP4/M9W+2YYyXFmrhnAxd0k/83I3eypgB9u/cMGKB9TGIcHfgax3/jJJQIbqbt9m+7t005IvnF/SFq/z8n6zEBW//sshEgtMalf/iJppV89WB/XuJkIiF6uwMJIelSB9iz08UAjL+aI1fdJCTl0hZvAQ4c+xk7EWY/c8K1nbH0eDIUzbwpFBOtS4LzlsCNCgfTPZYGoTwRxt/leBm/m2/0Uvxpo+PlwGy8yhuPK3OiMWho0u6nI8Y/fmHMTiakv5WB+00GnVcp4rvpvbk2Naw01l3sj4UUKlEZKzmdFKDrwpKsyK592AC3I2IDpnq814wB62KeHtXLGviAHTAR78nYm4nSmtD7mvHuUwqNLEE=\",\r\n    \"AuthId\":\"TPSM000091\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerApi/v1/mandate/list",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerApi",
+                "v1",
+                "mandate",
+                "list"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ReqAuthMandate Collect",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<upi:ReqAuthMandate xmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head ver=\"1.0\" ts=\"\" orgId=\"102312\" msgId=\"123WLQVFPJYRN2026052508431202904955\" />\r\n    <Txn id=\"123GQHRKAXKJQ2026052508431202993077\" note=\"\" custRef=\"123DBUUOMSEQT2026041313031084668377\" refId=\"123DBUUOMSEQT2026041313031084668377\" refUrl=\"www.demo.com\" ts=\"2026-03-30 17:36:40\" type=\"CREATE\" initiationMode=\"\" initiatedBy=\"PAYEE\" purpose=\"00\" refCategory=\"00\" orgTxnId=\"123DBUUOMSEQT2026041313031084668377\" />\r\n    <Mandate name=\"Create\" txnId=\"123DBUUOMSEQT2026041313031084668377\" umn=\"\" ts=\"2026-03-30 17:36:40\" revokeable=\"Y\" shareToPayee=\"Y\" type=\"\" blockFund=\"Y\">\r\n        <Validity start=\"09042026\" end=\"09082026\" />\r\n        <Amount value=\"10.00\" rule=\"MAX\" />\r\n        <Recurrence pattern=\"ONETIME\">\r\n            <Rule value=\"\" type=\"BEFORE\" />\r\n        </Recurrence>\r\n    </Mandate>\r\n    <Payer addr=\"nitesh98@upi\" name=\"payer\" seqNum=\"122\" type=\"ENTITY\" code=\"\">\r\n       \r\n    </Payer>\r\n    <Payees>\r\n        <Payee addr=\"sani21@upi\" name=\"payee\" seqNum=\"124454\" type=\"PERSON\" code=\"\" >\r\n            <Info>\r\n                <Identity id=\"\" type=\"PAN|AADHAAR|ACCOUNT\" verifiedName=\"\" />\r\n                <Rating VerifiedAddress=\"TRUE\" />\r\n            </Info>\r\n            <Ac addrType=\"ACCOUNT\">\r\n                <Detail name=\"IFSC\" value=\"HDFC00000012\" />\r\n                <Detail name=\"ACTYPE\" value=\"SAVINGS\" />\r\n                <Detail name=\"ACNUM\" value=\"1208854765767445775\" />\r\n            </Ac>\r\n            <Merchant>\r\n                <Identifier subCode=\"\" mid=\"\" sid=\"\" tid=\"\"\r\n\r\n                            merchantType=\"LARGE\"\r\n\r\n                            merchantGenre=\"ONLINE\"\r\n\r\n                            onBoardingType=\"BANK\"/>\r\n                <Name brand=\"ABC\" legal=\"Y\" franchise=\"Google\"/>\r\n                <Ownership type=\"OTHERS\"/>\r\n            </Merchant>\r\n        </Payee>\r\n    </Payees>\r\n</upi:ReqAuthMandate>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerResp/ReqAuthMandate",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerResp",
+                "ReqAuthMandate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ReqAuthMandate Pay",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<upi:ReqAuthMandate xmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head ver=\"1.0\" ts=\"\" orgId=\"102312\" msgId=\"123PPEDBZTTOO2026042305362372703749\" />\r\n    <Txn id=\"123PVKLZRJVZL2026042305362372763129\" note=\"\" custRef=\"123DBUUOMSEQT2026041313031084668377\" refId=\"123DBUUOMSEQT2026041313031084668377\" refUrl=\"www.demo.com\" ts=\"2026-03-30 17:36:40\" type=\"CREATE\" initiationMode=\"\" initiatedBy=\"PAYER\" purpose=\"00\" refCategory=\"00\" orgTxnId=\"123DBUUOMSEQT2026041313031084668377\" />\r\n    <Mandate name=\"Create\" txnId=\"123DBUUOMSEQT2026041313031084668377\" umn=\"\" ts=\"2026-03-30 17:36:40\" revokeable=\"Y\" shareToPayee=\"Y\" type=\"\" blockFund=\"Y\">\r\n        <Validity start=\"09042026\" end=\"09082026\" />\r\n        <Amount value=\"10.00\" rule=\"MAX\" />\r\n        <Recurrence pattern=\"ONETIME\">\r\n            <Rule value=\"\" type=\"BEFORE\" />\r\n        </Recurrence>\r\n    </Mandate>\r\n    <Payer addr=\"sani21@upi\" name=\"payer\" seqNum=\"122\" type=\"ENTITY\" code=\"\">\r\n        <Info>\r\n                <Identity id=\"\" type=\"ACCOUNT\" verifiedName=\"\" />\r\n                <Rating VerifiedAddress=\"TRUE\" />\r\n            </Info>\r\n            <Ac addrType=\"ACCOUNT\">\r\n                <Detail name=\"IFSC\" value=\"HDFC00000012\" />\r\n                <Detail name=\"ACTYPE\" value=\"SAVINGS\" />\r\n                <Detail name=\"ACNUM\" value=\"1208854765767445775\" />\r\n            </Ac>\r\n    </Payer>\r\n    <Payees>\r\n        <Payee addr=\"nitesh98@upi\" name=\"payee\" seqNum=\"124454\" type=\"PERSON\" code=\"\" >\r\n           \r\n            <Merchant>\r\n                <Identifier subCode=\"\" mid=\"\" sid=\"\" tid=\"\"\r\n\r\n                            merchantType=\"LARGE\"\r\n\r\n                            merchantGenre=\"ONLINE\"\r\n\r\n                            onBoardingType=\"BANK\"/>\r\n                <Name brand=\"ABC\" legal=\"Y\" franchise=\"Google\"/>\r\n                <Ownership type=\"OTHERS\"/>\r\n            </Merchant>\r\n        </Payee>\r\n    </Payees>\r\n</upi:ReqAuthMandate>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/ReqAuthMandate",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "ReqAuthMandate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Resp Mandate",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<upi:RespMandate xmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head \r\n        ver=\"1.0\" \r\n        ts=\"2026-03-30 17:36:40\" \r\n        orgId=\"102312\" \r\n        msgId=\"123TJPZCMDGUF2026052511345058827672\" />\r\n    <Resp \r\n        reqMsgId=\"123EYBMGWPIXO2026052510283055556312\" \r\n        result=\"SUCCESS\" \r\n        errCode=\"\" \r\n        actn=\"APPROVED\">\r\n        <Ref \r\n            type=\"PAYER\" \r\n            seqNum=\"124454\" \r\n            regName=\"payee\" \r\n            addr=\"payee@upi\" \r\n            approvalNum=\"APR123456\" \r\n            acNum=\"1208854765767445775\" \r\n            IFSC=\"HDFC00000012\" \r\n            code=\"\" \r\n            respCode=\"00\" />\r\n    </Resp>\r\n    <Txn \r\n        id=\"123ZTSJQDTIIS2026052511345058895763\" \r\n        note=\"\" \r\n        custRef=\"123DBUUOMSEQT2026041313031084668377\" \r\n        refId=\"123DBUUOMSEQT2026041313031084668377\" \r\n        refUrl=\"www.demo.com\" \r\n        ts=\"2026-03-30 17:36:40\" \r\n        refCategory=\"00\"\r\n        type=\"UPDATE\" \r\n        initiationMode=\"\" \r\n        initiatedBy=\"PAYER\" \r\n        purpose=\"00\" \r\n        orgTxnId=\"123DBUUOMSEQT2026041313031084668377\" />\r\n    <Mandate \r\n        name=\"UPDATE\" \r\n        txnId=\"123DBUUOMSEQT2026041313031084668377\" \r\n        umn=\"UMN9000000002\" \r\n        ts=\"2026-03-30 17:36:40\" \r\n        revokeable=\"Y\" \r\n        shareToPayee=\"Y\" \r\n        type=\"\" \r\n        blockFund=\"Y\">\r\n        <Validity start=\"09042026\" end=\"09082026\" />\r\n        <Amount value=\"500.00\" rule=\"MAX\" />\r\n        <Recurrence pattern=\"ONETIME\">\r\n            <Rule value=\"\" type=\"BEFORE\" />\r\n        </Recurrence>\r\n    </Mandate>\r\n    <Signature id=\"MANDATE\">\r\n        <!-- Digital Signature of the issuer -->\r\n        SIGNATURE_PLACEHOLDER\r\n    \r\n    </Signature>\r\n</upi:RespMandate>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerResp/RespMandate",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerResp",
+                "RespMandate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ReqMandateConfirmation",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<upi:ReqMandateConfirmation xmlns:upi=\"http://npci.org/upi/schema/\">\r\n\r\n    <Head \r\n        ver=\"2.0\" \r\n        ts=\"2026-04-24T16:30:00+05:30\" \r\n        orgId=\"NPCI\" \r\n        msgId=\"123YYTBAWIZYV2026052510283055462734\" />\r\n\r\n    <Txn \r\n        id=\"123EYBMGWPIXO2026052510283055556312\" \r\n        note=\"Mandate Confirmation\" \r\n        custRef=\"C00047\" \r\n        refId=\"REF123456\" \r\n        refUrl=\"https://example.com\" \r\n        ts=\"2026-04-24T16:30:00+05:30\" \r\n        type=\"CREATE\" \r\n        initiationMode=\"00\" \r\n        initiatedBy=\"PAYER\" \r\n        purpose=\"01\" \r\n        refCategory=\"00\" \r\n        orgTxnId=\"ORG123456\" />\r\n\r\n    <TxnConfirmation \r\n        note=\"Approved\" \r\n        orgStatus=\"SUCCESS\" \r\n        orgErrCode=\"00\" \r\n        type=\"MANDATE\" \r\n        actn=\"APPROVE\">\r\n\r\n        <Ref \r\n            type=\"PAYEE\" \r\n            regName=\"John Doe\" \r\n            addr=\"john@upi\" \r\n            approvalNum=\"APR123456\" \r\n            acNum=\"1234567890\" \r\n            IFSC=\"SBIN0001234\" \r\n            code=\"00\" \r\n            respCode=\"00\" />\r\n            \r\n    </TxnConfirmation>\r\n\r\n    <Mandate \r\n        name=\"Monthly Subscription\" \r\n        txnId=\"TXN123456\" \r\n        umn=\"UMN9000000002\" \r\n        ts=\"2026-04-24T16:30:00+05:30\" \r\n        revokeable=\"Y\" \r\n        shareToPayee=\"Y\" \r\n        type=\"CREATE\" \r\n        blockFund=\"N\">\r\n\r\n        <Validity start=\"24042026\" end=\"24052026\"/>\r\n\r\n        <Amount value=\"10.00\" rule=\"MAX\"/>\r\n\r\n        <Recurrence pattern=\"MONTHLY\">\r\n            <Rule value=\"5\" type=\"ON\"/>\r\n        </Recurrence>\r\n\r\n    </Mandate>\r\n\r\n    <Signature id=\"MANDATE\">\r\n        <!-- Digital Signature of the issuer -->\r\n    </Signature>\r\n\r\n</upi:ReqMandateConfirmation>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerResp/ReqMandateConfirmation",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerResp",
+                "ReqMandateConfirmation"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Transaction API",
+      "item": [
+        {
+          "name": "3.0 Generate Token",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "my-secret",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "my-client",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials",
+                  "type": "text",
+                  "uuid": "21182939-9042-4962-9128-4e512c5a5ef8"
+                },
+                {
+                  "key": "scope",
+                  "value": "read",
+                  "type": "text",
+                  "uuid": "7c582207-acc4-469c-8eb5-797fd33b0a95"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/merchantPay/oauth2/token",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "merchantPay",
+                "oauth2",
+                "token"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "3.1 Collect Payee VPA",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJraWQiOiI3NzQyNjExYS0xMTdmLTRlODktOWJmYy0wYzc3N2MzZjVjNjAiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3NzkzNDQxMzYsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovLzEwLjQwLjEuODc6ODA4MC9tZXJjaGFudFBheSIsImV4cCI6MTc3OTM0NDQzNiwiaWF0IjoxNzc5MzQ0MTM2LCJqdGkiOiIzMjZmM2QxNy05MjMxLTRlYWMtYWU4Yi01M2FkMGUwNmM5ZGEifQ.ciwsOYrWfiD-OjNyuFMRnV5xnjgookcmgKZfc4h7chO2BvLakGOq0ojkpn0KByEN3XLaCkC4wua53VkYSlXBD6qM-MDN-vOXPdLfzyY_Id6S6H5xoC6WDpjtDoKYPF5UxKGg2BlXakPFqtqNn8OVtXjdc4DdBOj_zlzhaRWsDF5sT5_xmNOl-jCZ3HGhD9ie69saJsaQwX3r0Za65xxdt1yabpWykGRJlDdzF1ZqcYrr6NWXgtH2kZxm4IAonrUu_KLde-CBUtNbobWNEm6-iOeNxlenVYKR6HkrZtAVA6EEAruEXmuc9_0ODPYmwZX7VfUOrGtyMxdst1a73XsRoQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "",
+                "value": "",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"encData\": \"QphCqJmDAFaxF1QdFwGF/jyZ6WXzJ9J1onmsmrfF3HxssGXew2YLlXW/lMomrtanIknjtx2s0Lf52EUWUiq/OeqxFbRDq/5WX+xmDrjMU+cKGuP6ZZcnXQMSYQmTbnESwpqgKiiNYTxha1a/AeBkmkeYG2uJj95JL/vgHGwYzvrTXxPHOt5PF3Yqynny4AqMGsYQLIVubLWTurpcqDuN4CXUob0uU6jGo6EUJb5JRK/nrbV4wmeU8B7QhrZl7XKeD50He3gTvZBy2qN7NKnj8Aja9Wwdzc2MkyztGSnnVvJRaPJfDq2uW70IFhcGDx7jzlw37aFo4gZ72VjzkBnofOcO/+mOya8MPkc9gYhwC4JuSlHEOsjJG2p2rCqoB8badve9dRiqFHXLyZShWFe5WsErlTgLIG8RPp2IMTH/T5T7jCr5BJm5T7oRM8oKOg5wjjOfGWOmjYkX3+fVwZRDvnRry7MmJp67qniMeqNXv2ABd3WnuIEKOH31h5tqvz9YLW4eevymzVaPY8sEJFad57/ybLTtd4hQT1Jn8zYmt+6GRi8UYePu7NoyGudDAxf/DoZbuOhEUAJCIQ1q/P5s9f8R6/nuuNPZgJw7mkOm094yvL5DLuZfSWKE/+b7n2Pqjnx0FvPy9b8LFsNzAXQOiaPqWC+ugu2CxAbisfVhUBkMDPXvtF6UhMLpWaGXVeeB5T8WYGmWO1CpAN9UOJeWjNMl+hLW+ei1TgjAAf5STqLDghoN5HAD7yrgv9IMEuPdRyRV3huxlFUhFYzijzOzxMTqSwjUlHB27RaBBEdqprsQyIMo0V03AaYotC/TWM9WLakSgbZ8CV1GQtrq+MeOr1P5H9EpdJ+wLYyPb7J5/DNaokVm0USwHTuxtMPecyKVyI1IZFEOsyDjXAI24isRMp8lwO1D9AlO6aTbWtoK6Qjm+vexhF396iBM/FiL3FJQKtH7nCTJMA1ZTtEXpL30Fb/PxR76ELFg6c8VSohfpJEO2PRiepw9SbomqgbJ7y+ZwEBhiyCyyt7ciBotd1rWTDdyhvr6uloBnjGUPA5KbcwkWQd1Cyp/bX0+COIRM2wzZMUTkTncKaDXYi3AlxtxtL8HgD1ktwuUirkxIr2iiIwvi50fq4KWAbM8H9rvAublkMtD4HAcMJhF9gPZDi/X8LybHFwspLIwwetTdfkXZiXmSavCTAcfxOFwCWNTdNNPaE0uYi9pklLx3UOveVILmKfJUDe0ISIgvWUJ3QRTl6jOBa+fsetmMdF9R5zevcF09y6iDKrobG+xBvcX8KXiEbAvgapgTJLO6ni4jR2gSUfmZajPOiiYHFzfya1clqPOx3IzXiYBfwBWN/VWy1Kubh/j9Fu/LC5iPOTGrcthacppzfTjP97H1gfPZnjwDfD2RDwMLpKdt80bE7+o/23Bx6EFfqnib9/LI5OXL+wWLCOuVmg/r02/T2L3m3lDPSKUvsJ4zCgjCNBNM6Fil3EfknJSEWjgc5g0LbCRZm23a4Ttq7rQZIc0GU3LTHt4fX2iWfHlP2AZzKBpqnO2H7WQd55X2DCIhYyUHSHokQ2y1maiVUI2PPaTOS3Tgd7iDSKbhh2CAe/1TA1pwHdExE8AJ3jQwoejdGw2mVQtq0XnguDL04fMnw9aUmXlrs7MYKxh+WIWtQ==\",\n    \"authId\": \"M0000118\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/merchantPay/payments/collect/collectVpaReqPay",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "merchantPay",
+                "payments",
+                "collect",
+                "collectVpaReqPay"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "3.2 Collect Payee Account",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJraWQiOiIwZTY4OWQ3OC1lMWM2LTQyOWItODdlMy01ZTMyODA2MmRmMTgiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3NzgwNjQxNjIsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovLzEwLjQwLjEuODc6ODA4MC9tZXJjaGFudFBheSIsImV4cCI6MTc3ODA2NDQ2MiwiaWF0IjoxNzc4MDY0MTYyLCJqdGkiOiJiNjQ5OTk3ZS03NDU0LTQ1ZmEtOTcxZS03NWIzMTkxN2I3YWIifQ.FvZ90OjnMJAa7h_BPIb9fy7mWLpbBTXFp1QtoxMnYcpC1FxT61h8JbYAJdnxOzzm73owNU4t1k9JtY8Cm61NuJL8LmWkepHYps27oKtbwIBs6HHjAskX8f2ANIfg7DXQ_JqxK71RFuZgT2woyVZ86rvORAo5Zv5MaM9unWjz1NiTnjPMucUQz-50bUqSYYylqrNLW3r_WPnVkCQ5Qh7ZMaCApGGWOS36-2AyGSFwPGZbM_XnWZqPsTmPh1LdJRKGzckbdpzrkVrpqnfXuuROYncYzNesjA5caHe7nT8g4nrsVkSYReqvo934F0CJWFKvifgPlrb1dpDGAxGo2D7Psw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encData\": \"mWRL48DzBwqsHJttIGza8gmg/h8ssWGeevBrC4in9OUIlz6dlnwYe6EvwlImFzPJaCgLhDf4Z7G9KNgH5eL54kdvJ7SRWWxvd2LisJ03K/U35Z8hshA94wEQvxtP71aFwLrf6G0of0fhHDAaENUGrsad5vbE50Qq4XVM6kDllD/gGW9jgge52oNkTJjo4h6pvKiKzJGqMXq0GDOKxtiprbBQnR62CdpXz+Aq2XhP9zvKJQI3p9UZWNyzX64N0KFzFCfK6Tirx7Mf9oDFWG6LazrT7I3f3c02JOf0VPLHiy9Km8l+/ctrYDO9hYSFQStMvepyInI+ftGF82U8J4JBYPPPFRSYZG6Ja5Yfn1Zi9Z4+1js1wWtKLYFK0w0JkpVukWhH6kYKrf327DCBYOoK6Ti/UDq+8cem5NU7T3DC5CUSye4lmreqD/2iUW5K7k5FKkb3F7SC2L/AmVTKttQLP4kXtcymIQn2mnso00nG9U7MlEv0PxMMCRetq0lRvZtoiRej18TCgKSlQkz42qyAEzX8Sq+zF1Coe9KfOPnQ52NZJBbVE8R3CVMWHpLtjT/h0O/sZv+AKgRlrbjd8wdhfITSAiUxY/W9Ripg4u1d60U9mwkztKwMxoTOvme5i0I0qienp0KAWaBH3QaryfuoE6T1KU8B+esEy9fnuEG6thHewpAE2SadKDEZlWzPdIeLmzI1DpOg4/kBRhpLoFh71iLMEbWvL3OU14ySFmbKqPFZQW66Rtppo/ce6MLczmxEVMe972DqEJvmYoWJs+d+sgvVHqn3u5uSnXweDL3lFKInNZvwZ5Kbeht0yTCvjNFn2ME8poKkUzSodoReDmcwtrsxv+hM42o1uQ9HkfrKPp7Gv4QC3UPuol/M/eVlPnX/k4YWTHwp36yusmGNXSf2IYzwDnVG9BAOq3p2kUb8LJ28+mav/2vDZDx/ItwFneYTBq8kuGKU+8d8pPrmyoyFzEZL/CpXCB0mOh2nh42oV3FavKBwrZ/v1Hnz5q1t559qBBb8rtvTSmfMqo/BbCIAQb7KZPcu+cA2vD8J1xLlAD8KUGLZRZ1GRbRmhS30yPnMNE/mbTB9Bv6FB1XHxPeSLNP71sGPtNvtZ1ils+yr+5ghK5DtUV9ZslLa4Ea5IINXw9m0Yh2rrmonU0QphiLuQKhuOrpUjinfJbiBaeNm5aEh/+ntI8dIG0AXFlFaFr2cpepIwx4N4EpeuuXVgqHteN2lX2jWzZ8oJsb7YEFtWFNJ9R5+MhMqvp9DDoKHRc6pr77onbLQH5rONzCJJYVlbj9X9vRIkEyrmSThkhl+7mFGBZUycOnT/kqDT6ycDCVQa1QLkb5QGrYRo902ezCopeL+k1UJpw0spJRHQ+fit3mmD4n/zaEdm3nXxAoQtp7p1HGRFT4Dt78jpHGSccR6iydxWPbJYQ==\",\r\n    \"authId\": \"M0000118\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/merchantPay/payments/collect/collectAccountReqpayx",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "merchantPay",
+                "payments",
+                "collect",
+                "collectAccountReqpayx"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "3.3 Pre Request Pay",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJraWQiOiIxMmRjMTM3Yy04MDY2LTRmMTktYmQ3YS1mMzkzMTZlMWQxMWMiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3Nzk3MDgxNzAsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovLzEwLjQwLjEuODc6ODA4MC9tZXJjaGFudFBheSIsImV4cCI6MTc3OTcwODQ3MCwiaWF0IjoxNzc5NzA4MTcwLCJqdGkiOiI1NzE4N2E3Yy04ZTA0LTQ1NzEtODA4OS1jMTE2ZDE3ODdkMzQifQ.MGHeUEuMhwzK3L9W6NadnUWc27NjuAk12j0xMejGAByyN8tK5szc7AKzgguS9cnAlvQfD-d1Q4G2sMg-MEQtxugxYb78cx12NNA_bjgBVkF4uKmNIOp9R4_hf3_8uTl9vsP9iPukZtpsspCP0dPe7IYDM3-14GX-cGYKEg0ll08iH03rdzTKOoxOUu8PQWx4azQnm0gQX-hXl211dzeh3ERh98TPjsvd7AQ9erB-tXd7FNwn29c790N8ps2vjzkYiTfiDHK9VTYHibVCXPSiW3pm8jOP3ygiBdjHTXMDzkcRsIP9gLHNtMZYN95qV3dBvnUIAct-V1Yv7oRYDbYSyw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": true
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJraWQiOiIwYjE1MThiYy1jZWI5LTQ5YmQtOTVkNi0zZGM4NjVjNjQzYmEiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3NzUwNDIyNzgsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwL21lcmNoYW50UGF5IiwiZXhwIjoxNzc1MDQyNTc4LCJpYXQiOjE3NzUwNDIyNzgsImp0aSI6IjkzMzYyYTQyLTAxNWMtNDg0OC05ZmI2LTFiM2M0YTY3MGYyMiJ9.xqjiiddq13d3ZhC6jzi0YIslbREeuIFEjwmyv3HkrFcYNgUGHRiIXtu8RQaZaTw63P3vxLV9XVUyz_DD4MPXoErnBvTtlGOGFhirfhDmPRFvEV15nXVBG5ib60ibf2S_5sv0waBzbIEMFneTdkndhraTFI3zfFCToIsMsu0NQrw2Gk80zBChM7siGDeDzajlmzNgxKmAGZeKoruoVrX00dilP8go-lTNZhH7WWW2LAlj3mkyHtSM_QDCykC8E9G_jPJ3a_08117KT8QRkIdHUnmaVk41oKRvFjqT89c6OUxnyJmt4XhDGVMQlWUqQSJ7LUjY6J_g7i6emZbKKPseLQ",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"encData\": \"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\",\n    \"authId\": \"M0000118\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/merchantPay/payments/upi/PrerequestPay",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "merchantPay",
+                "payments",
+                "upi",
+                "PrerequestPay"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "3.6 Intent Payment",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJraWQiOiI1ZWU1MzRhNi0zMzIyLTRlMzktOWVhMC0xMmUyYjFmNTMwMjciLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3Nzk4NjY4MTcsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovLzEwLjQwLjEuODc6ODA4MC9tZXJjaGFudFBheSIsImV4cCI6MTc3OTg2NzExNywiaWF0IjoxNzc5ODY2ODE3LCJqdGkiOiJkODMxMTBmZS03YjBlLTQ4OTgtYWFhZS0wOWVlNTdmOTkzODgifQ.dh50-yI8mXGao55-FQKWpSHrLoeA2Kik3FgEWm7BNteKxNvC9WH1fMctJs1Y0EvRG0TJp1xLsG3OO62cBLmvrkzyhFHE5UjZ_pxMBthQzWW7DTN-UiA-aVXP5DpqDvMZUyFzADeJqyXc5W4zkUMSPZHnvpAhoDv7zgCpajpEVBAiiEhb8xnYbhdKoYRNsoxdczABApyuK0vjEQUfnzoTPoZA-0kfn79sSgs8VaSF4JGqUTXtA7tDAEjWxVs3YN8cK3Mp5fZX80l4khE-WlTQzVhw00v9rnf4aU_A_6WOVpgJiu_WFN94-d7i3vXCNhmux4YpIKg1h6HKRAtVqAqmcw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"encData\": \"q3mEcttUzwW8Jwp7mlxIh3VL6jiKmxWVBu+x3UbF8c76kWViiak7aF7yo0zANoMHGDJUfH5g6NTuiJXTskiNp87O4bkFmVq9aLNqNS9Q40bQlkX8U2wbC+CwrWDsVFDt7TMJd4zBxH/Qk7iyNIicbBGNuKMFu2e+IzQkhHMDZgQGZwrQIJI+cHQjhQBg1QhJQ5BVlk4MH9+FsVSy9qAYSoJy50EAu2M+rtE4gF6YBcguMRhp5ny6O2u28nKmyAGAB1u+qHzbeOtpCd+KsMJiACToTpx9lSf4R3Pt38fnbPsiAI6DU2fD0cTxVRCgTy0U3ELMFnfXyARuR/79ncRGoxpsJ9qNQhIsHbpRyK3alqsLK8ZbqWvZpXpbM2qhmb5q9pauiOFRj1NZKaf+YaWfrSZrZ+pxuWPC3CE5usCbNy2oMmN+Vk5T5c8mUt5ULR2AspYzfPntCHdeLf/EhG2sJKh9TSiGfxRjXmYQyayQCXQoFnknHErgy5mzNqQEY0g0SjcSrrPPm67Us0GbgqHqmWAWOjqL1eMsw/bI2x4mPAafrteumAW15/ovHbQZfeWFfYPg9r1Yl0YpjasC0nFOHO9BcaV3PSm6DCaDaLr4OcRnAvnZ8LzIaxt19kkwmyEo3V1HQORGewa7xhdFP2+vWEFNKYbuMosBSIqtFHa2G6MFWNS96t+G0WJ+XnPDnlYG/Ix8AmBggcSdGI3auXv9UrjOr79fwEtt7GhVHvlhfHzQKY1NuEWR8URpijeKbZ55x+8zBdwfWcFHtLhgl2HhIoBovA35tJWcAjsSbzPrS4T46jFc1v+RerhwMJAjWADzjqo8xinbuEtKgrWeOyZUyf+noeoA4hX4Z8g1kJO3oWMcgZk2hmx37E3wSPt60HRNYBhxBVepZ3xk1nADrd703p9KV08dwinKpK8bFPo4Eu8rrjPdQrfpgYePKPq+SGuGKnzadTyDTnhd12zcdOIU+qrav2uXQyXfODPfCbxneev9DI0k4w5K\",\r\n    \"authId\": \"M0000118\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/merchantPay/payments/upi/initiate",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "merchantPay",
+                "payments",
+                "upi",
+                "initiate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TxnCheckStatus",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer"
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"encData\":\"KmqLACwcBou0WufCuw41ukYCHZ6wu+JsMYagtgSYs0sjBOf1utxraAce1AHrdKzPx+q/fg5/s0Q+F/IyhFu5WVODdiZhjp4ag0IjvrUt0J179/OkknkUmGfBTLUyjy1Dbnka20QM8iL0Rk8IHChkPk8rW6OkkAPUqVXvN/nXTJ3RraeX4pxGxkyqrQi8ln8hzBE3kXPipboHOXf7IFAXRVrjPu9HJVfQkTz/N4IzIwTFFDJ6E7dpylQK3rE8xRE0Vmf48wEQAiOEvvscHL4Y2dcdGFLpfiFqp8ep89LQ4IvUtqCnQwJOzxWrn6v9EdiCBrJEJpxjPt8zImhMR0hLfw==\",\"authId\":\"M000062\"}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.40.1.87:8080/merchantPay/payments/upi/getTxnStatus",
+              "protocol": "http",
+              "host": [
+                "10",
+                "40",
+                "1",
+                "87"
+              ],
+              "port": "8080",
+              "path": [
+                "merchantPay",
+                "payments",
+                "upi",
+                "getTxnStatus"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Vpa-ValidateAddress",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJraWQiOiIzMWU2YjZkNy1lMTFiLTQyOGYtOTk2Ny0zMTYwOGI1YTE3ZmUiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3NzA3MTIwNjgsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwIiwiZXhwIjoxNzcwNzEyMzY4LCJpYXQiOjE3NzA3MTIwNjgsImp0aSI6ImExODA0MWFmLWQ0MGQtNGZkMS05Y2ZjLWJkNjFmZTk4ZTEyMyJ9.H6fVbGUhnTd2FNylsr8LvaC3J-Zonv1MIb8Uc75-4v79Fq389xrRa4sm47LI0_PA-yQnbiGw-M1qgGp_5zT_n2iBL_pYK7udL0iK8Y-lbSu7hDyjWzxVeHt-KIRsNGgtcWWA17Tf5YSu6lMKx6WCmi2oO5w0FS6lKgrj63HaI3v8WKQHrQxzsQ9TGNAKGrVt0FOan5Rhp_MZeJKWsMUCealk-Grt5DzD8ce9XxfZuNcRisWpo9yjC0gkA4tGSDU5rQ-6wdLj154doRAxWd45dLPYxUMtYKw1GgyQ2OSfSooCNiHmOPsf0uDtH7P27bgTWChuYe8RByDN4X1TTwe29w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"encData\":\"9ClzjUQSuas13H48iYDp2K9GObcDInvN+KAmeTGn3Bs08p+TOmBEKYxSa30JYuqJcyjmdJ6H9zaqTAx/ewYnIkamZD8yW0Q6jrcrouhSl5KieGyBEe6nqHFIjd8KAQwM3MTg3KqHce+J+wD1VqSQc/42iuubX649edMZydhiKotIZBVP6Fp/lyKT7D9EqehQ0NavMeirS9L/BZaBE8j8tlKLDfib7Zx4/KtHXHPS82X0JzGCwHvgwr2dXwdZ0IlgkpHEcBOXS8YeLbgXDmAZokvFtuRo1hDVd3QNo8oRqD8zRlrAdzupluf2H18u7dkx41Pl8bU8onNb/6eGu7Ss/1auntmRVE0TMiB44JZqk5w=\",\r\n  \"authId\": \"M000062\"\r\n}\t\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.40.1.87:8080/merchantPay/payments/vpa/validateAddress",
+              "protocol": "http",
+              "host": [
+                "10",
+                "40",
+                "1",
+                "87"
+              ],
+              "port": "8080",
+              "path": [
+                "merchantPay",
+                "payments",
+                "vpa",
+                "validateAddress"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create-merchantVpa",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJraWQiOiJjODBmY2QyZS0xMDNmLTRmNTMtYTQ1Yy01ZjMxOGFkMmUzODQiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3NzA2MjQ3NTAsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwIiwiZXhwIjoxNzcwNjI1MDUwLCJpYXQiOjE3NzA2MjQ3NTAsImp0aSI6ImUzMmM2MWZkLTJjM2QtNDZhOC1iMWRjLTQwNDBmYThmZmQ4YiJ9.k82yhMROP0BHELTCWh6sC38-rnwI-Xld8WYw6TifkBYq2_CZqpXGYozsUYC_OSd20oU2WA1HzjUzRahEFXN0oN-aAf2a2cAXj6Cd7TspGD65a23Jdtn1OddIFQwClVCW3Ky0u-kAYEqI5n4G86OnSMaVw_pf02v5m7xvUS2Wuiz4jZ6nj5ETWV11qx-f8nnD9hzvXIgr5nN7LNohJQzDohaJ3JxoXDB51dt4YJSDCG8zXY343Rr4QCvRmVnufepskC9wHFp0fCzp5wiT9VvFV9LjSIMRdlilqyPGWxSLWTOUUbuh7Kc1rfg1bJAtXZ2raEhaSnqdO_wx2LCzHf0o0w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://10.40.1.87:8080/merchantPay/create-merchantVpa?encdata=tVhp5gfvXZeJCfbDb46QZacFuzdRZaaWVuj0tDiMgkNCB4QY7cy5fsge+u4sfVxPmfSd2yIezs91+WyGcPDKTuSwW48SmtefwmgbEepIHwTlw9xQVbq7msaMWifjgj3H9O%2FIRpzazDWPmWlS76+7y76wxBc9yOIcq+CfJReiUINoMmKJl4upN6MncYC+TGwbWg0Hr6VaFIzS+MLikLi9N4SLakxBU9dyAfklmQ8EnWJMtpbK6oWw8Wz+2B%2FvVkx6h6BLrbbRXf92JUzOVWfcqBl6ZeI2wTz+bu8gO5UYp8NzQWWq1RqvHYY7EGCVbJXc+2i1bfiI%2FgcpCJZ3R81H6z%2FHDF2YRjEQt%2F+1t0EvFLUCXQEvOBDZ6u4tecqA+sZy3Iyk6kkCO7LXHL3M7yLoQcpIUVsMP00Zu69Dc+Qu8R2bSsVETVpF5osSH6X9Tp+fmgFBt4gS9Killpi0z7JeerZ5XaFO6ME46eQlUTnKSW2I+YQCNewRvm4KOecWbuQn1TbYC92reT7W%2FPcS+OgLfWYXWD2LOxKx+tJndbX+WpsMzgaMJxfDMR8eE+4C2JMGh56P5+z1GXb%2FsHwG7fKUk6CDd9EGLEFJjsQsczUCqSVVwXUCPN3EfD6jF2h4WQ%2FZi9morLWO6LCDRdsApLkSQA%3D%3D&PartnerId=R0000251",
+              "protocol": "http",
+              "host": [
+                "10",
+                "40",
+                "1",
+                "87"
+              ],
+              "port": "8080",
+              "path": [
+                "merchantPay",
+                "create-merchantVpa"
+              ],
+              "query": [
+                {
+                  "key": "encdata",
+                  "value": "tVhp5gfvXZeJCfbDb46QZacFuzdRZaaWVuj0tDiMgkNCB4QY7cy5fsge+u4sfVxPmfSd2yIezs91+WyGcPDKTuSwW48SmtefwmgbEepIHwTlw9xQVbq7msaMWifjgj3H9O%2FIRpzazDWPmWlS76+7y76wxBc9yOIcq+CfJReiUINoMmKJl4upN6MncYC+TGwbWg0Hr6VaFIzS+MLikLi9N4SLakxBU9dyAfklmQ8EnWJMtpbK6oWw8Wz+2B%2FvVkx6h6BLrbbRXf92JUzOVWfcqBl6ZeI2wTz+bu8gO5UYp8NzQWWq1RqvHYY7EGCVbJXc+2i1bfiI%2FgcpCJZ3R81H6z%2FHDF2YRjEQt%2F+1t0EvFLUCXQEvOBDZ6u4tecqA+sZy3Iyk6kkCO7LXHL3M7yLoQcpIUVsMP00Zu69Dc+Qu8R2bSsVETVpF5osSH6X9Tp+fmgFBt4gS9Killpi0z7JeerZ5XaFO6ME46eQlUTnKSW2I+YQCNewRvm4KOecWbuQn1TbYC92reT7W%2FPcS+OgLfWYXWD2LOxKx+tJndbX+WpsMzgaMJxfDMR8eE+4C2JMGh56P5+z1GXb%2FsHwG7fKUk6CDd9EGLEFJjsQsczUCqSVVwXUCPN3EfD6jF2h4WQ%2FZi9morLWO6LCDRdsApLkSQA%3D%3D"
+                },
+                {
+                  "key": "PartnerId",
+                  "value": "R0000251"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DQR",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJraWQiOiJjODBmY2QyZS0xMDNmLTRmNTMtYTQ1Yy01ZjMxOGFkMmUzODQiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3NzA2MjQ3NTAsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwIiwiZXhwIjoxNzcwNjI1MDUwLCJpYXQiOjE3NzA2MjQ3NTAsImp0aSI6ImUzMmM2MWZkLTJjM2QtNDZhOC1iMWRjLTQwNDBmYThmZmQ4YiJ9.k82yhMROP0BHELTCWh6sC38-rnwI-Xld8WYw6TifkBYq2_CZqpXGYozsUYC_OSd20oU2WA1HzjUzRahEFXN0oN-aAf2a2cAXj6Cd7TspGD65a23Jdtn1OddIFQwClVCW3Ky0u-kAYEqI5n4G86OnSMaVw_pf02v5m7xvUS2Wuiz4jZ6nj5ETWV11qx-f8nnD9hzvXIgr5nN7LNohJQzDohaJ3JxoXDB51dt4YJSDCG8zXY343Rr4QCvRmVnufepskC9wHFp0fCzp5wiT9VvFV9LjSIMRdlilqyPGWxSLWTOUUbuh7Kc1rfg1bJAtXZ2raEhaSnqdO_wx2LCzHf0o0w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"encData\":\"FtR63hQYMtoxMFx/eVzunIUZvsmqAe2YuX7aZtXrxUW8S77hAO+MWnew+Il7e+KgXG1Gowmkue0WjudC/CpshGul/SiO9IywRRDe8oTGA9+cO5JD+QMVfHMdRzZULOO69+V49zA8ji49yAZvm6FqcYQRB3Jb8okCgFk/Kkc5A9kGrupWrzvDqRueJb8QcmKDok8N7EJSLkRmcSH2A/96QgYHOlT59EtBZL5CSAtrsUroCt6xV2/5ULCK4NhvjSmrg4pygCeSmE1Cl9OCtZWMON9FvVBgLExQqE8/ifxzZuTZrplflOgaT55KrPbKgv6meiKdYNmoQ74QAzu85o/85ITskQ7/8SlEwkQWgVNqj5zg+XmONzWXtddHViTJirmITv2ZrlYd9V5c0MD0r8bcKgLtMwpun8c1riNNCg58UlUcT+DvKbDzZwSpdbVxB7lW/7lj83o+VFpPBdJRzOkMkhKgDXNUTcu3emW+RE4Z5VThOemRzcq2CDDHjlakRnIplMJt0Vl0nJCI3FQ88l4rzrDh2kBgiTPeKjE3HVKTSk9M8RRoVrfZZXXyNRkc+1r1ZTJ44rzIVxEvw+UPFE50Bhw2CBQUyFw6JHBWc4eFHO3QBjAFISDrCwNsl7g8V/+9S/z6+FC9PEXa8Ieb/F2zcN7F1pyz9ElHXy5rILdYPYfjD9KxZqj90DowX+Bt9vm45D6k2VxjBfRGmzHW50seb/6r87XNH8LEhC+RKriSe+dIWEmvT6A795Qd67wBSq8vREZjiR0+TPOgYOWO4eYO6sp1utzqOIjM2mw2kp4+m6fXH701U+5Y+6UPQk0sE6Py4IeDVIynbv/j6VbesbCP2UtV4Lh64/UQfwNn/I33LKgR7ravg25c9wo/qO4KJQSu5K3yeINi9SXG+autYWx4iesibII/PEysILpFWjuL31jEWjyzHcmiFTf79+FmV//sq/4bkH4aNQMt6UeEeJeL/jd78MoHxwtF6DowYvg6qds=\",\r\n  \"authId\": \"M000062\"\r\n}\t\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.40.1.87:8080/merchantPay/payments/upi/initiateDynamicQr",
+              "protocol": "http",
+              "host": [
+                "10",
+                "40",
+                "1",
+                "87"
+              ],
+              "port": "8080",
+              "path": [
+                "merchantPay",
+                "payments",
+                "upi",
+                "initiateDynamicQr"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "requestPay",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJraWQiOiJmZmNkNTAxNC0zNzExLTQ5YWQtYjA2ZC1jMTIzZjVjZjRkYjEiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3NzUxMTE1NjYsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwL21lcmNoYW50UGF5IiwiZXhwIjoxNzc1MTExODY2LCJpYXQiOjE3NzUxMTE1NjYsImp0aSI6IjhhZjI5Y2U1LWNjYmQtNDk5Zi1hMmMxLWVjYmE3ZDFkZDAzOCJ9.Fjrbtb2B4k6SwyVyHYVotEPSa8nPMQI3UWc9dCfsB3KLNTmTZwOZNaqwc17quxlEGDSGuQMKFOqLQte3a9G7XlHXV2Fb43EB5yqajHiPSoLOfgwv3pOAbKh4JkqEsX2Esg3-q_2A95wceBa-2osekdxRKn_gV22p9Nay78UyGPXXCPV5Er3lumgi5NuWYHrT4pHwqG2foG6rdDMiAFJNh-E0--cD0mBl5o-luXobmuLkhcFnnjmayYuKUK-GY68TJV1fzp4OpSIYIDd1tyxtiarrhzyUNaLF3MRxVoJcVV1dkAmGvTDkKa7P1uCNJjsWkg29W25acJCpqtTKEFtp4A",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": true
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJraWQiOiIwYjE1MThiYy1jZWI5LTQ5YmQtOTVkNi0zZGM4NjVjNjQzYmEiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3NzUwNDIyNzgsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwL21lcmNoYW50UGF5IiwiZXhwIjoxNzc1MDQyNTc4LCJpYXQiOjE3NzUwNDIyNzgsImp0aSI6IjkzMzYyYTQyLTAxNWMtNDg0OC05ZmI2LTFiM2M0YTY3MGYyMiJ9.xqjiiddq13d3ZhC6jzi0YIslbREeuIFEjwmyv3HkrFcYNgUGHRiIXtu8RQaZaTw63P3vxLV9XVUyz_DD4MPXoErnBvTtlGOGFhirfhDmPRFvEV15nXVBG5ib60ibf2S_5sv0waBzbIEMFneTdkndhraTFI3zfFCToIsMsu0NQrw2Gk80zBChM7siGDeDzajlmzNgxKmAGZeKoruoVrX00dilP8go-lTNZhH7WWW2LAlj3mkyHtSM_QDCykC8E9G_jPJ3a_08117KT8QRkIdHUnmaVk41oKRvFjqT89c6OUxnyJmt4XhDGVMQlWUqQSJ7LUjY6J_g7i6emZbKKPseLQ",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"encData\": \"x9trRG/MQqNTvLhpSK9q2fnYdJfAUt7MStUy9YqezCOy5s4RzbfxQMxG3WUPu8H+6BqU5l4dTI8xCpOjWJE4eVnFKq1qB4Je6j6EwOuTCY7osk9YaUHoWIdiIc/XP5wRLBWs5kyxYQpJUb1v0YgL5aPp6Krs53PShFnJZSkyPtnQXOvfjqQzhG1yxcd19FMB5/zpGlOKBSqllXLWgeblW7hqNqPZTeaAb8Vs9dV+XUEniqY9XZkIVIFHDlpxFgTZV23gBH3dbmxr2WXijsDiKJ/Bgtym6K3YBCw/ka+ef8vO3ZPtGaYdYKif7KCfiz4AMWEV7T87GRDkzR7ZiV2KXRb2qfnRhKx5wkpPb6Uf3xUMJX11VwJD2Y0rWSKPZxcLn5IlhMkAh3QaFY0deyHGrtochMD9UbpPMl0CYyVrRf604XfoPe+ryKdKJxMWYXImq9ZiLbOHbugTMwlmBcX+cuATAfEE6mF/cqsoJq3xXVs94JdEDQ0zG95m2w5DsKv4fs+Srq4uoNCoeKSK9sioebz4Jrl1ke/505asVQrcPwASO/AgPRJbiM+QPUW07p/4YdxcrdBU+QdcJdzj20K5XzbXnAIaY97fMpeZt/bRSviOcHjDg4S8NWIoTkhY70zuwzxUxhrbpL/NEv0P6tm7LCWlbHe8uxLIKq59ITJ3foe1DaMSd1pv3MoY7/jbQ8LmoRBjk9AYQu0jqgzmDpw0GRYeqgz5Rj9lzwdWD0i1AbfGyI/hjYFKsmlfAvwww8TTlDxFsHrko2LQumIzI7x6wAaHYCsqZjpljKGHT0kKe5VBYxufpmH7ZkPp+ifK23HeR15PR+lDNBRFpHmVxSKrZInQxia0pVvg5FTuX/erzV+9x6IXrm/TeKd+3xplqZFKayN7ClM6kzCVyEq9r6y93tOLGZyaoUJkBc3Vi7eaqcIGcSWzz904it76qHC8gw5JNA+zI8f91LT/UyUNWoizFLdhKIeVtlFEpY6aeqUg41oOTMDEFE5SpzmB5SEMMNYuOnf/60USy8ONmrxxP3CfyEkn5+eCb4GVGT3X6VuE+MmEJH0ZSg1C1sL1fV8g/JnRxnACf0qO7n0Yn/CDQ/htzXeKf7mblogTcCUtE2eAr2CcL8RE3wiayTwNn3eQmhit3hU0vPk/OnK2QaBWODZayj1uj1KyCkDZNHz6vvj0nAjcGjV9Hj0ScP2L5YwVasS+UCvPM8d2tu1oB9b+iBSszylivZ1GEZAXyah4BYGURXUGj5Fmny4GVZ99CIau2bwIpytCQJyy9nLWgFJMLoMNskPv+jrspJRDnDOUb6GkE5EQ678oEydXyzr08hN9/0w0JIfWFuSZ0fEU6FFOU7qnqOHbUz0p9RHMVdlQ6LXImrrfs1E5InFPg4hYAPW6iQEm7QNBzP2owi8bzUeA2oF4xm9XAuX+ec97ZHn1QHXazSOJg519Ngt14TCNLdNXAZ4=\",\n    \"authId\": \"M000062\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9000/merchantPay/payments/upi/requestPay",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9000",
+              "path": [
+                "merchantPay",
+                "payments",
+                "upi",
+                "requestPay"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "confirmReject",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJraWQiOiIxNmJiZGVkYi04ZDA0LTQyOTctOGY3OS0xY2YyODc3ZGMzZmUiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3NzUwMjg4NjIsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwL21lcmNoYW50UGF5IiwiZXhwIjoxNzc1MDI5MTYyLCJpYXQiOjE3NzUwMjg4NjIsImp0aSI6IjI4YzUzZDJmLWM5ZjgtNGI0MS1iOGY4LTZjMDJjZTM4MWFjNSJ9.TwIYR6XN2BwLQBqTnZxAgye71s0XAfRn99tUbLqqpT7YVt1z_Uhlo70xhWvrNHFF_7pY_UpgEthiRv9EvRZuaE6LRqjQZcs2wuY8rrfPrWlJ4k-iIammCUx1OfCk3dmlRsl2a7fKTemu-WrL0ljueRc7pOE-qcSPXHWoKyn6wIBvKQeB7J97XQ-Ie0_Zdm1yrufIQSV0zardYvCV5mMVg-rWTvKJHZpGG43zYgTZvlkwj7X5UTQu-vezN9o9oau1P6E7cb2EMJDaRoSxWh8r8Y-Ns0KNHQo0Ws7IMAnd-X1SXO6Qv7PQpZd_ZCzOzqMsI-LdM4KPKzRBgO3O5c9VKg"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"encData\": \"x9trRG/MQqNTvLhpSK9q2fnYdJfAUt7MStUy9YqezCOy5s4RzbfxQMxG3WUPu8H+6BqU5l4dTI8xCpOjWJE4eVnFKq1qB4Je6j6EwOuTCY7osk9YaUHoWIdiIc/XP5wRLBWs5kyxYQpJUb1v0YgL5aPp6Krs53PShFnJZSkyPtnQXOvfjqQzhG1yxcd19FMB5/zpGlOKBSqllXLWgeblW7hqNqPZTeaAb8Vs9dV+XUEniqY9XZkIVIFHDlpxFgTZV23gBH3dbmxr2WXijsDiKJ/Bgtym6K3YBCw/ka+ef8vO3ZPtGaYdYKif7KCfiz4AMWEV7T87GRDkzR7ZiV2KXRb2qfnRhKx5wkpPb6Uf3xUMJX11VwJD2Y0rWSKPZxcLn5IlhMkAh3QaFY0deyHGrtochMD9UbpPMl0CYyVrRf604XfoPe+ryKdKJxMWYXImq9ZiLbOHbugTMwlmBcX+cuATAfEE6mF/cqsoJq3xXVs94JdEDQ0zG95m2w5DsKv4fs+Srq4uoNCoeKSK9sioebz4Jrl1ke/505asVQrcPwASO/AgPRJbiM+QPUW07p/4YdxcrdBU+QdcJdzj20K5XzbXnAIaY97fMpeZt/bRSviOcHjDg4S8NWIoTkhY70zuwzxUxhrbpL/NEv0P6tm7LCWlbHe8uxLIKq59ITJ3foe1DaMSd1pv3MoY7/jbQ8LmoRBjk9AYQu0jqgzmDpw0GRYeqgz5Rj9lzwdWD0i1AbfGyI/hjYFKsmlfAvwww8TTlDxFsHrko2LQumIzI7x6wAaHYCsqZjpljKGHT0kKe5VBYxufpmH7ZkPp+ifK23HeR15PR+lDNBRFpHmVxSKrZInQxia0pVvg5FTuX/erzV+9x6IXrm/TeKd+3xplqZFKayN7ClM6kzCVyEq9r6y93tOLGZyaoUJkBc3Vi7eaqcIGcSWzz904it76qHC8gw5JNA+zI8f91LT/UyUNWoizFLdhKIeVtlFEpY6aeqUg41oOTMDEFE5SpzmB5SEMMNYuOnf/60USy8ONmrxxP3CfyEkn5+eCb4GVGT3X6VuE+MmEJH0ZSg1C1sL1fV8g/JnRxnACf0qO7n0Yn/CDQ/htzXeKf7mblogTcCUtE2eAr2CcL8RE3wiayTwNn3eQmhit3hU0vPk/OnK2QaBWODZayj1uj1KyCkDZNHz6vvj0nAjcGjV9Hj0ScP2L5YwVasS+UCvPM8d2tu1oB9b+iBSszylivZ1GEZAXyah4BYGURXUGj5Fmny4GVZ99CIau2bwIpytCQJyy9nLWgFJMLoMNskPv+jrspJRDnDOUb6GkE5EQ678oEydXyzr08hN9/0w0JIfWFuSZ0fEU6FFOU7qnqOHbUz0p9RHMVdlQ6LXImrrfs1E5InFPg4hYAPW6iQEm7QNBzP2owi8bzUeA2oF4xm9XAuX+ec97ZHn1QHXazSOJg519Ngt14TCNLdNXAZ4=\",\n    \"authId\": \"M000062\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9000/merchantPay/payments/upi/AcceptReject",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9000",
+              "path": [
+                "merchantPay",
+                "payments",
+                "upi",
+                "AcceptReject"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "raiseRefund",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJraWQiOiJjYzZjOGU5NC03MDUyLTRmODItYWRhYy1jYzJiZDE4ZTQ1MDgiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3NzI4MDA5NjQsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovLzEwLjQwLjEuODc6ODA4MC9tZXJjaGFudFBheSIsImV4cCI6MTc3MjgwMTI2NCwiaWF0IjoxNzcyODAwOTY0LCJqdGkiOiIxNWJlZjBhMy1jY2M1LTQ0ZTgtYTg4MC0zYWFhMmM4MTNlZGIifQ.aLmXOsyONjZMfoe6gWLgsc9E5g37Z51FnZsR1DQ8g3hzCapfa6IWL2_LXnkPkHIxjGQ_8P-x2EfQFiPD3QbbXW9gf0-R94csuJUiyFE6fTkaUT-KY7NusCDxR-PdW2dvEWtuTqRwAXZsNkfuX_SaEzIQojoHOelHpznW-Hd392z6gC3QSzwIdYZVHTVl5PJhOI-3vdlNxogV_JvYC3qYMjDIQEChIALHB6ZzhlsKLTa-tNccxHSBFCNMFnwMPjyQrVRsSgf-cGQrwN0MBi52axW53A3HJFZqQ28fVhD_1bApYhJJwJHJtyhkbkUltg8o4EhGZcoAKVxwxSd3sCVY3w"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"encData\": \"Qn6CsYEJYRsjlUwvA1LlbSzDSYVZapKDvWHRnEUbXnvy+SLfKDeSz1SvlYtfJWX9okLmy5AoskSTlzXdnEN//WzQyXmqq6pcWzrNNeU+Mu44IgV7ETjn3gXJZLg5MrlDP3BlcejFCgddCCt+7wYus2Ih9HVn7KkGm1U4yFN2Yo3SsIV0hX7KxjdZE03CD8IB/kc0oT368hR5RaSicxeL7XlVRUwDKqRUOgUNxLteH03EZzSgbhA8z54E9sL48Je00/UivDemzFGgagdriNzhtk8CxuTA9fznP8EjNMONmgUCH3t7zRaLIEihgGScfzMeF881ijJuo23TFO0EYz8zsbZdMmCgsnXOlObtmqI0McSdAFeIuYvH1Ec7/+KVZsQOOipejQXEw9l2IxfPN7Q1lXrcwv51Po8O70LOCpuo6yYsqCc8AEhzl1bRaXRCRFqFZ8J5rX/weKop5fc32onTsg==\",\n    \"authId\": \"M000062\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.40.1.87:8080/merchantPay/refund/upi/raiseRefund",
+              "protocol": "http",
+              "host": [
+                "10",
+                "40",
+                "1",
+                "87"
+              ],
+              "port": "8080",
+              "path": [
+                "merchantPay",
+                "refund",
+                "upi",
+                "raiseRefund"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "refundStatus",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJraWQiOiI4ZmE3NGNiNC1jY2U0LTRlYWMtOGQ3MC1jMGE0MmJkYTQzM2QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3NzI4MDQyNzYsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovLzEwLjQwLjEuODc6ODA4MC9tZXJjaGFudFBheSIsImV4cCI6MTc3MjgwNDU3NiwiaWF0IjoxNzcyODA0Mjc2LCJqdGkiOiJhNzkzNTYxYy01MzYxLTQ0YTUtOWE4Yi00NmQyMzVjMjU4NzYifQ.G-cidSMcwUyXTYnwyBV6-YA41fa3dGgXIXzL7M-0aYBLuzYJa3vHVOkgwqbMtVkG1Qa7bRgs7LB2zcfSpoQwfK0fn4oIMzX0mCQZVRvygoBEGpBzlrDZi9xw90QIQ0VUtmHfeY_YpAr91D68NOcedQzkapG6estQI5YsSTl75Izn0Z5a5cM1QgQdpXE8hIHbhLjtAL7PUs_n879zgaPMv8r97jw4lqMOPSA_tg6T1L-Hrvzq7308ojFlALOcAJ7pKNBwp1wgHcCwDAPqS3LeWtqRcaXUzB8pGfF0lcxHnenQmlA3sy3r1K956YT1vLdDp3ZL-DVaXn4aIxvLlORp2g"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"encData\": \"2Itmb7zjKKP9F6RbFP/Xwn6dy5P0jpZlKiAVouVNeutSY95FaqxE0ljU0O1yJFQo0MB/koqC6zxh6OEnxMJVPURiz/J+wJ+u7zxd/dhsJ4Ozn8ynTMtL99s9BwUI8CF5PlDzNADUYWsp+D+B1Rwl4YzcLZdWNqbbpSfDsBOEVczBYtlyDnqEAHui7goeoYSkRW5XDzQgTDQzcqsU8PI2rjUj8bu7tQne4UdyRQDQH+MiWSb/sGq35aEzlFhTfh7YssxnCSyAO6G41WHp5jiLGE7z87y9R43WS6gsFYZF8Oc=\",\n    \"authId\": \"M000062\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://10.40.1.87:8080/merchantPay/refund/upi/refundStatus",
+              "protocol": "http",
+              "host": [
+                "10",
+                "40",
+                "1",
+                "87"
+              ],
+              "port": "8080",
+              "path": [
+                "merchantPay",
+                "refund",
+                "upi",
+                "refundStatus"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "NPCI Response",
+      "item": [
+        {
+          "name": "2.1.1. List Account Response",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<upi:RespListAccount xmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head ver=\"1.0\" ts=\"123\" orgId=\"NPCI\" msgId=\"123ITRFZJTSHJ2026052706563727395385\"/>\r\n    <Txn id=\"TXN001\" note=\"test\" refId=\"REF001\" refUrl=\"url\" ts=\"123\" type=\"ListAccount\"/>\r\n    <Resp reqMsgId=\"REQ001\" result=\"SUCCESS3\" errCode=\"901\"/>\r\n    <AccountList>\r\n        <Account accType=\"SAVINGS\" mbeba=\"Y\" accRefNumber=\"12345\"\r\n                 maskedAccnumber=\"XXXX1234\"\r\n                 ifsc=\"HDFC0000101\"\r\n                 mmid=\"9056014\"\r\n                 name=\"John\"\r\n                 aeba=\"Y\"\r\n                 aadhaarNo=\"XXXX XXXX 9012\">    \r\n            <CredsAllowed type=\"PIN\" subType=\"ATMPIN\" dType=\"\" dLength=\"\"/>\r\n        </Account>\r\n    </AccountList>\r\n</upi:RespListAccount>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerResp/ListAccountResponse",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerResp",
+                "ListAccountResponse"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2.2.1 OTP Request Response",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<upi:RespOtp xmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head ver=\"1.0\" ts=\"20260313163000\" orgId=\"NPCI\" msgId=\"123WEGSWFLPST2026052707020120128652\"/>\r\n    \r\n    <Txn id=\"TXN123456\" note=\"OTP Generation\" refId=\"REF987654\" refUrl=\"https://npci.org/otp\" ts=\"20260313163000\" type=\"Otp\"/>\r\n    \r\n    <Resp reqMsgId=\"REQ123456789\" result=\"SUCCESS\" errCode=\"00\" securePinUrl=\"https://secure.npci.org/upi/setpin\"/>\r\n</upi:RespOtp>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerResp/RespOtp",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerResp",
+                "RespOtp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RespMandate",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<upi:RespListAccount xmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head ver=\"1.0\" ts=\"123\" orgId=\"NPCI\" msgId=\"123UJOOGOAISM2026030910535177928630\"/>\r\n    <Txn id=\"TXN001\" note=\"test\" refId=\"REF001\" refUrl=\"url\" ts=\"123\" type=\"ListAccount\"/>\r\n    <Resp reqMsgId=\"REQ001\" result=\"SUCCESS3\" errCode=\"901\"/>\r\n    <AccountList>\r\n        <Account accType=\"SAVINGS\" mbeba=\"Y\" accRefNumber=\"12345\"\r\n                 maskedAccnumber=\"XXXX1234\"\r\n                 ifsc=\"HDFC0000101\"\r\n                 mmid=\"9056014\"\r\n                 name=\"John\"\r\n                 aeba=\"Y\"\r\n                 aadhaarNo=\"XXXX XXXX 9012\">    \r\n\r\n            <CredsAllowed type=\"PIN\" subType=\"ATMPIN\" dType=\"\" dLength=\"\"/>\r\n\r\n        </Account>\r\n\r\n        \r\n    </AccountList>\r\n</upi:RespListAccount>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/RespMandate",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "RespMandate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RespBalEnq",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<upi:RespListAccount xmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head ver=\"1.0\" ts=\"123\" orgId=\"NPCI\" msgId=\"123UJOOGOAISM2026030910535177928630\"/>\r\n    <Txn id=\"TXN001\" note=\"test\" refId=\"REF001\" refUrl=\"url\" ts=\"123\" type=\"ListAccount\"/>\r\n    <Resp reqMsgId=\"REQ001\" result=\"SUCCESS3\" errCode=\"901\"/>\r\n    <AccountList>\r\n        <Account accType=\"SAVINGS\" mbeba=\"Y\" accRefNumber=\"12345\"\r\n                 maskedAccnumber=\"XXXX1234\"\r\n                 ifsc=\"HDFC0000101\"\r\n                 mmid=\"9056014\"\r\n                 name=\"John\"\r\n                 aeba=\"Y\"\r\n                 aadhaarNo=\"XXXX XXXX 9012\">    \r\n\r\n            <CredsAllowed type=\"PIN\" subType=\"ATMPIN\" dType=\"\" dLength=\"\"/>\r\n\r\n        </Account>\r\n\r\n        \r\n    </AccountList>\r\n</upi:RespListAccount>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/RespBalEnq",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "RespBalEnq"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RespChkTxn",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<upi:RespBalEnq xmlns:upi=\"http://npci.org/upi/schema/\">\r\n\r\n    <Head \r\n        ver=\"1.0\" \r\n        ts=\"2026-03-25T13:00:00\" \r\n        orgId=\"NPCI\" \r\n        msgId=\"MSG123456\"/>\r\n\r\n    <Txn \r\n        id=\"TXN12345\"\r\n        note=\"Balance Enquiry\"\r\n        refId=\"REF123\"\r\n        refUrl=\"https://example.com\"\r\n        ts=\"2026-03-25T13:00:00\"\r\n        type=\"BalEnq\">\r\n\r\n        <RiskScores>\r\n            <Score provider=\"sp\" type=\"TXNRISK\" value=\"10\"/>\r\n            <Score provider=\"NPCI\" type=\"TXNRISK\" value=\"5\"/>\r\n        </RiskScores>\r\n\r\n    </Txn>\r\n\r\n    <Resp \r\n        reqMsgId=\"REQ12345\"\r\n        result=\"SUCCESS\"\r\n        errCode=\"\"/>\r\n\r\n    <Payer \r\n        addr=\"user@upi\"\r\n        name=\"Sunny Singh\"\r\n        seqNum=\"1\"\r\n        type=\"PERSON\"\r\n        code=\"0000\">\r\n\r\n        <Bal>\r\n            <Data>BASE64_ENCRYPTED_BALANCE_DATA</Data>\r\n        </Bal>\r\n\r\n    </Payer>\r\n\r\n</upi:RespBalEnq>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/RespChkTxn ",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "RespChkTxn "
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RespValAdd",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<upi:RespListAccount xmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head ver=\"1.0\" ts=\"123\" orgId=\"NPCI\" msgId=\"123UJOOGOAISM2026030910535177928630\"/>\r\n    <Txn id=\"TXN001\" note=\"test\" refId=\"REF001\" refUrl=\"url\" ts=\"123\" type=\"ListAccount\"/>\r\n    <Resp reqMsgId=\"REQ001\" result=\"SUCCESS3\" errCode=\"901\"/>\r\n    <AccountList>\r\n        <Account accType=\"SAVINGS\" mbeba=\"Y\" accRefNumber=\"12345\"\r\n                 maskedAccnumber=\"XXXX1234\"\r\n                 ifsc=\"HDFC0000101\"\r\n                 mmid=\"9056014\"\r\n                 name=\"John\"\r\n                 aeba=\"Y\"\r\n                 aadhaarNo=\"XXXX XXXX 9012\">    \r\n\r\n            <CredsAllowed type=\"PIN\" subType=\"ATMPIN\" dType=\"\" dLength=\"\"/>\r\n\r\n        </Account>\r\n\r\n        \r\n    </AccountList>\r\n</upi:RespListAccount>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/ListAccountResponse",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "ListAccountResponse"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RespRegMob",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<upi:RespRegMob xmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head ver=\"1.0\" ts=\"20260313130000\" orgId=\"NPCI\" msgId=\"MSG123456\"/>\r\n    <Txn id=\"TXN001\" note=\"Mobile Registration\" refId=\"REF12345\" refUrl=\"npci\" ts=\"20260313130000\" type=\"ReqRegMob\"/>\r\n    <Resp reqMsgId=\"REQ123\" result=\"SUCCESS\" errCode=\"\"/>\r\n</upi:RespRegMob>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/RespRegMob",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "RespRegMob"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RespSetCre",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<upi:RespSetCre xmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head \r\n        ver=\"2.0\"\r\n        ts=\"2026-03-16T11:20:00+05:30\"\r\n        orgId=\"NPCI\"\r\n        msgId=\"MSG123456789\"\r\n    />\r\n    \r\n    <Txn \r\n        id=\"TXN123456789\"\r\n        note=\"Set Credential Request\"\r\n        refId=\"REF123456\"\r\n        refUrl=\"https://example.com\"\r\n        ts=\"2026-03-16T11:20:00+05:30\"\r\n        type=\"SetCre\"\r\n    />\r\n    \r\n    <Resp \r\n        reqMsgId=\"REQ123456789\"\r\n        result=\"SUCCESS\"\r\n        errCode=\"\"\r\n    />\r\n</upi:RespSetCre>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/RespSetCre",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "RespSetCre"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RespManageVae",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

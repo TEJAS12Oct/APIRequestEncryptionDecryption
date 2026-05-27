@@ -1,0 +1,35 @@
+1779699494142	Rename resource 'TransactioApi.json'
+1779699498064	Copy file
+1779699511383	Rename resource 'TransactioApiIntent.json'
+1779702956262	Rename package 'com.example.demo.Collect'
+1779703053322	Rename package 'com.example.demo.Intent'
+1779703085971	Rename package 'com.example.demo.CollectPayeeVPA'
+1779703093188	Copy compilation unit
+1779703124039	Rename type 'DecryptionCollect'
+1779703162716	Copy compilation unit
+1779703170053	Copy compilation unit
+1779703185481	Delete element
+1779703193893	Delete element
+1779703203116	Delete element
+1779703207241	Delete element
+1779703231091	Copy file
+1779703238828	Copy file
+1779703255093	Delete element
+1779703262295	Delete element
+1779703271309	Delete element
+1779703276092	Delete element
+1779703298513	Rename resource 'TransactioApiCollect.json'
+1779703323286	Rename resource 'TransactioApiIntent.json'
+1779703334780	Rename type 'SHA256ConversionCollect'
+1779703344435	Rename type 'SHA256ConversionIntent'
+1779703358492	Rename package 'com.auisy.TransactionAPIJson'
+1779703397548	Rename type 'EncryptionKeyCollect'
+1779703410545	Rename type 'EncryptionKeyIntent'
+1779703481614	Rename resource 'CollectPayeeAccount'
+1779703554810	Rename type 'CollectPayeeAccount'
+1779703560761	Rename type 'CollectPayeeVPA'
+1779703566717	Rename type 'IntentPayment'
+1779703586651	Rename type 'CollectPayeeCollect'
+1779703592897	Rename type 'CollectPayeeVPA'
+1779703598925	Rename type 'IntentPayment'
+1779787204955	Copy compilation unit
