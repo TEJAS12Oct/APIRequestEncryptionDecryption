@@ -14,8 +14,8 @@ public class AccountListSHAConversion {
 	public static void main(String[] args) {
 
 		try {
-			String requestId = "REQ2705202602";
-			String linkValue = "7412332147";
+			String requestId = "REQ2905202601";
+			String linkValue = "7420857935";
 			String ifsc = "HDFC0021196";
 			String tpapId = "TPSM000091";
 

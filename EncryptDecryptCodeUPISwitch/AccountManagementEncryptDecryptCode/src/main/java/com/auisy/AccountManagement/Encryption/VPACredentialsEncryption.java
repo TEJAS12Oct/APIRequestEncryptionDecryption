@@ -1,4 +1,4 @@
-package com.auisy.TransactionAPI.Encryption;
+package com.auisy.AccountManagement.Encryption;
 
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
@@ -13,8 +13,7 @@ import javax.crypto.spec.SecretKeySpec;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CollectPayeeAccountEncryption {
-
+public class VPACredentialsEncryption {
 	private static final String AES = "AES";
 	private static final String AES_GCM = "AES/GCM/NoPadding";
 	private static final int KEY_SIZE = 256;
@@ -82,68 +81,47 @@ public class CollectPayeeAccountEncryption {
 		try {
 
 			String Request = """
-						{
-						  "merchantTxnId": "2026546994427052611",
-						  "auth_id": "M0000118",
-						  "sid": "M0000118",
-						  "tid": "M0000118",
-						  "adf1": "NA",
-						  "adf2": "NA",
-						  "adf3": "NA",
-						  "adf4": "NA",
-						  "adf5": "NA",
-						  "checkSum": "1b15ce1e5cad11f51d62a16fa8b324371b449c990dbfcb5dfed5cdd7fee0d687",
-						  "reseller_auth_id": "NA",
-						  "txn_timestamp": "2026-05-27 15:28:00",
-						  "amount": 111.00,
-						  "currencyCode": "INR",
-						  "customerID": "NA",
-						  "mobile": "+916987456321",
-						  "geocode": "19.0760,72.8777",
-						  "location": "Mumbai, IND",
-						  "ip": "192.168.1.10",
-						  "remark": "Paymentremark",
-						  "expireyTimeUp": "5",
-						  "type": "NA",
-						  "id": "DEVICE12345678",
-						  "os": "Android",
-						  "app": "NA",
-						  "capability": "NA",
-						  "telecom": "Airtel",
-						  "returnUrl": "https://merchant.com/callback",
-						  "seqId": "123456789012",
-						  "payer": [
-						    {
-						      "addr": "Ram@okicici",
-						      "name": "Ram"
-						    }
-						  ],
-						  "payee": [
-						    {
-						      "addr": "tejas_vpa_jawaletejaszSFK@okicici",
-						      "name": "Tejas Jawale",
-						      "accountNumber": "123443211234",
-						      "ifsc": "SBIN0004321"
-						    }
-						  ]
-						}
+							{
+							  "customerId": "C00056",
+							  "requestId": "REQ2905202603",
+							  "tpapId": "TPSM000091",
+							  "mobileMobNum": "7420857935",
+							  "payerAddr": "Tejas12@upi",
+							  "deviceInfo": {
+							    "mobile": "7420857935",
+							    "os": "ANDROID",
+							    "appVersion": "2.3.1",
+							    "type": "MOB",
+							    "geoCode": "19.0760,72.8777",
+							    "location": "Mumbai",
+							    "ip": "49.205.45.12",
+							    "id": "DEVICETEJAA12101999",
+							    "app": "test.pay.com",
+							    "capability": "UPI",
+							    "telecom": "AIRTEL"
+							  },
+							  "adf1": "",
+							  "adf2": "",
+							  "adf3": "",
+							  "adf4": "",
+							  "adf5": ""
+							}
 					""";
 
 			// Every Auth-ID has Separate Merchant Transaction Key
 			// Merchant Transaction Key
-			// String MerchantTransactionKey = "jx2Au8Rt8gR8qA4zG4zh1HT6Lp7rT2MH";
-			// Path : Merchant Login => My Account => Transaction Key
-			String MerchantTransactionKey = "jx2Au8Rt8gR8qA4zG4zh1HT6Lp7rT2MH"; // M0000118
+			// String TPap TransactionKey = "jP4vB2nk2IX1Xq8Wf6bz7Gn7vO7Su8ln";
+
+			String TpapTransactionKey = "jP4vB2nk2IX1Xq8Wf6bz7Gn7vO7Su8ln"; // TPSM000091
 
 			// For Encryption, We Need Request And Merchant Transaction Key
-			String Encrypt = encrypt(Request, MerchantTransactionKey);
+			String Encrypt = encrypt(Request, TpapTransactionKey);
 
 			System.out.println("Encryption Key :" + "\n" + Encrypt + "\n");
 
-			String Descryption = decrypt(Encrypt, MerchantTransactionKey);
+			String Descryption = decrypt(Encrypt, TpapTransactionKey);
 
 			System.out.println("Request validation :" + "\n" + Descryption + "\n");
-
 		} catch (
 
 		Exception e) {

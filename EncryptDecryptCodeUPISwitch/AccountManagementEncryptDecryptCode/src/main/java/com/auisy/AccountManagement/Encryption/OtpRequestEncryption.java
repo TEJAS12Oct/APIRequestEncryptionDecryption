@@ -83,10 +83,10 @@ public class OtpRequestEncryption {
 
 			String Request = """
 						{
-						  "requestId": "REQ2705202603",
+						  "requestId": "REQ2905202602",
 						  "tpapId": "TPSM000091",
 						  "linkType": "MOBILE",
-						  "linkValue": "7412332147",
+						  "linkValue": "7420857935",
 						  "payerAddr": "Tejas12@upi",
 						  "payerName": "Tejas Jawale",
 						  "payerSeqNum": "1",
@@ -99,16 +99,16 @@ public class OtpRequestEncryption {
 						  "aadhaarIin": "",
 						  "aadhaarUidNum": "221670966616",
 						  "mmid": "",
-						  "mobileNumber": "7412332147",
+						  "mobileNumber": "7420857935",
 						  "deviceInfo": {
-						    "mobile": "7412332147",
+						    "mobile": "7420857935",
 						    "os": "ANDROID",
 						    "appVersion": "1.0.3",
-						    "type": "MOBILE",
+						    "type": "MOB",
 						    "geoCode": "19.0760,72.8777",
 						    "location": "Mumbai",
 						    "ip": "49.205.45.12",
-						    "id": "DEVICE987654321",
+						    "id": "DEVICETEJAA12101999",
 						    "app": "test.pay.com",
 						    "capability": "UPI",
 						    "telecom": "AIRTEL"

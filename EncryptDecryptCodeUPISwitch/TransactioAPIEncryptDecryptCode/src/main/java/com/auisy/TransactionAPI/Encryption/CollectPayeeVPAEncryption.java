@@ -83,7 +83,7 @@ public class CollectPayeeVPAEncryption {
 
 			String Request = """
 					{
-						  "merchantTxnId": "2026546994426052605",
+						  "merchantTxnId": "2026546994428052603",
 						  "auth_id": "M0000118",
 						  "sid": "M0000118",
 						  "tid": "M0000118",
@@ -92,10 +92,10 @@ public class CollectPayeeVPAEncryption {
 						  "adf3": "NA",
 						  "adf4": "NA",
 						  "adf5": "NA",
-						  "checkSum": "99c1e0755312708c30322a8029474235179363335a81e8277f37a488d4f4cb77",
+						  "checkSum": "279b2a887e743f53013ac5cb46a47561addb913423c0d29f7da224725359a66b",
 						  "reseller_auth_id": "NA",
-						  "txn_timestamp": "2026-05-26 10:25:00",
-						  "amount": 105.00,
+						  "txn_timestamp": "2026-05-28 15:44:00",
+						  "amount": 12000.00,
 						  "currencyCode": "INR",
 						  "customerID": "NA",
 						  "mobile": "+917420871899",
@@ -150,7 +150,6 @@ public class CollectPayeeVPAEncryption {
 			System.out.println("Request validation :" + "\n" + Descryption + "\n");
 
 		} catch (
-
 		Exception e) {
 			e.printStackTrace();
 		}

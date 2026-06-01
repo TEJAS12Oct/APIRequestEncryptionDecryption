@@ -3,8 +3,7 @@ package com.auisy.TransactionAPI.SHA256Conversion;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 
-public class CollectPayeeCollectSHAConversion {
-
+public class RequestPaySHAConversion {
 	public static String sha256(String input) throws Exception {
 
 		MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -23,9 +22,9 @@ public class CollectPayeeCollectSHAConversion {
 	public static void main(String[] args) {
 
 		try {
-			String merchantTxnId = "20265469944260526110";
+			String merchantTxnId = "2026546994429052601";
 			String auth_id = "M0000118";
-			double amount = 110.00; // Always keep amount in 2 decimal format
+			double amount = 101.00; // Always keep amount in 2 decimal format
 			String payee_addr = "tejas_vpa_jawaletejaszSFK@okicici";
 			String payer_addr = "Ram@okicici";
 

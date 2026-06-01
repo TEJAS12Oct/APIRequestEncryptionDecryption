@@ -1,4 +1,4 @@
-package com.auisy.AccountManagement.Encryption;
+package com.auisy.TransactionAPI.Encryption;
 
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
@@ -13,7 +13,8 @@ import javax.crypto.spec.SecretKeySpec;
 import org.springframework.stereotype.Component;
 
 @Component
-public class VPACreationEncryption {
+public class RequestPayEncryption {
+
 	private static final String AES = "AES";
 	private static final String AES_GCM = "AES/GCM/NoPadding";
 	private static final int KEY_SIZE = 256;
@@ -81,47 +82,100 @@ public class VPACreationEncryption {
 		try {
 
 			String Request = """
-							{
-							  "customerId": "C00054",
-							  "requestId": "REQ2705202605",
-							  "tpapId": "TPSM000091",
-							  "mobileMobNum": "7412332147",
-							  "payerAddr": "Tejas12@upi",
-							  "deviceInfo": {
-							    "mobile": "7412332147",
-							    "os": "ANDROID",
-							    "appVersion": "2.3.1",
-							    "type": "MOBILE",
-							    "geoCode": "19.0760,72.8777",
-							    "location": "Mumbai",
-							    "ip": "49.205.45.12",
-							    "id": "DEVICE18232346758",
-							    "app": "com.upi.app",
-							    "capability": "UPI",
-							    "telecom": "AIRTEL"
-							  },
-							  "adf1": "",
-							  "adf2": "",
-							  "adf3": "",
-							  "adf4": "",
-							  "adf5": ""
-							}
+					{
+					  "seqnum": "AABBCCDDEEFF112233",
+					  "merchantTxnId": "2026546994429052601",
+					  "mpin": "MTIzNDU2Nzg5",
+					  "Checksum": "8d9487ca93e635ca7ce9b59310e324e8fc9b80a9f1df37fa64b0fcd5f234a688",
+					  "payer": {
+					    "mobile": "+916987456321",
+					    "accountNumber": "34408015821",
+					    "ifscCode": "SBIN0017118",
+					    "accountType": "CURRENT",
+					    "payerAddr": "sani21@upi",
+					    "payerName": "dsdsdd",
+					    "payerMCC": "6543",
+					    "payerType": "PERSON"
+					  },
+					  "payee": {
+					    "payeeAddr": "tejas_vpa_jawaletejaszSFK@okicici",
+					    "payeeName": "Tejas Jawale",
+					    "payeeMCC": "6789",
+					    "payeeType": "ENTITY"
+					  },
+					  "transaction": {
+					    "amount": 101.01,
+					    "currencyCode": "INR",
+					    "txnType": "P2M",
+					    "remark": "pay forshopping",
+					    "approvedFlag": "M"
+					  },
+					  "qrDetails": {
+					    "referenceId": "",
+					    "globalVpa": "test@paytm",
+					    "qrAmount": "",
+					    "referenceUrl": "",
+					    "merchantId": "M0000118",
+					    "merchantTxnId": "",
+					    "subMerchantId": "",
+					    "terminalId": "",
+					    "ver": "",
+					    "qrMode": "",
+					    "purpose": "",
+					    "category": "",
+					    "qrThrough": "",
+					    "qrExpireDate": ""
+					  },
+					  "gstDetails": {
+					    "gst": "svalue",
+					    "billNo": "323223",
+					    "billDate": "29-05-2026",
+					    "billName": "mel"
+					  },
+					  "device": {
+					    "mobile": "+916987456321",
+					    "geocode": "19.0760,72.8777",
+					    "location": "Mumbai, IND",
+					    "ip": "192.168.1.10",
+					    "type": "MOB",
+					    "id": "DEVICE123",
+					    "os": "Android",
+					    "app": "PayApp 2.0",
+					    "capability": "UPI",
+					    "telecom": "Airtel"
+					  },
+					  "additionalInfo": {
+					    "auth_id": "TPSM000091",
+					    "reseller_auth_id": "NA",
+					    "customerID": "C00056",
+					    "adf1": "",
+					    "adf2": "",
+					    "adf3": "",
+					    "adf4": "",
+					    "adf5": ""
+					  },
+					  "callbackUrl": "https://merchant.com/callback"
+					}
 					""";
 
 			// Every Auth-ID has Separate Merchant Transaction Key
 			// Merchant Transaction Key
-			// String TPap TransactionKey = "jP4vB2nk2IX1Xq8Wf6bz7Gn7vO7Su8ln";
+			// String MerchantTransactionKey = "zq7rA6Jp3go0TQ8nR8Ry4kz9Zb2vh4wT";
+			// Path : Merchant Login => My Account => Transaction Key
 
-			String TpapTransactionKey = "jP4vB2nk2IX1Xq8Wf6bz7Gn7vO7Su8ln"; // TPSM000091
+			String MerchantTransactionKey = "jx2Au8Rt8gR8qA4zG4zh1HT6Lp7rT2MH"; // M0000118
+			// String MerchantTransactionKey = "zq7rA6Jp3go0TQ8nR8Ry4kz9Zb2vh4wT"; // M000093
+
 
 			// For Encryption, We Need Request And Merchant Transaction Key
-			String Encrypt = encrypt(Request, TpapTransactionKey);
+			String Encrypt = encrypt(Request, MerchantTransactionKey);
 
 			System.out.println("Encryption Key :" + "\n" + Encrypt + "\n");
 
-			String Descryption = decrypt(Encrypt, TpapTransactionKey);
+			String Descryption = decrypt(Encrypt, MerchantTransactionKey);
 
 			System.out.println("Request validation :" + "\n" + Descryption + "\n");
+
 		} catch (
 
 		Exception e) {
