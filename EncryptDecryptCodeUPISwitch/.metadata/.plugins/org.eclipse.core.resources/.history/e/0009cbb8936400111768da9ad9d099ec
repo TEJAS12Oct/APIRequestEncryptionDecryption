@@ -1,0 +1,154 @@
+package com.auisy.TransactionAPI.Encryption;
+
+import java.nio.charset.StandardCharsets;
+import java.security.SecureRandom;
+import java.util.Base64;
+
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.GCMParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class ConfirmAndRejectEncryption {
+
+	private static final String AES = "AES";
+	private static final String AES_GCM = "AES/GCM/NoPadding";
+	private static final int KEY_SIZE = 256;
+	private static final int TAG_LENGTH_BIT = 128;
+	private static final int IV_LENGTH_BYTE = 12;
+
+	private static final SecureRandom secureRandom = new SecureRandom();
+
+	public static String generateAESKey() throws Exception {
+		KeyGenerator keyGen = KeyGenerator.getInstance(AES);
+		keyGen.init(KEY_SIZE);
+		SecretKey key = keyGen.generateKey();
+		return Base64.getEncoder().encodeToString(key.getEncoded());
+	}
+
+	public static String encrypt(String plainText, String keyString) throws Exception {
+		byte[] keyBytes = keyString.getBytes(StandardCharsets.UTF_8);
+		if (keyBytes.length != 32) {
+			throw new IllegalArgumentException("AES-256 key must be 32 bytes");
+		}
+
+		SecretKeySpec keySpec = new SecretKeySpec(keyBytes, AES);
+
+		byte[] iv = new byte[IV_LENGTH_BYTE];
+		secureRandom.nextBytes(iv);
+
+		Cipher cipher = Cipher.getInstance(AES_GCM);
+		GCMParameterSpec spec = new GCMParameterSpec(TAG_LENGTH_BIT, iv);
+		cipher.init(Cipher.ENCRYPT_MODE, keySpec, spec);
+
+		byte[] encrypted = cipher.doFinal(plainText.getBytes(StandardCharsets.UTF_8));
+
+		byte[] encryptedWithIv = new byte[iv.length + encrypted.length];
+		System.arraycopy(iv, 0, encryptedWithIv, 0, iv.length);
+		System.arraycopy(encrypted, 0, encryptedWithIv, iv.length, encrypted.length);
+
+		return Base64.getEncoder().encodeToString(encryptedWithIv);
+	}
+
+	public static String decrypt(String cipherText, String keyString) throws Exception {
+		byte[] keyBytes = keyString.getBytes(StandardCharsets.UTF_8);
+		if (keyBytes.length != 32) {
+			throw new IllegalArgumentException("AES-256 key must be 32 bytes");
+		}
+
+		SecretKeySpec keySpec = new SecretKeySpec(keyBytes, "AES");
+
+		byte[] decoded = Base64.getDecoder().decode(cipherText);
+
+		byte[] iv = new byte[12];
+		byte[] encrypted = new byte[decoded.length - 12];
+		System.arraycopy(decoded, 0, iv, 0, 12);
+		System.arraycopy(decoded, 12, encrypted, 0, encrypted.length);
+
+		Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+		GCMParameterSpec spec = new GCMParameterSpec(128, iv);
+		cipher.init(Cipher.DECRYPT_MODE, keySpec, spec);
+
+		byte[] decrypted = cipher.doFinal(encrypted);
+		return new String(decrypted, StandardCharsets.UTF_8);
+	}
+
+	public static void main(String[] args) {
+
+		try {
+
+			String Request = """
+					       {
+							  "seqNum": "1006202601",
+							  "txnId": "123HMPKHEAQ202606100526163394730112",
+							  "ReqId": "REQ1006202602",
+							  "CustomerId": "C00060",
+							  "authID": "TPSM000091",
+							  "Checksum": "cffb3d8bc349cf688278bf70d621bdb43e0c307790ea3972f8e3fbb3f3ff6359",
+							  "adf1": "NA",
+							  "adf2": "NA",
+							  "adf3": "NA",
+							  "adf4": "NA",
+							  "payer": {
+							    "addr": "Tejas08062026@upi",
+							    "accountNumber": "987667899876",
+							    "ifsc": "HDFC0021196"
+							  },
+							  "payee": {
+							    "addr": "tejas_vpa_jawaletejaszSFK@okicici"
+							  },
+							  "transaction": {
+							    "amount": 99.98,
+							    "approvedAmount": 99.98,
+							    "currency": "INR",
+							    "note": "taxi-bill",
+							    "action": "A",
+							    "approvedFlag": "M"
+							  },
+							  "credentials": {
+							    "type": "PIN",
+							    "subType": "MPIN",
+							    "data": "<base64encodedString>"
+							  },
+							  "device": {
+							    "mobile": "7420111111",
+							    "geocode": "19.76,72.8777",
+							    "location": "Mumbai, IN",
+							    "ip": "49.205.45.12",
+							    "type": "MOB",
+							    "id": "DEVICETEJAA12101999",
+							    "os": "Android",
+							    "app": "test.pay.com",
+							    "capability": "UPI",
+							    "telecom": "Airtel"
+							  }
+					       	}
+					""";
+
+			// Every Auth-ID has Separate Merchant Transaction Key
+						// Merchant Transaction Key
+						// String TPap TransactionKey = "jP4vB2nk2IX1Xq8Wf6bz7Gn7vO7Su8ln";
+
+						String TpapTransactionKey = "jP4vB2nk2IX1Xq8Wf6bz7Gn7vO7Su8ln"; // TPSM000091
+
+						// For Encryption, We Need Request And Merchant Transaction Key
+						String Encrypt = encrypt(Request, TpapTransactionKey);
+
+						System.out.println("Encryption Key :" + "\n" + Encrypt + "\n");
+
+						String Descryption = decrypt(Encrypt, TpapTransactionKey);
+
+						System.out.println("Request validation :" + "\n" + Descryption + "\n");
+						System.out.println("Kindly Save Response In Notepad");
+					} catch (
+
+					Exception e) {
+						e.printStackTrace();
+					}
+				}
+
+			}

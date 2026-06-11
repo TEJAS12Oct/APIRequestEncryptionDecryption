@@ -1,5 +1,0 @@
-package com.auisy.TransactionAPI.Encryption;
-
-public class PreRequestPayEncryption {
-
-}

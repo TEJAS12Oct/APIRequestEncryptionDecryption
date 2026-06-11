@@ -1,0 +1,50 @@
+// Kindly Enter All Merchant On Boarding Details , Auth id and Transaction Key and Bank Details
+{
+						  "merchantTxnId": "2026546994425052619",
+						  "auth_id": "M0000118",
+						  "sid": "M0000118",
+						  "tid": "M0000118",
+						  "adf1": "NA",
+						  "adf2": "NA",
+						  "adf3": "NA",
+						  "adf4": "NA",
+						  "adf5": "NA",
+						  "checkSum": "d984bfabce5f4bc57242aba7f631676ff9f3b1d1b57d627e3f64754e2c0304b7",
+						  "reseller_auth_id": "NA",
+						  "txn_timestamp": "2026-05-25 15:18:00",
+						  "amount": 117.00,
+						  "currencyCode": "INR",
+						  "customerID": "NA",
+						  "mobile": "+917420871899",
+						  "geocode": "19.0760,72.8777",
+						  "location": "Mumbai, IND",
+						  "ip": "115.160.210.123",
+						  "remark": "Paymentremark",
+						  "expireyTimeUp": 5,
+						  "type": "NA",
+						  "id": "DEVICE1344543523",
+						  "os": "Android",
+						  "app": "NA",
+						  "capability": "NA",
+						  "telecom": "Airtel",
+						  "returnUrl": "https://merchant.com/callback",
+						  "seqId": "123456789010",
+						  "channelcode": "NA",
+						  "mcccode": "6543",
+						  "verifypayeeracc": "Y",
+						  "merchanttype": "SMALL",
+						  "payer": [
+						    {
+						      "addr": "Ram@okicici",
+						      "name": "Ram"
+						    }
+						  ],
+						  "payee": [
+						    {
+						      "addr": "tejas_vpa_jawaletejaszSFK@okicici",
+						      "name": "Tejas Jawale",
+						      "accountNumber": "123443211234",
+						      "ifsc": "SBIN0004321"
+						    }
+						  ]
+}

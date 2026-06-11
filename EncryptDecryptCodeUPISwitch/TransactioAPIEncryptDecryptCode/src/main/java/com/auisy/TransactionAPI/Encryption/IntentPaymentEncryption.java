@@ -83,28 +83,28 @@ public class IntentPaymentEncryption {
 
 			String Request = """
 					{
-					  "merchantTxnId": "2026546994427052602",
+					  "merchantTxnId": "906202609062026010",
 					  "auth_id": "M0000118",
-					  "txn_timestamp": "2026-05-27 12:55:00", 	
+					  "txn_timestamp": "2026-06-09 11:09:00", 	
 					  "txn_type": "Intent",
 					  "txn_ver": "111",
 					  "initiation_mode": "00",
-					  "checkSum": "6766e5fbbc94d101ce39bf64bb0c54d22e8050c4750751d27e5c86406b4c16ee",
+					  "checkSum": "a63842f7a467482ec286ecc6acb8f74aa5e653878e25f6f2eb1a4826ca643b7c",
 					  "purpose_code": "01",
 					  "note": "Payment for order",
 					  "callbackUrl": "https://merchant.com/callback",
 					  "expiresIn": 10,
-					  "amount": 102.00,
+					  "amount": 110.00,
 					  "reseller_auth_id": "000000",
 					  "reseller_txn_id": "0000000000000",
 					  "autoCapture": true,
 					  "pay_key": "tejas_vpa_jawaletejaszSFK@okicici",
-					  "description": "Payment via Intent",
+					  "description": "Payment for Order 0906202604",
 					  "txn_medium": "WEB",
 					  "customer": {
-					    "name": "Tejas Jawale",
-					    "email": "tejas.jawale@gmail.com",
-					    "phone": "+917420871899"
+					    "name": "Customer one",
+					    "email": "Customer.one@gmail.com",
+					    "phone": "+919006202601"
 					  }
 					}
 					""";

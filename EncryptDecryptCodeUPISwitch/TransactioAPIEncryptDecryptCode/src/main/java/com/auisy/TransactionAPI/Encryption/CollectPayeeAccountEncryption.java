@@ -83,7 +83,7 @@ public class CollectPayeeAccountEncryption {
 
 			String Request = """
 						{
-						  "merchantTxnId": "2026546994427052611",
+						  "merchantTxnId": "906202609062026003",
 						  "auth_id": "M0000118",
 						  "sid": "M0000118",
 						  "tid": "M0000118",
@@ -92,10 +92,10 @@ public class CollectPayeeAccountEncryption {
 						  "adf3": "NA",
 						  "adf4": "NA",
 						  "adf5": "NA",
-						  "checkSum": "1b15ce1e5cad11f51d62a16fa8b324371b449c990dbfcb5dfed5cdd7fee0d687",
+						  "checkSum": "ced081c780a5cdefd77f876556e171018788584bda72ea594149904b5e2d816e",
 						  "reseller_auth_id": "NA",
-						  "txn_timestamp": "2026-05-27 15:28:00",
-						  "amount": 111.00,
+						  "txn_timestamp": "2026-06-09 16:52:00",
+						  "amount": 100.00,
 						  "currencyCode": "INR",
 						  "customerID": "NA",
 						  "mobile": "+916987456321",
@@ -114,8 +114,8 @@ public class CollectPayeeAccountEncryption {
 						  "seqId": "123456789012",
 						  "payer": [
 						    {
-						      "addr": "Ram@okicici",
-						      "name": "Ram"
+						      "addr": "Tejas08062026@upi",
+						      "name": "Tejas Jawale"
 						    }
 						  ],
 						  "payee": [

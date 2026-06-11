@@ -1,3 +1,6 @@
 1779793471380	Rename resource 'AccountList.json''
 1779865632362	Rename type 'VPACredentialsEncryption'
 1779867676100	Delete element
+1779868698500	Rename type 'VPACredentials'
+1780041205889	Delete element
+1780041213689	Rename type 'VPACreationEncryption'

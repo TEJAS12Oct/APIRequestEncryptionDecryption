@@ -14,16 +14,16 @@ public class AccountListSHAConversion {
 	public static void main(String[] args) {
 
 		try {
-			String requestId = "REQ2905202601";
-			String linkValue = "7420857935";
+			String requestId = "REQ0806202601";
+			String linkValue = "7420111111";
 			String ifsc = "HDFC0021196";
 			String tpapId = "TPSM000091";
 
-			// Checksum Formula : requestId + linkValue + ifsc + tpapId;
-			String checksumString = requestId + "|" + linkValue + "|" + ifsc + "|" + tpapId;
-			System.out.println("Checksum Printing : " + checksumString + "\n");
+			// Signature Formula : requestId + linkValue + ifsc + tpapId;
+			String signatureString = requestId + "|" + linkValue + "|" + ifsc + "|" + tpapId;
+			System.out.println("Checksum Printing : " + signatureString + "\n");
 
-			String ChecksumConversion = sha256(checksumString);
+			String ChecksumConversion = sha256(signatureString);
 
 			System.out.println("SHA-256 Checksum : " + ChecksumConversion);
 

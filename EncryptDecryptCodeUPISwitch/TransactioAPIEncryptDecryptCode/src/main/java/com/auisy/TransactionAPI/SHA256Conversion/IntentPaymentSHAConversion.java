@@ -25,8 +25,8 @@ public class IntentPaymentSHAConversion {
 		try {
 
 			String auth_id = "M0000118";
-			String merchantTxnId = "2026546994427052602";
-			double amount = 102.00; // Always keep amount in 2 decimal format
+			String merchantTxnId = "906202609062026010";
+			double amount = 110.00; // Always keep amount in 2 decimal format
 			String pay_key = "tejas_vpa_jawaletejaszSFK@okicici";
 
 			// Checksum Formula : auth_id + merchantTxnId + amount + pay_key

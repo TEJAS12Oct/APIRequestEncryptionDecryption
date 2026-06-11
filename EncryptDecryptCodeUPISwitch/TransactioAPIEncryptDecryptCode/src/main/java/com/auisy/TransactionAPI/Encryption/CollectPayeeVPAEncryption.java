@@ -83,7 +83,7 @@ public class CollectPayeeVPAEncryption {
 
 			String Request = """
 					{
-						  "merchantTxnId": "2026546994428052603",
+						  "merchantTxnId": "906202609062026002",
 						  "auth_id": "M0000118",
 						  "sid": "M0000118",
 						  "tid": "M0000118",
@@ -92,14 +92,14 @@ public class CollectPayeeVPAEncryption {
 						  "adf3": "NA",
 						  "adf4": "NA",
 						  "adf5": "NA",
-						  "checkSum": "279b2a887e743f53013ac5cb46a47561addb913423c0d29f7da224725359a66b",
+						  "checkSum": "1f62ab9d25c9b5ec7eddee44ec792b72adcaf193f45c5e737cad0ca0f52c3bb6",
 						  "reseller_auth_id": "NA",
-						  "txn_timestamp": "2026-05-28 15:44:00",
-						  "amount": 12000.00,
+						  "txn_timestamp": "2026-06-09 14:55:00",
+						  "amount": 102.00,
 						  "currencyCode": "INR",
 						  "customerID": "NA",
 						  "mobile": "+917420871899",
-						  "geocode": "19.0760,72.8777",
+						  "geocode": "19.76,72.8777",
 						  "location": "Mumbai, IND",
 						  "ip": "115.160.210.123",
 						  "remark": "Paymentremark",
@@ -118,8 +118,8 @@ public class CollectPayeeVPAEncryption {
 						  "merchanttype": "SMALL",
 						  "payer": [
 						    {
-						      "addr": "Ram@okicici",
-						      "name": "Ram"
+						      "addr": "Tejas08062026@upi",
+						      "name": "Tejas Jawale"
 						    }
 						  ],
 						  "payee": [
@@ -149,8 +149,9 @@ public class CollectPayeeVPAEncryption {
 
 			System.out.println("Request validation :" + "\n" + Descryption + "\n");
 
-		} catch (
-		Exception e) {
+			System.out.println("Check Recored in Payee Transaction Report");
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}

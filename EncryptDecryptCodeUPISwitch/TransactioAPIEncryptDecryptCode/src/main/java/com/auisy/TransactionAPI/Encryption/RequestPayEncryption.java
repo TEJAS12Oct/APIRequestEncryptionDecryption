@@ -12,6 +12,24 @@ import javax.crypto.spec.SecretKeySpec;
 
 import org.springframework.stereotype.Component;
 
+/*
+ * TPAP is a payment application similar to Google Pay (GPay).
+ 
+ * TPAP Customer Onboarding** refers to the customer registration/onboarding process. 
+ * Customer details can be viewed in **Issuer Admin → TPAP Master.
+
+ * Payer is the TPAP customer who initiates and makes the payment. 
+ * For TSMP000091, the payer details can be viewed in TPAP Master → Account Details or in the Customer Report.
+
+ * Payee is the customer who receives the payment. The payee can be any valid customer account that receives funds from the payer.
+ * 
+ * All the above details belong to the **TPAP Customer**.
+
+ * For TPAP Customer Onboarding, you need to execute the Account Management APIs (2.1 to 2.5) available in the Integration Kit. 
+ * These APIs are used to register the customer, create the account, and set up the required customer account details.
+
+*/
+
 @Component
 public class RequestPayEncryption {
 
@@ -83,28 +101,28 @@ public class RequestPayEncryption {
 
 			String Request = """
 					{
-					  "seqnum": "AABBCCDDEEFF112233",
-					  "merchantTxnId": "2026546994429052601",
-					  "mpin": "MTIzNDU2Nzg5",
-					  "Checksum": "8d9487ca93e635ca7ce9b59310e324e8fc9b80a9f1df37fa64b0fcd5f234a688",
+					  "seqnum": "100620251ABCDE10062026",
+					  "merchantTxnId": "1006202602",
+					  "mpin": "TSJmUDJ2Nz45",
+					  "Checksum": "11f648b304d16af611b7e9b85ebeceb8cd4d3c24c360206fbfb6e3f9a4485427",
 					  "payer": {
-					    "mobile": "+916987456321",
-					    "accountNumber": "34408015821",
-					    "ifscCode": "SBIN0017118",
-					    "accountType": "CURRENT",
-					    "payerAddr": "sani21@upi",
-					    "payerName": "dsdsdd",
-					    "payerMCC": "6543",
+					    "mobile": "+917420857935",
+					    "accountNumber": "987667899876",
+					    "ifscCode": "HDFC0021196",
+					    "accountType": "SAVINGS",
+					    "payerAddr": "Tejas08062026@upi",
+					    "payerName": "Tejas Jawale",
+					    "payerMCC": "1234",
 					    "payerType": "PERSON"
 					  },
 					  "payee": {
 					    "payeeAddr": "tejas_vpa_jawaletejaszSFK@okicici",
-					    "payeeName": "Tejas Jawale",
-					    "payeeMCC": "6789",
+					    "payeeName": "TEJAS JAWALE",
+					    "payeeMCC": "9876",
 					    "payeeType": "ENTITY"
 					  },
 					  "transaction": {
-					    "amount": 101.01,
+					    "amount": 301.00,
 					    "currencyCode": "INR",
 					    "txnType": "P2M",
 					    "remark": "pay forshopping",
@@ -112,10 +130,10 @@ public class RequestPayEncryption {
 					  },
 					  "qrDetails": {
 					    "referenceId": "",
-					    "globalVpa": "test@paytm",
+					    "globalVpa": "",
 					    "qrAmount": "",
 					    "referenceUrl": "",
-					    "merchantId": "M0000118",
+					    "merchantId": "",
 					    "merchantTxnId": "",
 					    "subMerchantId": "",
 					    "terminalId": "",
@@ -128,26 +146,26 @@ public class RequestPayEncryption {
 					  },
 					  "gstDetails": {
 					    "gst": "svalue",
-					    "billNo": "323223",
-					    "billDate": "29-05-2026",
+					    "billNo": "123321",
+					    "billDate": "10-06-2026",
 					    "billName": "mel"
 					  },
 					  "device": {
-					    "mobile": "+916987456321",
-					    "geocode": "19.0760,72.8777",
+					    "mobile": "+917420844456",
+					    "geocode": "19.084,72.8777",
 					    "location": "Mumbai, IND",
 					    "ip": "192.168.1.10",
-					    "type": "MOB",
-					    "id": "DEVICE123",
+					    "type": "MOBILE",
+					    "id": "DEVICETEJAA1299",
 					    "os": "Android",
 					    "app": "PayApp 2.0",
-					    "capability": "UPI",
+					    "capability": "GPS",
 					    "telecom": "Airtel"
 					  },
 					  "additionalInfo": {
 					    "auth_id": "TPSM000091",
 					    "reseller_auth_id": "NA",
-					    "customerID": "C00056",
+					    "customerID": "C00060",
 					    "adf1": "",
 					    "adf2": "",
 					    "adf3": "",
@@ -160,19 +178,18 @@ public class RequestPayEncryption {
 
 			// Every Auth-ID has Separate Merchant Transaction Key
 			// Merchant Transaction Key
-			// String MerchantTransactionKey = "zq7rA6Jp3go0TQ8nR8Ry4kz9Zb2vh4wT";
-			// Path : Merchant Login => My Account => Transaction Key
+			// String TpapTransactionKey = "jP4vB2nk2IX1Xq8Wf6bz7Gn7vO7Su8ln";
+			// Take it from Backend or After Tpap On Boarding Mail will be sent and Details
+			// available in Mail
 
-			String MerchantTransactionKey = "jx2Au8Rt8gR8qA4zG4zh1HT6Lp7rT2MH"; // M0000118
-			// String MerchantTransactionKey = "zq7rA6Jp3go0TQ8nR8Ry4kz9Zb2vh4wT"; // M000093
-
+			String TpapTransactionKey = "jP4vB2nk2IX1Xq8Wf6bz7Gn7vO7Su8ln"; // TPSM000091
 
 			// For Encryption, We Need Request And Merchant Transaction Key
-			String Encrypt = encrypt(Request, MerchantTransactionKey);
+			String Encrypt = encrypt(Request, TpapTransactionKey);
 
 			System.out.println("Encryption Key :" + "\n" + Encrypt + "\n");
 
-			String Descryption = decrypt(Encrypt, MerchantTransactionKey);
+			String Descryption = decrypt(Encrypt, TpapTransactionKey);
 
 			System.out.println("Request validation :" + "\n" + Descryption + "\n");
 

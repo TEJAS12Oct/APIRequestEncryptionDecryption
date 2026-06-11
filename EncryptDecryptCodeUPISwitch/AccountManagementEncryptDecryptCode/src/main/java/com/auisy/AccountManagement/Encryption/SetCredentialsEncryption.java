@@ -83,32 +83,32 @@ public class SetCredentialsEncryption {
 
 			String Request = """
 						{
-						  "customerId": "C00056",
-						  "requestId": "REQ2905202605",
+						  "customerId": "C00060",
+						  "requestId": "REQ0806202608",
 						  "tpapId": "TPSM000091",
 						  "addrType": "ACCOUNT",
 						  "accountIfsc": "HDFC0021196",
 						  "accountType": "SAVINGS",
 						  "accountNumber": "987667899876",
 						  "mobileMmid": "1234567",
-						  "mobileNumber": "7420857935",
+						  "mobileNumber": "7420111111",
 						  "credType": "PIN",
 						  "credSubType": "MPIN",
 						  "credData": "encryptedOldPin",
 						  "newCredType": "PIN",
 						  "newCredSubType": "MPIN",
 						  "newCredData": "encryptedNewPin",
-						  "payerAddr": "user@upi",
-						  "payerName": "John Doe",
+						  "payerAddr": "Tejas08062026@upi",
+						  "payerName": "Tejas Jawale",
 						  "payerSeqNum": "1",
 						  "payerType": "PERSON",
 						  "payerCode": "0000",
 						  "deviceInfo": {
-						    "mobile": "7420857935",
+						    "mobile": "7420111111",
 						    "os": "ANDROID",
 						    "appVersion": "2.3.1",
 						    "type": "MOB",
-						    "geoCode": "19.0760,72.8777",
+						    "geoCode": "19.76,72.8777",
 						    "location": "Mumbai",
 						    "ip": "49.205.45.12",
 						    "id": "DEVICETEJAA12101999",
@@ -138,7 +138,7 @@ public class SetCredentialsEncryption {
 			String Descryption = decrypt(Encrypt, TpapTransactionKey);
 
 			System.out.println("Request validation :" + "\n" + Descryption + "\n");
-
+			System.out.println("Kindly Save Response In Notepad");
 		} catch (
 
 		Exception e) {

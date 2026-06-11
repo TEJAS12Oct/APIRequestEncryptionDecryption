@@ -1,0 +1,44 @@
+package com.auisy.TransactionAPI.SHA256Conversion;
+
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+
+public class DynamicQRSHAConversion {
+
+	public static String sha256(String input) throws Exception {
+
+		MessageDigest digest = MessageDigest.getInstance("SHA-256");
+
+		byte[] hashBytes = digest.digest(input.getBytes(StandardCharsets.UTF_8));
+
+		StringBuilder hexString = new StringBuilder();
+
+		for (byte b : hashBytes) {
+			hexString.append(String.format("%02x", b));
+		}
+
+		return hexString.toString();
+	}
+
+	public static void main(String[] args) {
+
+		try {
+
+			String auth_id = "M0000118";
+			String merchantTxnId = "906202609062026021";
+			double amount = 221.00; // Always keep amount in 2 decimal format
+			String pay_key = "tejas_vpa_jawaletejaszSFK@okicici";
+
+			// Checksum Formula : auth_id + merchantTxnId + amount + pay_key
+			String checksumString = auth_id + merchantTxnId + String.format("%.2f", amount) + pay_key;
+			System.out.println("Checksum Printing : " + checksumString + "\n");
+
+			String ChecksumConversion = sha256(checksumString);
+
+			System.out.println("SHA-256 Checksum : " + ChecksumConversion);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

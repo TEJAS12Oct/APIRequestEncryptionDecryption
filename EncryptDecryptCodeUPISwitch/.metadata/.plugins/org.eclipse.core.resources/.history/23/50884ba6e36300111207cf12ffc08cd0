@@ -1,0 +1,25 @@
+{
+					  "merchantTxnId": "906202609062026022",
+					  "auth_id": "M0000118",
+					  "txn_timestamp": "2026-06-09 13:12:00",
+					  "txn_type": "Dynamic QR",
+					  "txn_ver": "111",
+					  "initiation_mode": "00",
+					  "checkSum": "7ad0f532004b0f413926953bac394f813608068f96b2939754ee4e70fd66e66d",
+					  "purpose_code": "01",
+					  "note": "Payment for order",
+					  "callbackUrl": "https://merchant.com/callback",
+					  "expiresIn": 10,
+					  "amount": 222.00,
+					  "reseller_auth_id": "000000",
+					  "reseller_txn_id": "0000000000000",
+					  "autoCapture": true,
+					  "pay_key": "tejas_vpa_jawaletejaszSFK@okicici",
+					  "description": "Payment for Order 0906202604",
+					  "txn_medium": "WEB",
+					  "customer": {
+					    "name": "Customer one",
+					    "email": "Customer.one@gmail.com",
+					    "phone": "+919006202601"
+					  }
+s}

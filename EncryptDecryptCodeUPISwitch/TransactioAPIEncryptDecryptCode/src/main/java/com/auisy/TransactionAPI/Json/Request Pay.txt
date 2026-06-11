@@ -1,0 +1,75 @@
+// Kindly Enter All Tpap Onboarding Customer Details , Auth id and Transaction Key and Bank Details
+{
+					  "seqnum": "AABBCCDDEEFF332211",
+					  "merchantTxnId": "2026546994401062601", 
+					  "mpin": "TSJmUDJ2Nz45",
+					  "Checksum": "d08780c4104590313d4946a4f4f7a459143ec0aae9caa269b4a335187f101e7e",
+					  "payer": {    // Tpap Customer Onboarding Details => Customer Who Pay Money
+					    "mobile": "+917420857935",
+					    "accountNumber": "987667899876",
+					    "ifscCode": "HDFC0021196",
+					    "accountType": "SAVINGS",
+					    "payerAddr": "Tejas12@upi",
+					    "payerName": "Tejas Jawale",
+					    "payerMCC": "6789",
+					    "payerType": "PERSON"
+					  },
+					  "payee": {   // çustomer Who recieves Money
+					    "payeeAddr": "Ram@okicici",
+					    "payeeName": "Ram",
+					    "payeeMCC": "9876",
+					    "payeeType": "ENTITY"
+					  },
+					  "transaction": {
+					    "amount": 101.00,
+					    "currencyCode": "INR",
+					    "txnType": "P2M",
+					    "remark": "pay forshopping",
+					    "approvedFlag": "M"
+					  },
+					  "qrDetails": {
+					    "referenceId": "",
+					    "globalVpa": "",
+					    "qrAmount": "",
+					    "referenceUrl": "",
+					    "merchantId": "",
+					    "merchantTxnId": "",
+					    "subMerchantId": "",
+					    "terminalId": "",
+					    "ver": "",
+					    "qrMode": "",
+					    "purpose": "",
+					    "category": "",
+					    "qrThrough": "",
+					    "qrExpireDate": ""
+					  },
+					  "gstDetails": {
+					    "gst": "svalue",
+					    "billNo": "123321",
+					    "billDate": "01-06-2026",
+					    "billName": "mel"
+					  },
+					  "device": {
+					    "mobile": "+917420844456",
+					    "geocode": "19.084,72.8777",
+					    "location": "Mumbai, IND",
+					    "ip": "192.168.1.10",
+					    "type": "MOBILE",
+					    "id": "DEVICETEJAA1299",
+					    "os": "Android",
+					    "app": "PayApp 2.0",
+					    "capability": "GPS",
+					    "telecom": "Airtel"
+					  },
+					  "additionalInfo": {
+					    "auth_id": "TPSM000091",
+					    "reseller_auth_id": "NA",
+					    "customerID": "C00056",
+					    "adf1": "",
+					    "adf2": "",
+					    "adf3": "",
+					    "adf4": "",
+					    "adf5": ""
+					  },
+					  "callbackUrl": "https://merchant.com/callback"
+}

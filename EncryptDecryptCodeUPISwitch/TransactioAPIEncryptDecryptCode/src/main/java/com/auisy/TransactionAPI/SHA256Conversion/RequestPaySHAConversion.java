@@ -22,11 +22,11 @@ public class RequestPaySHAConversion {
 	public static void main(String[] args) {
 
 		try {
-			String merchantTxnId = "2026546994429052601";
-			String auth_id = "M0000118";
-			double amount = 101.00; // Always keep amount in 2 decimal format
-			String payee_addr = "tejas_vpa_jawaletejaszSFK@okicici";
-			String payer_addr = "Ram@okicici";
+			String merchantTxnId = "1006202601";
+			String auth_id = "TPSM000091";
+			double amount = 301.00; // Always keep amount in 2 decimal format
+			String payee_addr = "tejas_vpa_jawaletejaszSFK@okicici"; // who Receives Money
+			String payer_addr = "Tejas08062026@upi"; //Customer who pays Money
 
 			// Checksum Formula : auth_id + merchantTxnId + amount + pay_key
 			String checksumString = merchantTxnId + auth_id + String.format("%.2f", amount) + payer_addr + payee_addr;

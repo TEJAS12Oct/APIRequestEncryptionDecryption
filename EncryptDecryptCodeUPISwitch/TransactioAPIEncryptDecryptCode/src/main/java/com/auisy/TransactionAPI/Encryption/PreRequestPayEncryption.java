@@ -82,71 +82,71 @@ public class PreRequestPayEncryption {
 
 			String Request = """
 					{
-					  "seqnum": "AABBCCDDEEFF112233",
-					  "merchantTxnId": "2026546994425052625",
+					  "seqnum": "AABBCCDDEEFF998877",
+					  "merchantTxnId": "2026546994403062602",
 					  "mpin": "NA",
-					  "checkSum": "67441d1bab28892a7a112f0c9aadaae837777b2b3cc695a71e27d0581962ff21",
+					  "checkSum": "0d19637828353773da0b5f7efc6657719418082339ca99717cbaea4632716faf",
 					  "payer": {
-					    "mobile": "9999499899",
-					    "accountNumber": "34408015821",
-					    "ifscCode": "SBIN0017118",
-					    "accountType": "CURRENT",
-					    "payerAddr": "Ram@okicici",
-					    "payerName": "Ram",
-					    "payerMCC": "6543",
+					    "mobile": "+917420857935",
+					    "accountNumber": "987667899876",
+					    "ifscCode": "HDFC0021196",
+					    "accountType": "SAVINGS",
+					    "payerAddr": "Tejas12@upi",
+					    "payerName": "Tejas Jawale",
+					    "payerMCC": "6789",
 					    "payerType": "PERSON"
 					  },
 					  "payee": {
-					    "payeeAddr": "tejas_vpa_jawaletejaszSFK@okicici",
-					    "payeeName": "Tejas Jawale",
-					    "payeeMCC": "6789",
+					    "payeeAddr": "Ram@okicici",
+					    "payeeName": "Ram",
+					    "payeeMCC": "9876",
 					    "payeeType": "ENTITY"
 					  },
 					  "transaction": {
-					    "amount": 125.00,
+					    "amount": 302.00,
 					    "currencyCode": "INR",
 					    "txnType": "P2M",
 					    "remark": "pay forshopping",
 					    "approvedFlag": "A"
 					  },
-					  "qrDetails": {
-					    "referenceId": "sasaassa",
-					    "globalVpa": "test@paytm",
-					    "qrAmount": "125.00",
-					    "referenceUrl": "https://www.google.com",
-					    "merchantId": "M0000118",
-					    "merchantTxnId": "2026546994425052625",
-					    "subMerchantId": "M0000118",
-					    "terminalId": "M0000118",
-					    "ver": "1",
-					    "qrMode": "01",
-					    "purpose": "00",
-					    "category": "01",
-					    "qrThrough": "01",
-					    "qrExpireDate": "2026-05-25 16:55:00"
+					   "qrDetails": {
+					    "referenceId": "",
+					    "globalVpa": "",
+					    "qrAmount": "305.00",
+					    "referenceUrl": "",
+					    "merchantId": "TPSM000091",
+					    "merchantTxnId": "",
+					    "subMerchantId": "",
+					    "terminalId": "",
+					    "ver": "",
+					    "qrMode": "",
+					    "purpose": "",
+					    "category": "",
+					    "qrThrough": "",
+					    "qrExpireDate": ""
 					  },
 					  "gstDetails": {
 					    "gst": "svalue",
 					    "billNo": "323223",
-					    "billDate": "25-05-2026",
+					    "billDate": "01-06-2026",
 					    "billName": "mel"
 					  },
-					  "device": {
-					    "mobile": "9999999999",
-					    "geocode": "19.0760,72.8777",
+					   "device": {
+					    "mobile": "+917420844456",
+					    "geocode": "19.084,72.8777",
 					    "location": "Mumbai, IND",
 					    "ip": "192.168.1.10",
 					    "type": "MOBILE",
-					    "id": "DEVICE123",
+					    "id": "DEVICETEJAA1299",
 					    "os": "Android",
 					    "app": "PayApp 2.0",
-					    "capability": "NA",
+					    "capability": "GPS",
 					    "telecom": "Airtel"
 					  },
-					  "additionalInfo": {
-					    "auth_id": "M0000118",
+					 	"additionalInfo": {
+					    "auth_id": "TPSM000091",
 					    "reseller_auth_id": "NA",
-					    "customerID": "NA",
+					    "customerID": "C00056",
 					    "adf1": "NA",
 					    "adf2": "NA",
 					    "adf3": "NA",
@@ -159,19 +159,18 @@ public class PreRequestPayEncryption {
 
 			// Every Auth-ID has Separate Merchant Transaction Key
 			// Merchant Transaction Key
-			// String MerchantTransactionKey = "zq7rA6Jp3go0TQ8nR8Ry4kz9Zb2vh4wT";
-			// Path : Merchant Login => My Account => Transaction Key
+			// String TpapTransactionKey = "jP4vB2nk2IX1Xq8Wf6bz7Gn7vO7Su8ln";
+			// Take it from Backend or After Tpap On Boarding Mail will be sent and Details
+			// available in Mail
 
-			String MerchantTransactionKey = "jx2Au8Rt8gR8qA4zG4zh1HT6Lp7rT2MH"; // M0000118
-			// String MerchantTransactionKey = "zq7rA6Jp3go0TQ8nR8Ry4kz9Zb2vh4wT"; //
-			// M000093
+			String TpapTransactionKey = "jP4vB2nk2IX1Xq8Wf6bz7Gn7vO7Su8ln"; // TPSM000091
 
-			// For Encryption, We Need Request And Merchant Transaction Key
-			String Encrypt = encrypt(Request, MerchantTransactionKey);
+			// For Encryption, We Need Request And TPAP Transaction Key
+			String Encrypt = encrypt(Request, TpapTransactionKey);
 
 			System.out.println("Encryption Key :" + "\n" + Encrypt + "\n");
 
-			String Descryption = decrypt(Encrypt, MerchantTransactionKey);
+			String Descryption = decrypt(Encrypt, TpapTransactionKey);
 
 			System.out.println("Request validation :" + "\n" + Descryption + "\n");
 
@@ -179,9 +178,7 @@ public class PreRequestPayEncryption {
 
 		Exception e) {
 			e.printStackTrace();
-		}
+		}	
 	}
 
 }
-
-

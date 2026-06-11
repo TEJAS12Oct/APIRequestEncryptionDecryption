@@ -1,0 +1,48 @@
+package com.auisy.TransactionAPI.SHA256Conversion;
+
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+
+public class CollectPayeeAccountSHAConversion {
+
+	public static String sha256(String input) throws Exception {
+
+		try {
+			MessageDigest digest = MessageDigest.getInstance("SHA-256");
+			byte[] hash = digest.digest(input.getBytes(StandardCharsets.UTF_8));
+			StringBuilder hexString = new StringBuilder();
+			for (byte b : hash) {
+				String hex = Integer.toHexString(0xff & b);
+				if (hex.length() == 1) {
+					hexString.append('0');
+				}
+				hexString.append(hex);
+			}
+			return hexString.toString();
+		} catch (Exception e) {
+			throw new RuntimeException("Error generating checksum", e);
+		}
+	}
+
+	public static void main(String[] args) {
+
+		try {
+			String merchantTxnId = "906202609062026003";
+			String auth_id = "M0000118";
+			double amount = 103.00; // Always keep amount in 2 decimal format
+			String payee_addr = "tejas_vpa_jawaletejaszSFK@okicici";
+			String payer_addr = "Tejas08062026@upi";
+
+			// Checksum Formula : auth_id + merchantTxnId + amount + pay_key
+			String checksumString = merchantTxnId + auth_id + String.format("%.2f", amount) + payer_addr + payee_addr;
+			System.out.println("Checksum Printing : " + checksumString + "\n");
+
+			String ChecksumConversion = sha256(checksumString);
+
+			System.out.println("SHA-256 Checksum : " + ChecksumConversion);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

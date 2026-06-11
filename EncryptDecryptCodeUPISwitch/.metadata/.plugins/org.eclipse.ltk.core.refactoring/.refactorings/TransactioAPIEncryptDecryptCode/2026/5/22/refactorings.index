@@ -33,3 +33,5 @@
 1779703592897	Rename type 'CollectPayeeVPA'
 1779703598925	Rename type 'IntentPayment'
 1779787204955	Copy compilation unit
+1779875295209	Rename type 'CollectPayeeCollectSHAConversion'
+1779875406329	Rename type 'CollectPayeeAccounttSHAConversion'

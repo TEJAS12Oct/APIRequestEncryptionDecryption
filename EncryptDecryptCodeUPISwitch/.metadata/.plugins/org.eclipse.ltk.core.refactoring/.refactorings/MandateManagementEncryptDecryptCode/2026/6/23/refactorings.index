@@ -1,0 +1,10 @@
+1780313851303	Delete element
+1780313944186	Rename type 'CollectPayeeAccountSHAConversion'
+1780314068479	Rename type 'MerchantDecryption'
+1780314083232	Rename resource 'MerchantDecryption.txt'
+1780314099123	Rename type 'MerchantDecryptionSHAConversion'
+1780314336805	Delete element
+1780314349908	Delete element
+1780551067812	Rename type 'InitiateMandateEncryption'
+1780551075536	Rename resource 'InitiateMandate.txt'
+1780551085878	Rename type 'InitiateMandateSHAConversion'

@@ -23,11 +23,11 @@ public class CollectPayeeVPASHAConversion {
 	public static void main(String[] args) {
 
 		try {
-			String merchantTxnId = "2026546994428052603";
+			String merchantTxnId = "906202609062026002";
 			String auth_id = "M0000118";
-			double amount = 12000.00; // Always keep amount in 2 decimal format
+			double amount = 102.00; // Always keep amount in 2 decimal format
 			String payee_addr = "tejas_vpa_jawaletejaszSFK@okicici";
-			String payer_addr = "Ram@okicici";
+			String payer_addr = "Tejas08062026@upi";
 
 			// Checksum Formula : auth_id + merchantTxnId + amount + pay_key
 			String checksumString = merchantTxnId + auth_id + String.format("%.2f", amount) + payer_addr + payee_addr;

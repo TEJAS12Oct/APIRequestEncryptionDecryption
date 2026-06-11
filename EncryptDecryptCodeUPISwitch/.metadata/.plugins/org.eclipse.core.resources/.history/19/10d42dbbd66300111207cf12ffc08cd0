@@ -1,0 +1,5 @@
+package com.auisy.TransactionAPI.Encryption;
+
+public class DynamicQREncryption {
+
+}

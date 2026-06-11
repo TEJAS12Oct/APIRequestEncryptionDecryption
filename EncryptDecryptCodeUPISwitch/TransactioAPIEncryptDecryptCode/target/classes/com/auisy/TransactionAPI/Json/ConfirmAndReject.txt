@@ -1,0 +1,45 @@
+{
+							  "seqNum": "SEQ10062026001",
+							  "txnId": "123HMPKHEAQ202606100526163394730112",
+							  "ReqId": "REQ1006202601",
+							  "CustomerId": "C00060",
+							  "authID": "TPSM000091",
+							  "Checksum": "4e539c02c23a1c8fb91154a810bc78efee596aa530ce043053178a13cc03ee62",
+							  "adf1": "NA",
+							  "adf2": "NA",
+							  "adf3": "NA",
+							  "adf4": "NA",
+							  "payer": {
+							    "addr": "Tejas08062026@upi",
+							    "accountNumber": "987667899876",
+							    "ifsc": "HDFC0021196"
+							  },
+							  "payee": {
+							    "addr": "tejas_vpa_jawaletejaszSFK@okicici"
+							  },
+							  "transaction": {
+							    "amount": 100.00,
+							    "approvedAmount": 100.00,
+							    "currency": "INR",
+							    "note": "taxi-bill",
+							    "action": "A",
+							    "approvedFlag": "M"
+							  },
+							  "credentials": {
+							    "type": "PIN",
+							    "subType": "MPIN",
+							    "data": "<base64encodedString>"
+							  },
+							  "device": {
+							    "mobile": "7420111111",
+							    "geocode": "19.76,72.8777",
+							    "location": "Mumbai, IN",
+							    "ip": "192.168.1.10",
+							    "type": "MOBILE",
+							    "id": "DEVICE12345678",
+							    "os": "Android",
+							    "app": "PayApp 2.0",
+							    "capability": "GPS",
+							    "telecom": "Airtel"
+							  }
+					       	}
