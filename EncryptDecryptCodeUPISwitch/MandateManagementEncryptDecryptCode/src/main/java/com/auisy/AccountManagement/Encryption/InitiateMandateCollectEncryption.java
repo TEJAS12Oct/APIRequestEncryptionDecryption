@@ -1,4 +1,5 @@
-package com.auisy.TransactionAPI.Encryption;
+
+package com.auisy.AccountManagement.Encryption;
 
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
@@ -13,7 +14,7 @@ import javax.crypto.spec.SecretKeySpec;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CollectPayeeAccountEncryption {
+public class InitiateMandateCollectEncryption {
 
 	private static final String AES = "AES";
 	private static final String AES_GCM = "AES/GCM/NoPadding";
@@ -82,51 +83,40 @@ public class CollectPayeeAccountEncryption {
 		try {
 
 			String Request = """
-						{
-						  "merchantTxnId": "1906202619",
-						  "auth_id": "M0000118",
-						  "sid": "M0000118",
-						  "tid": "M0000118",
-						  "adf1": "NA",
-						  "adf2": "NA",
-						  "adf3": "NA",
-						  "adf4": "NA",
-						  "adf5": "NA",
-						  "checkSum": "e4e233f79927ef074b0f6594ca778f6680c30de83b4aa12263eb5bf80d154273",
-						  "reseller_auth_id": "NA",
-						  "txn_timestamp": "2026-06-19 18:00:00",
-						  "amount": 1000.00,
-						  "currencyCode": "INR",
-						  "customerID": "NA",
-						  "mobile": "+917420871899",
-						  "geocode": "19.76,72.8777",
-						  "location": "Mumbai, IND",
-						  "ip": "192.168.1.10",
-						  "remark": "Paymentremark",
-						  "expireyTimeUp": "5",
-						  "type": "NA",
-						  "id": "DEVICE19062026",
-						  "os": "Android",
-						  "app": "NA",
-						  "capability": "NA",
-						  "telecom": "Airtel",
-						  "returnUrl": "https://merchant.com/callback",
-						  "seqId": "170620260001",
-						  "payer": [
-						    {
-						      "addr": "Tejas08062026@upi",
-						      "name": "Tejas Jawale"
-						    }
-						  ],
-						  "payee": [
-						    {
-						      "addr": "tejas_vpa_jawaletejaszSFK@okicici",
-						      "name": "Tejas Jawale",
-						      "accountNumber": "123443211234",
-						      "ifsc": "SBIN0004321"
-						    }
-						  ]
-						}
+					{
+						 "customerId": "NA",
+						 "requestId": "REQ1206202603",
+						 "tpapId": "M0000118",
+						 "deviceInfo": {
+						 "mobile": "7420111111",
+						 "os": "NA",
+						 "appVersion": "NA",
+						 "type": "MOB",
+						 "geoCode": "NA",
+						 "location": "NA",
+						 "ip": "192.168.1.1",
+						 "id": "NA",
+						 "app": "NA",
+						 "capability": "NA",
+						 "telecom": "NA"
+						 },
+						 "seqNo": "SEQ1206202603",
+						 "payerVa": "Tejas08062026@upi",
+						 "payeeVa": "tejas_vpa_jawaletejaszSFK@okicici",
+						 "ifsc": "SBIN0004321",
+						 "accountNumber": "123443211234",
+						 "signature": "60xBJ/DXrIWWWCMquclC4Z1VfQbf1YWXVAjuKJRbzmc=",
+						 "amount": "700.00",
+						 "debitRule": "ON",
+						 "startDate": "12062026",
+						 "endDate": "12062028",
+						 "frequency": "MONTHLY",
+						 "adf1": "",
+						 "adf2": "",
+						 "adf3": "",
+						 "adf4": "",
+						 "adf5": ""
+					}
 					""";
 
 			// Every Auth-ID has Separate Merchant Transaction Key

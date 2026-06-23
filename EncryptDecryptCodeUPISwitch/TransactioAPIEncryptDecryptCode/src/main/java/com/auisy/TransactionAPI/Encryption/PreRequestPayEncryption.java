@@ -82,37 +82,37 @@ public class PreRequestPayEncryption {
 
 			String Request = """
 					{
-					  "seqnum": "AABBCCDDEEFF998877",
-					  "merchantTxnId": "2026546994403062602",
-					  "mpin": "NA",
-					  "checkSum": "0d19637828353773da0b5f7efc6657719418082339ca99717cbaea4632716faf",
+					  "seqnum": "123456543212",
+					  "merchantTxnId": "100620261006202605",
+					  "mpin": "TSJmUDJ2Nz44",
+					  "checkSum": "0998e8349abf8ef551137eb09953d59da623c785f33c12a18636ef38469596df",
 					  "payer": {
 					    "mobile": "+917420857935",
 					    "accountNumber": "987667899876",
 					    "ifscCode": "HDFC0021196",
 					    "accountType": "SAVINGS",
-					    "payerAddr": "Tejas12@upi",
+					    "payerAddr": "Tejas08062026@upi",
 					    "payerName": "Tejas Jawale",
-					    "payerMCC": "6789",
+					    "payerMCC": "1234",
 					    "payerType": "PERSON"
 					  },
 					  "payee": {
-					    "payeeAddr": "Ram@okicici",
-					    "payeeName": "Ram",
+					    "payeeAddr": "tejas_vpa_jawaletejaszSFK@okicici",
+					    "payeeName": "TEJAS JAWALE",
 					    "payeeMCC": "9876",
 					    "payeeType": "ENTITY"
 					  },
 					  "transaction": {
-					    "amount": 302.00,
+					    "amount": 105.00,
 					    "currencyCode": "INR",
 					    "txnType": "P2M",
 					    "remark": "pay forshopping",
-					    "approvedFlag": "A"
+					    "approvedFlag": "M"
 					  },
 					   "qrDetails": {
 					    "referenceId": "",
 					    "globalVpa": "",
-					    "qrAmount": "305.00",
+					    "qrAmount": "105.00",
 					    "referenceUrl": "",
 					    "merchantId": "TPSM000091",
 					    "merchantTxnId": "",
@@ -127,8 +127,8 @@ public class PreRequestPayEncryption {
 					  },
 					  "gstDetails": {
 					    "gst": "svalue",
-					    "billNo": "323223",
-					    "billDate": "01-06-2026",
+					    "billNo": "765432",
+					    "billDate": "11-06-2026",
 					    "billName": "mel"
 					  },
 					   "device": {
@@ -146,7 +146,7 @@ public class PreRequestPayEncryption {
 					 	"additionalInfo": {
 					    "auth_id": "TPSM000091",
 					    "reseller_auth_id": "NA",
-					    "customerID": "C00056",
+					    "customerID": "C00060",
 					    "adf1": "NA",
 					    "adf2": "NA",
 					    "adf3": "NA",
@@ -178,7 +178,7 @@ public class PreRequestPayEncryption {
 
 		Exception e) {
 			e.printStackTrace();
-		}	
+		}
 	}
 
 }

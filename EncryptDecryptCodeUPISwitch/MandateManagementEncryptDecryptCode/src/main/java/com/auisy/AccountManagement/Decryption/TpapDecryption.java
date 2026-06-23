@@ -35,15 +35,15 @@ public class TpapDecryption {
 	public static void main(String[] args) {
 
 		try {
-			// Every Auth-ID has Separate Merchant Transaction Key
-			// Merchant Transaction Key
+			// Every Auth-ID has Separate Tpap Transaction Key
+			// T PAP Transaction Key
 			// String TpapTransactionKey = "jP4vB2nk2IX1Xq8Wf6bz7Gn7vO7Su8ln";
 			// Take it from Backend or After Tpap On Boarding Mail will be sent and Details
 			// available in Mail
 
 			String TpapTransactionKey = "jP4vB2nk2IX1Xq8Wf6bz7Gn7vO7Su8ln"; // TPSM000091
 
-			String EncryptResponseAfterPaymentDone = "FrohBgb4780EPpCMmXn6kLAPDndUs4QbIKG8ZA9lyph1vGzi9pbAkMr6Z2whmnUe3gTug2i3Ph48K3mSiR0XOypSTUyeBF2GKOPklWDyRkbYOTMCURpDuNyE9rSP2awaoIUAm9a1xHAyxvt99zHVuyUlqnIs7GEQ1/Tu3YyDS87U3veReqIkULpZ2SuGEM1ZKouNgtdLbrsXNUZ2AKAotqL7OXvtS1RqvL8wiDK3/1ZaCqGfoLFuIcMBn6+sXIP/mgAB/0NJehEfkoDJlgMZfycuvDjpf24lSSiPjMZGejNIMIaFkm55T5VNcLiwylbBmA9u8odKyjqzJcb0l3thm4uupMywRoinsLCpsAsWc9XMsNBU6y23Qv2gcfx52qLrUUGHo0BhW8meI4RZdiAOnoXLBsEaWQ==";
+			String EncryptResponseAfterPaymentDone = "kRTiCmLackcNvDPI9sNENHNw5QAwHsnA3oXmzpgvpGZcEG89CAUI8bOBXiONPLjBAI9hkn1Zphb2aaV+GeMSDeCguvVmecrt4PBzLBJS2TbdJD+NSu6/KrzPYRkbssxVXSxpWHwG52S0ijuB2lywdg89oxwMPe72K4ZjLFqgnQR9a5VvHJ3mhycvlAfC7mzXBDetu/VnYBAT9DAUnfVBUz7g4uFGKa6b/fQeaibOt548bB8KeFUeUm+Q1cbF3QrlBJsaXhyTI6ilX6iOCDMr+XqniBnwwVrI2z00TgcCYXQOFdCbHdMHiYMQlad1IgJHafEApL1po1Ax0cnBaKI2vX8c6IdVZRgsnw3T5ypXsU0tKIJMwrjOJd1yXXXdV4NSnIEeAbSaPSvF2Ph8AmGDLtitWlccINcdykU=	";
 
 			// For Decryption, We Need Request And Tpap Transaction Key
 			String Decrypt = decrypt(EncryptResponseAfterPaymentDone, TpapTransactionKey);

@@ -23,15 +23,15 @@ public class CollectPayeeAccountSHAConversion {
 	public static void main(String[] args) {
 
 		try {
-			String merchantTxnId = "906202609062026003";
+			String merchantTxnId = "1906202619";
 			String auth_id = "M0000118";
-			double amount = 103.00; // Always keep amount in 2 decimal format
+			double amount = 1000.00; // Always keep amount in 2 decimal format
 			String payee_addr = "tejas_vpa_jawaletejaszSFK@okicici";
 			String payer_addr = "Tejas08062026@upi";
 
 			// Checksum Formula : auth_id + merchantTxnId + amount + pay_key
 			String checksumString = merchantTxnId + auth_id + String.format("%.2f", amount) + payer_addr + payee_addr;
-			System.out.println("Checksum Printing : " + checksumString + "\n");
+			System.out.println("Checksum Printing : "  + checksumString + "\n");
 
 			String ChecksumConversion = sha256(checksumString);
 

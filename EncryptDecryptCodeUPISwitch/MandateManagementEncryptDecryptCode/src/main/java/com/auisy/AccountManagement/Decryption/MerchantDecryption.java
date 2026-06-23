@@ -1,4 +1,4 @@
-package com.auisy.TransactionAPI.Decryption;
+package com.auisy.AccountManagement.Decryption;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
@@ -41,9 +41,10 @@ public class MerchantDecryption {
 			// Path : Merchant Login => My Account => Transaction Key
 
 			String MerchantTransactionKey = "jx2Au8Rt8gR8qA4zG4zh1HT6Lp7rT2MH"; // M0000118
-			String EncryptResponseAfterPaymentDone = "WgEt51LFwFMXxaoLF9sQpP0R1aGYNTSqOTka8BdJgcbPRr5c1C3Qji4SFGDf2t4ntLIdgUL6fUtJSLbqBjqMLfLsT71ap0h6ibWru+IRaLAEk2GxGPysmn4TFwyHhVW1lE5wZJKMLj20lrMa4zgSqNpWXNRhNQYh5YhYgFjGRFPIEgOtmrCOUyaet9ARzNO61VG5YxH8nINOrETwVgvDtzPThC91o0SM4VKwWS3TwfFJ+25rDrHtOuUnyBBcB2wxM68CdcVxW1NT0Bkso9Z7VRbxJXb+4VPQwBovBfq8OqrZw0Bs+bLFSJW4/L8ocX6HKw==";
 
-			// For Decryption, We Need Request And Merchant Transaction Key	
+			String EncryptResponseAfterPaymentDone = "FD1SMDvT25iP/pcDPNCyvyCglqqWdiQ3h2dlB1f0VyMzITL1E4FjERUpHPxGhWWEO8wg4u1Qiv/nq9CPKC7596D8ZN+5j2cJ/qQCgl99avj4StmLoiCR8b+4gNNCk5T4f+QOdCE2gCeBpKAx0IGtR2826i4HkvyizvBU6HoW5FKIdhUTzVkR0ucKEmYGjBBYG0AQxQENVsoUiVxPTnEwocYfM6ODMZ8nfBybdyyKnojOzKRv4aXb2lhbyf8QeGzJqaBXNuYlWN4p9mSUQqvuERsRbeoASx6hYKuC9QYmaxExgAORwkV6tV8zCwg3zxKWOLYyu1JXsQ==";
+
+			// For Decryption, We Need Request And Tpap Transaction Key
 			String Decrypt = decrypt(EncryptResponseAfterPaymentDone, MerchantTransactionKey);
 			System.out.println("After Decryption JSON API Response :" + "\n" + Decrypt + "\n");
 
