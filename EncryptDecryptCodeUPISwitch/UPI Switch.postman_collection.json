@@ -639,13 +639,13 @@
       "name": "Mandate Management",
       "item": [
         {
-          "name": "4.1 Initiate Mandate",
+          "name": "4.1 IM Activity Pay",
           "request": {
             "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"encDate\":\"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\",\r\n    \"AuthId\":\"TPSM000091\"\r\n}",
+              "raw": "{\r\n    \"encDate\": \"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\",\r\n    \"AuthId\": \"TPSM000091\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -672,100 +672,7 @@
           "response": []
         },
         {
-          "name": "4.1.1 IM Response Mandate Pay",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<upi:RespMandate xmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head \r\n        ver=\"1.0\" \r\n        ts=\"2026-03-30 17:36:40\" \r\n        orgId=\"102312\" \r\n        msgId=\"123WFOEDFPIYQ2026060505075745851439\" />\r\n    <Resp \r\n        reqMsgId=\"123WFOEDFPIYQ2026060505075745851439\" \r\n        result=\"SUCCESS\" \r\n        errCode=\"\" \r\n        actn=\"APPROVED\">\r\n        <Ref \r\n            type=\"PAYER\" \r\n            seqNum=\"0506202601\" \r\n            regName=\"payee\" \r\n            addr=\"Ram@okicici\" \r\n            approvalNum=\"JUN0506202601\" \r\n            acNum=\"1208854765767445775\" \r\n            IFSC=\"HDFC00000012\" \r\n            code=\"\" \r\n            respCode=\"00\" />\r\n    </Resp>\r\n    <Txn \r\n        id=\"123BDNEJHIUXE2026060505075745976912\" \r\n        note=\"\" \r\n        custRef=\"123DBUUOMSEQT2026041313031084668377\" \r\n        refId=\"123DBUUOMSEQT2026041313031084668377\" \r\n        refUrl=\"www.demo.com\" \r\n        ts=\"2026-06-04 11:00:00\" \r\n        refCategory=\"00\"\r\n        type=\"CREATE\" \r\n        initiationMode=\"\" \r\n        initiatedBy=\"PAYER\" \r\n        purpose=\"00\" \r\n        orgTxnId=\"123DBUUOMSEQT2026041313031084668377\" />\r\n    <Mandate \r\n        name=\"CREATE\" \r\n        txnId=\"123BDNEJHIUXE2026060505075745976912\" \r\n        umn=\"UMN0406202601\" \r\n        ts=\"2026-06-04 11:00:00\" \r\n        revokeable=\"Y\" \r\n        shareToPayee=\"Y\" \r\n        type=\"\" \r\n        blockFund=\"Y\">\r\n        <Validity start=\"04062026\" end=\"04082026\" />\r\n        <Amount value=\"401.00\" rule=\"MAX\" />\r\n        <Recurrence pattern=\"ONETIME\">\r\n            <Rule value=\"\" type=\"BEFORE\" />\r\n        </Recurrence>\r\n    </Mandate>\r\n    <Signature id=\"MANDATE\">\r\n        SIGNATURE_PLACEHOLDER\r\n    </Signature>\r\n</upi:RespMandate>",
-              "options": {
-                "raw": {
-                  "language": "xml"
-                }
-              }
-            },
-            "url": {
-              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerResp/RespMandate",
-              "protocol": "https",
-              "host": [
-                "txn-upi-switch",
-                "boltpe",
-                "co",
-                "in"
-              ],
-              "path": [
-                "IssuerResp",
-                "RespMandate"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "4.1.2 IM Req Auth Mandate Pay",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<upi:ReqAuthMandate\r\n\txmlns:upi=\"http://npci.org/upi/schema/\">\r\n\t<Head ver=\"1.0\" ts=\"\" orgId=\"102312\" msgId=\"123ZRKAXMQUZO2026060312135789935987\" />\r\n\t<Txn \r\n        id=\"123SWFMVPPDXD2026060312135790015398\" \r\n        note=\"\" \r\n        custRef=\"123DBUUOMSEQT2026041313031084668377\" \r\n        refId=\"123DBUUOMSEQT2026041313031084668377\" \r\n        refUrl=\"www.demo.com\" \r\n        ts=\"2026-03-30 17:36:40\" \r\n        type=\"CREATE\" \r\n        initiationMode=\"\" \r\n        initiatedBy=\"PAYER\" \r\n        purpose=\"00\" \r\n        refCategory=\"00\" \r\n        orgTxnId=\"123DBUUOMSEQT2026041313031084668377\" />\r\n\t<Mandate \r\n        name=\"Create\" \r\n        txnId=\"123DBUUOMSEQT2026041313031084668377\" \r\n        umn=\"\" \r\n        ts=\"2026-03-30 17:36:40\" \r\n        revokeable=\"Y\" \r\n        shareToPayee=\"Y\" \r\n        type=\"\" \r\n        blockFund=\"Y\">\r\n\t<Validity start=\"09042026\" end=\"09082026\" />\r\n\t<Amount value=\"10.00\" rule=\"MAX\" />\r\n\t<Recurrence pattern=\"ONETIME\">\r\n\t<Rule value=\"\" type=\"BEFORE\" />\r\n\t</Recurrence>\r\n\t</Mandate>\r\n\t<Payer \r\n        addr=\"sani21@upi\" \r\n        name=\"payer\" \r\n        seqNum=\"122\" \r\n        type=\"ENTITY\" \r\n        code=\"\">\r\n\t\t<Info>\r\n\t\t\t<Identity id=\"\" type=\"ACCOUNT\" verifiedName=\"\" />\r\n\t\t\t<Rating VerifiedAddress=\"TRUE\" />\r\n\t\t</Info>\r\n\t\t<Ac addrType=\"ACCOUNT\">\r\n\t\t\t<Detail name=\"IFSC\" value=\"HDFC00000012\" />\r\n\t\t\t<Detail name=\"ACTYPE\" value=\"SAVINGS\" />\r\n\t\t\t<Detail name=\"ACNUM\" value=\"1208854765767445775\" />\r\n\t\t</Ac>\r\n\t</Payer>\r\n\t<Payees>\r\n\t\t<Payee \r\n            addr=\"tejas_vpa_jawaletejaszSFK@okicici\" \r\n            name=\"payee\" \r\n            seqNum=\"124454\" \r\n            type=\"PERSON\" \r\n            code=\"\" >\r\n\t\t\t<Merchant>\r\n\t\t\t\t<Identifier subCode=\"\" mid=\"\" sid=\"\" tid=\"\"\r\n                            merchantType=\"LARGE\"\r\n                            merchantGenre=\"ONLINE\"\r\n                            onBoardingType=\"BANK\"/>\r\n\t\t\t\t<Name brand=\"ABC\" legal=\"Y\" franchise=\"Google\"/>\r\n\t\t\t\t<Ownership type=\"OTHERS\"/>\r\n\t\t\t</Merchant>\r\n\t\t</Payee>\r\n\t</Payees>\r\n</upi:ReqAuthMandate>",
-              "options": {
-                "raw": {
-                  "language": "xml"
-                }
-              }
-            },
-            "url": {
-              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerResp/ReqAuthMandate",
-              "protocol": "https",
-              "host": [
-                "txn-upi-switch",
-                "boltpe",
-                "co",
-                "in"
-              ],
-              "path": [
-                "IssuerResp",
-                "ReqAuthMandate"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "4.1.3 IM Req Mandate Confirmation",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "<upi:ReqMandateConfirmation xmlns:upi=\"http://npci.org/upi/schema/\">\r\n\r\n    <Head \r\n        ver=\"2.0\" \r\n        ts=\"2026-04-24T16:30:00+05:30\" \r\n        orgId=\"NPCI\" \r\n        msgId=\"123YYTBAWIZYV2026052510283055462734\" />\r\n\r\n    <Txn \r\n        id=\"123EYBMGWPIXO2026052510283055556312\" \r\n        note=\"Mandate Confirmation\" \r\n        custRef=\"C00047\" \r\n        refId=\"REF123456\" \r\n        refUrl=\"https://example.com\" \r\n        ts=\"2026-04-24T16:30:00+05:30\" \r\n        type=\"CREATE\" \r\n        initiationMode=\"00\" \r\n        initiatedBy=\"PAYER\" \r\n        purpose=\"01\" \r\n        refCategory=\"00\" \r\n        orgTxnId=\"ORG123456\" />\r\n\r\n    <TxnConfirmation \r\n        note=\"Approved\" \r\n        orgStatus=\"SUCCESS\" \r\n        orgErrCode=\"00\" \r\n        type=\"MANDATE\" \r\n        actn=\"APPROVE\">\r\n\r\n        <Ref \r\n            type=\"PAYEE\" \r\n            regName=\"John Doe\" \r\n            addr=\"john@upi\" \r\n            approvalNum=\"APR123456\" \r\n            acNum=\"1234567890\" \r\n            IFSC=\"SBIN0001234\" \r\n            code=\"00\" \r\n            respCode=\"00\" />\r\n            \r\n    </TxnConfirmation>\r\n\r\n    <Mandate \r\n        name=\"Monthly Subscription\" \r\n        txnId=\"TXN123456\" \r\n        umn=\"UMN9000000002\" \r\n        ts=\"2026-04-24T16:30:00+05:30\" \r\n        revokeable=\"Y\" \r\n        shareToPayee=\"Y\" \r\n        type=\"CREATE\" \r\n        blockFund=\"N\">\r\n\r\n        <Validity start=\"24042026\" end=\"24052026\"/>\r\n\r\n        <Amount value=\"10.00\" rule=\"MAX\"/>\r\n\r\n        <Recurrence pattern=\"MONTHLY\">\r\n            <Rule value=\"5\" type=\"ON\"/>\r\n        </Recurrence>\r\n\r\n    </Mandate>\r\n\r\n    <Signature id=\"MANDATE\">\r\n        <!-- Digital Signature of the issuer -->\r\n    </Signature>\r\n\r\n</upi:ReqMandateConfirmation>",
-              "options": {
-                "raw": {
-                  "language": "xml"
-                }
-              }
-            },
-            "url": {
-              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerResp/ReqMandateConfirmation",
-              "protocol": "https",
-              "host": [
-                "txn-upi-switch",
-                "boltpe",
-                "co",
-                "in"
-              ],
-              "path": [
-                "IssuerResp",
-                "ReqMandateConfirmation"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "IM Actitvity Collect",
+          "name": "4.2 IM Activity Collect",
           "request": {
             "method": "POST",
             "header": [
@@ -776,7 +683,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\n    \"encDate\":\"qJavpuNtsqkxR9SDQ+fRn5gbJaWcXzbYw87P9YJSQBs0zLlf1RtPm1iYTxISTc3f2XT0RKFUbwhJ3rzCJoIs+ordJb1HSeooAy3fy7HHBx9Tc+fdc2BjbT1edK0PkCvGDEeOen1BPqaYOpralNbn/LAPNi594Ml66//swtIZGxUftfUqz4KqW+UY3snTrGDO6Zsh+i4yNWYgTLkiUI3Np0gIOW5GsGKEPLKiBpDZwJ57CMoSgQhoTjIaA8iL+CHJl+lkpSb4FojHp+1jdKqHQlbYCG497Y+g1ZD6wBe/FgxubtEwKK7QJJUX6jjBZrDmrUxaBAfHAhPyLZTxEFuXDDfGSpDM+HQsA05uwklR7QQl7uvFxcYdv0o+MrJhJRDNvU3/xefsWwPtmeK+TRAhSKe7lrSDgLghNiV35pYBjAR8U6keRewfSXhthyQ6PadakquajURn3KT9CpVrc+gbSO/ScVRTVRym3RFy4AJ0yKPaxVkAmWW6tf4F+25snJyg6NlA1bkCyoTDQ01oj4li3n4CjB5V+GyqsRKUZYJxpnieGk+EZb5sj+6iYJTrsTH4cIbcNOo7HSfZxT1BrmJPpUqS868U6mmS95Kif1WHPEn1WnrdvQ1LZjxFuU9FzU9DZ1evXeAxFq1ikU3MSkcL3I55rGa6t49Vlc7vLjTDjOVFak2GWQ==\",\n\n    \"AuthId\":\"M00002\"\n\n}",
+              "raw": "{\n    \"encDate\":\"9bCejVec4L95N1EobfQ9t4wk30T+tU7lzX11pabuNHOBwpD9i2qu4CwfcfnH3xb1N+zqwcX19YiGfx7RLbfSq4EYuXN1KeNRVn2csN8GELKKQRNyPsBw2/E3O5yH3GsB079ZySx9LqbOryEGAYn7wNVktQ+7px3UZqLW9eZ+RxS4+uM/8+bm9gurpEEbq8nVpQ65T6vTRSb7x0lONtnIHmli3ohoyP4h0su8bVb4qWED3Y3GIzYQnQMwrekS8RIuMl6TZ7GkgfV1uY4tc2gejifiTpb9HIHnfaic+Eb3xXrcBpoHgxYTYiKLZ9mDjpVszE978VmmPfSHOkkdjPtduU5sPIz8MBfmKHjke84uJ9KewILgnZwFaAsLsQSkm5mF1aG2T3wXL/6Ndhr7FWhgvQlsVyhO+jHj9lJ1sDjzRYLiqEqgaiDxDixKDd+gCvw75EsQU1jt1mBgBnpqRde2GXtkDkncnCj9BW8guYFzItLr6jyURhQM2dkioZRcFAN3yPKMzWYhn9FTXFQ0FdFidRF4wXtTXkl4EqI6gLXVyMvup4HQC7EvtUKtKySS1WNjkA3MBHKvnm/9P8N99op5W99zA+Wt/JBlyhiKhmMKGuIr4H43XAcCxtaMwIf9e14r7K2IvJk6fkKauOL8wL67DllEjP7sKl4UxUhSsGtZMIIjHlP3+YzO6M7w32b3fnpVrUZeQbRXu+QkgZtiIMnybjhmDVcIZ8PZsm88Ug1carLFslew2nc2sLigN4GMBA6aQ6J8EeqFrOC8f30Ttc5ezbug3Zs76UObdJhHV2x/87Pdh/4YLnmu4eXKcq1hW9fvcpTnhXSh279F0tB1EgcbaR8UKXuaINE6w8/kkAwOwITecNM9xb3S6XAwArE6YfbUUYVCiZfT1fzSRMdlGiW/1H120FtAKf5Pdz5EWqTEY3++wNRzGSRftbRG9vKDNo07CSjGCjSLzRiZv6nihgj3mDz/S3MWyg2MAqXoapsR2LvfuIgoKj6jEDJcy94Gz+jv\",\n    \"AuthId\":\"M0000118\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -803,44 +710,13 @@
           "response": []
         },
         {
-          "name": "ReqAuthMandate Collect",
+          "name": "4.4. IM ApproveReject Confirmation",
           "request": {
             "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<upi:ReqAuthMandate xmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head ver=\"1.0\" ts=\"\" orgId=\"102312\" msgId=\"123WLQVFPJYRN2026052508431202904955\" />\r\n    <Txn id=\"123GQHRKAXKJQ2026052508431202993077\" note=\"\" custRef=\"123DBUUOMSEQT2026041313031084668377\" refId=\"123DBUUOMSEQT2026041313031084668377\" refUrl=\"www.demo.com\" ts=\"2026-03-30 17:36:40\" type=\"CREATE\" initiationMode=\"\" initiatedBy=\"PAYEE\" purpose=\"00\" refCategory=\"00\" orgTxnId=\"123DBUUOMSEQT2026041313031084668377\" />\r\n    <Mandate name=\"Create\" txnId=\"123DBUUOMSEQT2026041313031084668377\" umn=\"\" ts=\"2026-03-30 17:36:40\" revokeable=\"Y\" shareToPayee=\"Y\" type=\"\" blockFund=\"Y\">\r\n        <Validity start=\"09042026\" end=\"09082026\" />\r\n        <Amount value=\"10.00\" rule=\"MAX\" />\r\n        <Recurrence pattern=\"ONETIME\">\r\n            <Rule value=\"\" type=\"BEFORE\" />\r\n        </Recurrence>\r\n    </Mandate>\r\n    <Payer addr=\"nitesh98@upi\" name=\"payer\" seqNum=\"122\" type=\"ENTITY\" code=\"\">\r\n       \r\n    </Payer>\r\n    <Payees>\r\n        <Payee addr=\"sani21@upi\" name=\"payee\" seqNum=\"124454\" type=\"PERSON\" code=\"\" >\r\n            <Info>\r\n                <Identity id=\"\" type=\"PAN|AADHAAR|ACCOUNT\" verifiedName=\"\" />\r\n                <Rating VerifiedAddress=\"TRUE\" />\r\n            </Info>\r\n            <Ac addrType=\"ACCOUNT\">\r\n                <Detail name=\"IFSC\" value=\"HDFC00000012\" />\r\n                <Detail name=\"ACTYPE\" value=\"SAVINGS\" />\r\n                <Detail name=\"ACNUM\" value=\"1208854765767445775\" />\r\n            </Ac>\r\n            <Merchant>\r\n                <Identifier subCode=\"\" mid=\"\" sid=\"\" tid=\"\"\r\n\r\n                            merchantType=\"LARGE\"\r\n\r\n                            merchantGenre=\"ONLINE\"\r\n\r\n                            onBoardingType=\"BANK\"/>\r\n                <Name brand=\"ABC\" legal=\"Y\" franchise=\"Google\"/>\r\n                <Ownership type=\"OTHERS\"/>\r\n            </Merchant>\r\n        </Payee>\r\n    </Payees>\r\n</upi:ReqAuthMandate>",
-              "options": {
-                "raw": {
-                  "language": "xml"
-                }
-              }
-            },
-            "url": {
-              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerResp/ReqAuthMandate",
-              "protocol": "https",
-              "host": [
-                "txn-upi-switch",
-                "boltpe",
-                "co",
-                "in"
-              ],
-              "path": [
-                "IssuerResp",
-                "ReqAuthMandate"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "/mandate/action",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"encDate\":\"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\",\r\n    \"AuthId\":\"TPSM000091\"\r\n}",
+              "raw": "{\r\n    \"encDate\":\"vImCd64Kj1kQ/KPCet15B0G5dMD8/nYWHDblpJi1tDueHG7FpTPwh0S3eMuQlCmeCAnNeBQxQQvNy1h4jjUVVaAUEvuYGYLtC3TEfOdx9ufnWeGUO6digi/ML7o2SWockSfhFksZBvJbIbjVR07rNO3fOweik8gAJlRbyW0pIZWCIhcDEbpg8IKSLsjaCDgOL5cpHCuW6/nMf8NtrXytyrKDdsC4EuicbQ7SCGBWP8UJDkTUuTb/imVIH5AFznoeNjqYbbLculiVkvByqnfVMYJcPf5MWKtH5yne1YqXWtoEo+bF/dM//AGjpvFF1/mljSStI5tpszocs8l4UbKWe13Q6D1+HFmZMREi9q7WSVE83r5mxmzlEsM3vaqJlOQilx5d6MKmhaG9w/zSz7Oe4eszvz78eecV7JIHs9r5fVdEsQ1xmEJQRALjnfznole3Qg1e2C45J3T7XNyLNi28onWw0Gcjrcm51mBkxKT3L+eWI4+iFI71KFcJuhIkScm52AGsiPz4Z+GRxSg1UYmjwFyRsVtpccLNvV3u6wmW3Q2dUDishuWNHVYJyqqlDcj8coDONaPYb4gnhxKQ9DBSSksi/NiCZ07i5nrIryIoQezk0NPuyxR/TUNUIL1q2ROyJV6FFl1Y0wqTGW1vQxoddyC1/l/d0qp5r3VzNSWcwJZnrhWUCmgpD8kfnObzsmiuwJwjGOrSsBTIVhYEG3K71WbxQsRKXxfrDmpdILH/txTQeYPfzMBD6DRm2k5Q2ZkYxr0xaDQdE0r5jUXnlGAy4PXEIydQz529ykhV+hi3L7lCwGLEkLBxhMXmaNMolIJgNyNqzzAZ/3xnoYqPV2XjtO0I0Xd5HeMmrZmd3HtS8V659CL1HprXl7IBFaFhn1jb319Do5tckyR/Z5uiebA1EnOjBdcGB0YGaHbD1fGXmbmIDkTR0cpgpXvigaLX0ad+80LktmNWNDEGrt+siD+vz+tX3ubTVZBa92OCLE75TBSruFstZ240eGFBK+wX4o0wSCN3yntV/efVkLdiKlKdHgbbT9F8rJFe3jeHJSbPS1ogNZssGO+bkLIMyWB6Ejc4ppIsjdzhFh85VYYZ+san75pvNJLosRidzRCMK1RsDho2Vgz+M7KtKN9BV8TCc+DSKJvPfOBF8VZfsTQO7m7i+dZcACbSgmPE8a9CLBYsk78zeF1mKhOzRJmFX/WBFmRbrMWCl6CRSrin8pD5HkkLqU287DoP9B3YVG9eV2PUCsC+LUBdf3EYyUOomUGWy9ecHNqUvoJFfjy3Ibk57vkYTV3DgcffpghJk04Ja6LFFClq6eWmUebbKRXwMDHM1rKSSETynjYCQBerz2KP5MPTY5/Bnc2pdMjFv1SlQrTm8wAq0uFRyYLEPuraLzgjDSnkMY5JPZIfSco=\",\r\n    \"AuthId\":\"TPSM000091\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -927,6 +803,135 @@
                 "v1",
                 "mandate",
                 "list"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Mandate Management Response",
+      "item": [
+        {
+          "name": "4.2.1 Response Mandate",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<upi:RespMandate xmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head \r\n        ver=\"1.0\" \r\n        ts=\"2026-03-30 17:36:40\" \r\n        orgId=\"102312\" \r\n        msgId=\"123UTLZPZEWXW2026061503303315414266\" />\r\n    <Resp \r\n        reqMsgId=\"123UTLZPZEWXW2026061503303315414266\" \r\n        result=\"SUCCESS\" \r\n        errCode=\"\" \r\n        actn=\"APPROVED\">\r\n        <Ref \r\n            type=\"PAYER\" \r\n            seqNum=\"0506202601\" \r\n            regName=\"payee\" \r\n            addr=\"Tejas08062026@upi\" \r\n            approvalNum=\"JUN0506202601\" \r\n            acNum=\"987667899876\" \r\n            IFSC=\"HDFC0021196\" \r\n            code=\"\" \r\n            respCode=\"00\" />\r\n    </Resp>\r\n    <Txn \r\n        id=\"123RMGXSWGNZG2026061503303315493236\" \r\n        note=\"\" \r\n        custRef=\"123RMGXSWGNZG2026061503303315493236\" \r\n        refId=\"123RMGXSWGNZG2026061503303315493236\" \r\n        refUrl=\"www.demo.com\" \r\n        ts=\"2026-06-12 15:43:00\" \r\n        refCategory=\"00\"\r\n        type=\"CREATE\" \r\n        initiationMode=\"\" \r\n        initiatedBy=\"PAYER\" \r\n        purpose=\"00\" \r\n        orgTxnId=\"123RMGXSWGNZG2026061503303315493236\" />\r\n    <Mandate \r\n        name=\"CREATE\" \r\n        txnId=\"123JJQDTKSHLG2026061209514374692392\" \r\n        umn=\"UMN0406202601\" \r\n        ts=\"2026-06-04 11:00:00\" \r\n        revokeable=\"Y\" \r\n        shareToPayee=\"Y\" \r\n        type=\"\" \r\n        blockFund=\"Y\">\r\n        <Validity start=\"12062026\" end=\"12082026\" />\r\n        <Amount value=\"700.00\" rule=\"MAX\" />\r\n        <Recurrence pattern=\"ONETIME\">\r\n            <Rule value=\"\" type=\"BEFORE\" />\r\n        </Recurrence>\r\n    </Mandate>\r\n    <Signature id=\"MANDATE\">\r\n        SIGNATURE_PLACEHOLDER\r\n    </Signature>\r\n</upi:RespMandate>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerResp/RespMandate",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerResp",
+                "RespMandate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "4.2.2. Request Auth Mandate Collect",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<upi:ReqAuthMandate xmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head ver=\"1.0\" ts=\"\" orgId=\"102312\" msgId=\"123XAJWDDFTAV2026061209514374643618\" />\r\n    <Txn id=\"123JJQDTKSHLG2026061209514374692392\" note=\"\" custRef=\"123JJQDTKSHLG2026061209514374692392\" refId=\"123JJQDTKSHLG2026061209514374692392\" refUrl=\"www.demo.com\" ts=\"2026-03-30 17:36:40\" type=\"CREATE\" initiationMode=\"\" initiatedBy=\"PAYEE\" purpose=\"00\" refCategory=\"00\" orgTxnId=\"123JJQDTKSHLG2026061209514374692392\" />\r\n    <Mandate name=\"Create\" txnId=\"123JJQDTKSHLG2026061209514374692392\" umn=\"\" ts=\"2026-03-30 17:36:40\" revokeable=\"Y\" shareToPayee=\"Y\" type=\"\" blockFund=\"Y\">\r\n        <Validity start=\"09042026\" end=\"09082026\" />\r\n        <Amount value=\"10.00\" rule=\"MAX\" />\r\n        <Recurrence pattern=\"ONETIME\">\r\n            <Rule value=\"\" type=\"BEFORE\" />\r\n        </Recurrence>\r\n    </Mandate>\r\n    <Payer addr=\"Tejas08062026@upi\" name=\"payer\" seqNum=\"122\" type=\"ENTITY\" code=\"\">\r\n       \r\n    </Payer>\r\n    <Payees>\r\n        <Payee addr=\"tejas_vpa_jawaletejaszSFK@okicici\" name=\"payee\" seqNum=\"124454\" type=\"PERSON\" code=\"\" >\r\n            <Info>\r\n                <Identity id=\"\" type=\"PAN|AADHAAR|ACCOUNT\" verifiedName=\"\" />\r\n                <Rating VerifiedAddress=\"TRUE\" />\r\n            </Info>\r\n            <Ac addrType=\"ACCOUNT\">\r\n                <Detail name=\"IFSC\" value=\"SBIN0004321\" />\r\n                <Detail name=\"ACTYPE\" value=\"SAVINGS\" />\r\n                <Detail name=\"ACNUM\" value=\"123443211234\" />\r\n            </Ac>\r\n            <Merchant>\r\n                <Identifier subCode=\"\" mid=\"\" sid=\"\" tid=\"\"\r\n\r\n                            merchantType=\"LARGE\"\r\n\r\n                            merchantGenre=\"ONLINE\"\r\n\r\n                            onBoardingType=\"BANK\"/>\r\n                <Name brand=\"ABC\" legal=\"Y\" franchise=\"Google\"/>\r\n                <Ownership type=\"OTHERS\"/>\r\n            </Merchant>\r\n        </Payee>\r\n    </Payees>\r\n</upi:ReqAuthMandate>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerResp/ReqAuthMandate",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerResp",
+                "ReqAuthMandate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "4.2.3 Request Mandate Confirmation",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<upi:ReqMandateConfirmation xmlns:upi=\"http://npci.org/upi/schema/\">\r\n\r\n    <Head \r\n        ver=\"2.0\" \r\n        ts=\"2026-04-24T16:30:00+05:30\" \r\n        orgId=\"NPCI\" \r\n        msgId=\"123UTLZPZEWXW2026061503303315414266\" />\r\n\r\n    <Txn \r\n        id=\"123RMGXSWGNZG2026061503303315493236\" \r\n        note=\"Mandate Confirmation\" \r\n        custRef=\"C00060\" \r\n        refId=\"REF123456\" \r\n        refUrl=\"https://example.com\" \r\n        ts=\"2026-06-12T17:00:00+05:30\" \r\n        type=\"CREATE\" \r\n        initiationMode=\"00\" \r\n        initiatedBy=\"PAYER\" \r\n        purpose=\"01\" \r\n        refCategory=\"00\" \r\n        orgTxnId=\"ORG123456\" />\r\n\r\n    <TxnConfirmation \r\n        note=\"Approved\" \r\n        orgStatus=\"SUCCESS\" \r\n        orgErrCode=\"00\" \r\n        type=\"MANDATE\" \r\n        actn=\"APPROVE\">\r\n        <Ref \r\n            type=\"PAYEE\" \r\n            regName=\"Tejas Jawale\" \r\n            addr=\"tejas_vpa_jawaletejaszSFK@okicici\" \r\n            approvalNum=\"APR1823456\" \r\n            acNum=\"123443211234\" \r\n            IFSC=\"SBIN0004321\" \r\n            code=\"00\" \r\n            respCode=\"00\" />        \r\n    </TxnConfirmation>\r\n    <Mandate \r\n        name=\"Monthly Subscription\" \r\n        txnId=\"TXN123456\" \r\n        umn=\"UMN1506202601\" \r\n        ts=\"2026-04-24T16:30:00+05:30\" \r\n        revokeable=\"Y\" \r\n        shareToPayee=\"Y\" \r\n        type=\"CREATE\" \r\n        blockFund=\"N\">\r\n        <Validity start=\"24042026\" end=\"24052026\"/>\r\n        <Amount value=\"700.00\" rule=\"MAX\"/>\r\n        <Recurrence pattern=\"MONTHLY\">\r\n            <Rule value=\"5\" type=\"ON\"/>\r\n        </Recurrence>\r\n\r\n    </Mandate>\r\n\r\n    <Signature id=\"MANDATE\">\r\n        <!-- Digital Signature of the issuer -->\r\n    </Signature>\r\n\r\n</upi:ReqMandateConfirmation>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerResp/ReqMandateConfirmation",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerResp",
+                "ReqMandateConfirmation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "4.2.4 Request Auth Mandate Pay",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<upi:ReqAuthMandate\r\n\txmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head ver=\"1.0\" ts=\"\" orgId=\"102312\" msgId=\"123UTLZPZEWXW2026061503303315414266\" />\r\n    <Txn \r\n        id=\"123RMGXSWGNZG2026061503303315493236\" \r\n        note=\"\" \r\n        custRef=\"123DBUUOMSEQT2026041313031084668377\" \r\n        refId=\"123DBUUOMSEQT2026041313031084668377\" \r\n        refUrl=\"www.demo.com\" \r\n        ts=\"2026-03-30 17:36:40\" \r\n        type=\"CREATE\" \r\n        initiationMode=\"\" \r\n        initiatedBy=\"PAYER\" \r\n        purpose=\"00\" \r\n        refCategory=\"00\" \r\n        orgTxnId=\"123RMGXSWGNZG2026061503303315493236\" />\r\n    <Mandate \r\n        name=\"Create\" \r\n        txnId=\"123RMGXSWGNZG2026061503303315493236\" \r\n        umn=\"UMN1506202601\" \r\n        ts=\"2026-03-30 17:36:40\" \r\n        revokeable=\"Y\" \r\n        shareToPayee=\"Y\" \r\n        type=\"\" \r\n        blockFund=\"Y\">\r\n        <Validity start=\"09042026\" end=\"09082026\" />\r\n        <Amount value=\"400.00\" rule=\"MAX\" />\r\n        <Recurrence pattern=\"ONETIME\">\r\n            <Rule value=\"\" type=\"BEFORE\" />\r\n        </Recurrence>\r\n    </Mandate>\r\n    <Payer \r\n        addr=\"Tejas08062026@upi\" \r\n        name=\"payer\" \r\n        seqNum=\"122\" \r\n        type=\"ENTITY\" \r\n        code=\"\">\r\n        <Info>\r\n            <Identity id=\"\" type=\"ACCOUNT\" verifiedName=\"\" />\r\n            <Rating VerifiedAddress=\"TRUE\" />\r\n        </Info>\r\n        <Ac addrType=\"ACCOUNT\">\r\n            <Detail name=\"IFSC\" value=\"HDFC0021196\" />\r\n            <Detail name=\"ACTYPE\" value=\"SAVINGS\" />\r\n            <Detail name=\"ACNUM\" value=\"987667899876\" />\r\n        </Ac>\r\n    </Payer>\r\n    <Payees>\r\n        <Payee \r\n            addr=\"tejas_vpa_jawaletejaszSFK@okicici\" \r\n            name=\"payee\" \r\n            seqNum=\"124454\" \r\n            type=\"PERSON\" \r\n            code=\"\" >\r\n            <Merchant>\r\n                <Identifier subCode=\"\" mid=\"\" sid=\"\" tid=\"\"\r\n                            merchantType=\"LARGE\"\r\n                            merchantGenre=\"ONLINE\"\r\n                            onBoardingType=\"BANK\"/>\r\n                <Name brand=\"ABC\" legal=\"Y\" franchise=\"Google\"/>\r\n                <Ownership type=\"OTHERS\"/>\r\n            </Merchant>\r\n        </Payee>\r\n    </Payees>\r\n</upi:ReqAuthMandate>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://txn-upi-switch.boltpe.co.in/IssuerResp/ReqAuthMandate",
+              "protocol": "https",
+              "host": [
+                "txn-upi-switch",
+                "boltpe",
+                "co",
+                "in"
+              ],
+              "path": [
+                "IssuerResp",
+                "ReqAuthMandate"
               ]
             }
           },
@@ -1055,7 +1060,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJraWQiOiI1NjY5YmM2OS1jY2FmLTQ0ZDUtYmNmNi1lMTk4MjAyMzU2OTkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3Nzk4NzQ4ODgsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovLzEwLjQwLjEuODc6ODA4MC9tZXJjaGFudFBheSIsImV4cCI6MTc3OTg3NTE4OCwiaWF0IjoxNzc5ODc0ODg4LCJqdGkiOiIxOGZhZWI0YS1mZTVlLTRjZGEtYWZkMC1lOTZhYTk2OTc1YzAifQ.Ul0HQlhha8q1et1HXK_MpzyIPqORCCB2WbxJq94T10AU83GGQnojAxjzYJOGLLQIUW69UDkIJ92CL30nswkSip6uLzFzUo9M0UTbva-eFejDUh3q-wdsg4Fed0ARx50whX5B5lw2JnUWzSLOjf9-4aO80-T0gb8oD11S62Zgyj2o6JqM8RoDjOB-8AK7QXMs8ODi1MRGRBcmX0UGRRh5Uo0g6dtVbxDYs9nscfgzOYInJbNT0nnJLXxM_8PDsgkN7nEWG7kdOj0Bv3uqPwJ1AUUqVjzAreLe_Sr-DmwZH9WCvGlW00iLCIS3z0Akqd46k2_W04PjMh4q3fjJFR7lCA",
+                  "value": "",
                   "type": "string"
                 }
               ]
@@ -1064,7 +1069,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"encData\": \"Zs6II6M3ybMGSkWFFU+XbshZ4edm8k8lxuj4NbxXO68su7aSMOo4naVHCE0eCs0OfWOiISQQPNsvCsByJta2y7ypJXw0VsbXvgvGboGU7/dqMTnoTL5FZo2DFSFBJO9Am4SRfZI7FosJpIeN91r0Dik8KWeZDLmJT74jT8vOE0GWOTZn5ew4pV+sFr9UaEyrelUVv3kZYUbH3IfSV8WABXkyDiC81zkUN94oie3nUSDKrLDPttjAZffXtuQG4IfA29ktACRyFLBkS+2xNQK7+yV0qchZcn9H7z5M4wngvTvSsAIHm742MOOZfmKjLqqB2MOtyLOu4NANbtV8rdQhfdmjfnsuQTKmt6/2MCgVkDtlhngg66A6le5Ho+Psb7IhCAt9tcmv4JPdgOI2Ago7oipD4gJkmvf0P8YsgCbQfGG2z4dH7+FcaRwPqzan14NCDR3z3Dk73wjJhF/b3zjajhz9bp/MIYcualtdXxfVNHJ5QJoPqA20k3byF7tQ1PmTsLk/QVo7CzxD44xKOeAsbP9vIBfjx8ufdDKMjgvJhgLTFhW8e2XbFo/xkG25vEHOTx8oY2NYs9eayIAa1SVRiC69R4owgRbc9SiDQlYKasRe2FavZxP5t6R4FyOjNax+9pY2gRqUfRHi4Z+wtJ1vPqx8JaRqXzDXEilZmufh+tiYZp4+qrc9obAkybN8dUgb8nelrmyJ2LmPBAuljT8rtkliIEYFW65N8lamE2/eWH0MA5jynTKFO+vHrSAvTCL3iicswEVWSpT5Y8OOlamhrFWYsGmk4lgtwjhDg/+DlGkZSYXGc0SAjI9H9Ts6DAv1HZjVDa1C/u0xmasOFpp1JiLdciY0fwFOP8kmqbZ2BP8jFVTqHmJIC9p/muwkC0x2vynqtUbEJUEnRziqj87bOfm8koe/g0uwZIG02rBJow1P3oYHRfwB+CNCzabobm8D1q5km5S4CS3ETgJhKIQkdOaPL7Ug6DY2c59CejSLlPpDidYdV+S27on2KQtmBsf7qBdqhcuH26mg/5BhuRbNnvdsE/6I55trivf3w22a1Fg/4koSPHvT09HmAztP8AMt6eK3Jwrt5z5VMY0S8ndjODPmuOtaW2hlZHIhYp6xrZTJvJN1y3UxoKmbckG3FGL/GdJWdUSESnaHBefTebEc+BQK4a3zEHVtVrV3Um0Tvr3ylXaT5DeaT3jYbFVx2niVqNaZ1C6knVKiu3cJ7Y8KJArfmkw2lG9ujcrdEczTx9nTk5eNN3PA9BdDJTDIBGILdNKHXr3mUAMv/zsRErS89tJFG2qnQnxfLjYzQ+zjOHlHVMnWIfhpmjHMZBMLlEOHM5WiMakKQby0C/ZuWmgBm3JN6C0wJbzr2BZVWaVt3B67uL99ZQOwFgYn2UuzB32ivmmpgwKWsfiyNZ/Aza+0qYNNUHg8M3EwanDarFXkK7ujkpiuyy4R27VyAFbiBC/I\",\r\n    \"authId\": \"M0000118\"\r\n}",
+              "raw": "{\r\n    \"encData\": \"YT/El4JMmxzC2t6nKY5njoaEldRzKGHWyymrZSKLYfDbmT5usrKVPOzAY42qLPwvP0xcPVvxKxTJeYil+lkWmdE1UI9vl4ybIiFXoBL2UpGFsDGpF7Mmvpf3otdJxstAGevrWJUspfMzdSLJV8AisX0Z+RWhzbLdZP37X8TmKKf2dZFYluu4WrB4Tm5CDC3IyRHGmk24JEA+5nFoZIi73WGE8i3zSBrMst4LHtLabCoeF0qkplIzqba0jwEaEup08oI7sOT+ZMqVBgQBGfdkvVlv9i0cIokeA2jBka4MVoUxFyxMychvNDA1s9yGnA4OVyjMRJIcFJp9gwz+5bW8flrSakz/Ex8MWqqeN7Hk2luZMLQxG3tOqQpsmQev6czwgJ78TgNRkaUG4/3GtQQ2OvAhcq7wNd4gXLAOhlv4qeHS/vM0jhRztqBfKAA3oEDBdxePXaEe6Y8gju4spFA6zTKEJCRzdq5PQ0PZ9HHh+FM6+ge70doT0GxmQ9NzK4OgKfkx5Chv8tWZL6dHUPQask3L/aB1MnAMJxXef+q8+Cs3Z2K6HmlV/Rv50Q+gdAAk2ogAUWgCWmWf0bsCuIpaE7uGadGgf8p1XpHtPBmlMjE+Gg4wCCJAu88g6SmCWtHQSAxMBFrILqqAySX31zvllD/AwKTry7J0PBkVTqWPu1QFQTg/BBWKHxpJRfqsqIn6KcezKplwjncDmZKrCvHrKHVzpTXJI4ts9lRUCS84x978t/U/1ipwedlFP6MkDoj6eMXvX5BooGtKWKbKqHtLR3dWl7jmEzVdt8tFzI7HOLtSUMQD3HzXuzfJAmA2MJ20G4oh6ZsW2eynSBPUGUAUsvX+w5KTt4HRjErwi/ztUS1+3LaBeipZXUV5iNliLZJ85Xdh412SGakb4N+59m4pHf2SnyLw5QdrZN6NTGkkJjnaUIj9zJNn0kmnp6Xn8u+CDWKkj6jgBOYC1epG2LW5DJeTVpfHLU97FMNbKL3XudDFr//OWke0XvCqCshQvlYehZlYq8gQ9fh8LWPeAhH2StK29vtFQZfF47viFAtVrqxM+Ck0lEOQG+nB1h32TZi2Iqm+SmCJ4EtLZPzpyQ5HzlfKkqIlv6IZJLEL9Hk0jjVSOTdSywBSeNJChRe3Ux9mGQD9vNjm66jSPP51oBEnUtHiB6EdwpPTGln3DlvMzJEZRcSd+TAKrJcakJFjkQv3csJBN0OrKi1wUMYbw/z3ykx9dhTMlJVAfwQAfM4wqa956nfOQRZB7U+T77SvhldS58Fi8o9uV9F5A1y6VLxAa1AinkWU9DDOuuNPUoAG6uzxVfpjC4FOwnVfe9Ypc3S2Sf5Qs+cdtZRgXI1FPA/a4bujgWDf+PwcB5A6Hz/wO/QUcwdk1xYQxUvwc1BAcv1y2PlKuub1I0AJk1tHvzqNICGROaTjMotAg/LDGQrQnRht8+fW5oNUTVDdfElfqxVr5y5RUAY=\",\r\n    \"authId\": \"M0000118\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1098,7 +1103,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJraWQiOiIyODcwODZjZi05ZmY2LTQ3M2MtOWUzMS1kZDllZjY5YjM0ZTEiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3ODAzMDk0NjIsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovLzEwLjQwLjEuODc6ODA4MC9tZXJjaGFudFBheSIsImV4cCI6MTc4MDMwOTc2MiwiaWF0IjoxNzgwMzA5NDYyLCJqdGkiOiI1MDY1NTk0OS02NDdkLTQ5MzktOTA2OS0yOWY1NjIzYzZlZjIifQ.BuE8kGrqqXj2XcXyQYKMX5NetSp00n9lxrBDl_HijkrRmnH-8gNOCc2pbx4cw9aKgfNYk4qdXnoWgTVhgjW9pDtPBAo35HJpeRtK7n8qEVuRYN1ZolT4UBku-uY4DQLpOIYKkcEc-rBrNx59CbczLdFVl4AMUSnXampcmOsgPfTT87qGiZTtDxRHYJ4GbvOl5ed9Sh45gVtqrPvUK9VWYNkoPP71sypDDkY_LsCk5ed6_mZKWoogaI2TZ5MhIWLtDBXBoQTkG16u9WkIvVUgewdBaeUmvZSD9-v75ZJYPTtOB5fzQ2qzE71VwyHJZ1Fn4AOFiyae9WzgEg7IPXzv4Q",
+                  "value": "eyJraWQiOiJiYjU3N2VjNS1jZTg5LTRlMjgtODM4Zi1kZmYyNWNlMzNmMDMiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJteS1jbGllbnQiLCJhdWQiOiJteS1jbGllbnQiLCJuYmYiOjE3ODExNjIyNzQsInNjb3BlIjpbInJlYWQiXSwiaXNzIjoiaHR0cDovLzEwLjQwLjEuODc6ODA4MC9tZXJjaGFudFBheSIsImV4cCI6MTc4MTE2MjU3NCwiaWF0IjoxNzgxMTYyMjc0LCJqdGkiOiI2ODkzY2MzMi1hZTgxLTRhMjctYWY1ZS05YTU4YWE2NDA5MWEifQ.Q4u9XimrUYo-gX-lz8uwDgUea7TMUihakhUsqvJqHOlcudE1BFH738CK4Wr9GWlAa0Wk-21r_HT9a0yisOc6-DD1jEPb1j3W9FQTQD3G30aDOIcuTO7EbYH3wATSTyHqKpuCAA9zlyUFxcXlGdiWo_ibwOkGI0v4BnuVo89pTaZQEi_JwbtLd3rT6oSUcdSjxyt80CkQHGfFsbV6TfC4TJWtuZHNbEJ6vPH0fHjRJnTceEvn3WdwFdRyNQVqgVSuPPJOrF9MpVXNOD9odnuUEF82mnHB9hu1SYToWIjMijl89bFX_tvEkcW5Q9C5YJCRoE3EsCA9w6dWZF1CZdBTeA",
                   "type": "string"
                 }
               ]
@@ -1118,7 +1123,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"encData\": \"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\",\n    \"authId\": \"TPSM000091\"\n}",
+              "raw": "{\n    \"encData\": \"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\",\n    \"authId\": \"TPSM000091\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1550,25 +1555,6 @@
             }
           },
           "response": []
-        },
-        {
-          "name": "New Request",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": ""
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "New Request",
-          "request": {
-            "method": "GET",
-            "header": []
-          },
-          "response": []
         }
       ]
     },
@@ -1656,7 +1642,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ReqAuthDetails xmlns=\"http://npci.org/upi/schema/\">\n    <Head ver=\"1.0\" ts=\"123423\" orgId=\"NPCI\" msgId=\"123IVFOCUUM202606100655508998570021\"/>\n    <Txn id=\"123IVFOCUUM202606100655508998570021\"\n         note=\"Payments for testing\"\n         refId=\"REF123\"\n         custRef=\"CUST001\"\n         ts=\"T008000900212002021\"\n         type=\"PAY\">\n        <RiskScores>\n            <Score provider=\"sp\" type=\"TXNRISK\" value=\"10\"/>\n            <Score provider=\"NPCI\" type=\"TXNRISK\" value=\"5\"/>\n        </RiskScores>\n\n        <Rules>\n            <Rule name=\"EXPIREAFTER\" value=\"30\"/>\n            <Rule name=\"MINAMOUNT\" value=\"1\"/>\n        </Rules>\n\n    </Txn>\n    <Payer addr=\"Tejas08062026@upi  \"\n           name=\"TEJAS JAWALE\"\n           seqNum=\"1\"\n           type=\"PERSON\"\n           code=\"0000\">\n        <Info>\n            <Identity id=\"ABCDE1234F\" type=\"PAN\" verifiedName=\"kalesh\"/>\n            <Rating VerifiedAddress=\"TRUE\"/>\n        </Info>\n        <Amount value=\"100\" curr=\"INR\">\n            <Split name=\"PURCHASE\" value=\"100\"/>\n        </Amount>\n         <Ac addrType=\"ACCOUNT\">\n                <Detail name=\"IFSC\" value=\"HDFC0021196\"/>\n                <Detail name=\"ACTYPE\" value=\"SAVINGS\"/>\n                <Detail name=\"ACNUM\" value=\"987667899876\"/>\n            </Ac>\n    </Payer>\n    <Payees>\n        <Payee seqNum=\"1\"\n               addr=\"Tejas08062026@upi\"\n               name=\"Receiver\"\n               type=\"PERSON\"\n               code=\"0000\">\n                <!-- <Payee seqNum=\"1\"\n               addr=\"myvpa_testuserVAcR@paytm\"\n               name=\"Receiver\"\n               type=\"PERSON\"\n               code=\"0000\"> -->\n\n            <!-- <Info>\n                <Identity id=\"XYZ1234\" type=\"PAN\" verifiedName=\"Receiver\"/>\n                <Rating VerifiedAddress=\"TRUE\"/>\n            </Info>\n\n            <Ac addrType=\"ACCOUNT\">\n                <Detail name=\"IFSC\" value=\"HDFC0001234\"/>\n                <Detail name=\"ACTYPE\" value=\"SAVINGS\"/>\n                <Detail name=\"ACNUM\" value=\"10439876543210\"/>\n            </Ac> -->\n            <Amount value=\"100\" curr=\"INR\">\n                <Split name=\"PURCHASE\" value=\"100\"/>\n            </Amount>\n        </Payee>\n    </Payees>\n\n</ReqAuthDetails>",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ReqAuthDetails xmlns=\"http://npci.org/upi/schema/\">\n    <Head ver=\"1.0\" ts=\"123423\" orgId=\"NPCI\" msgId=\"123GVJKWBSJ202606110718047531140700\"/>\n    <Txn id=\"123GVJKWBSJ202606110718047531140700\"\n         note=\"Payments for testing\"\n         refId=\"REF123\"\n         custRef=\"CUST001\"\n         ts=\"T008000900212012022\"\n         type=\"PAY\">\n        <RiskScores>\n            <Score provider=\"sp\" type=\"TXNRISK\" value=\"10\"/>\n            <Score provider=\"NPCI\" type=\"TXNRISK\" value=\"5\"/>\n        </RiskScores>\n        <Rules>\n            <Rule name=\"EXPIREAFTER\" value=\"30\"/>\n            <Rule name=\"MINAMOUNT\" value=\"1\"/>\n        </Rules>\n\n    </Txn>\n    <Payer addr=\"Tejas08062026@upi\"\n           name=\"TEJAS JAWALE\"\n           seqNum=\"1\"\n           type=\"PERSON\"\n           code=\"0000\">\n        <Info>\n            <Identity id=\"ABCDE1234F\" type=\"PAN\" verifiedName=\"kalesh\"/>\n            <Rating VerifiedAddress=\"TRUE\"/>\n        </Info>\n        <Amount value=\"100\" curr=\"INR\">\n            <Split name=\"PURCHASE\" value=\"100\"/>\n        </Amount>\n         <Ac addrType=\"ACCOUNT\">\n                <Detail name=\"IFSC\" value=\"HDFC0021196\"/>\n                <Detail name=\"ACTYPE\" value=\"SAVINGS\"/>\n                <Detail name=\"ACNUM\" value=\"987667899876\"/>\n            </Ac>\n    </Payer>\n    <Payees>\n        <Payee seqNum=\"1\"\n               addr=\"tejas_vpa_jawaletejaszSFK@okicici\"\n               name=\"Receiver\"\n               type=\"PERSON\"\n               code=\"0000\">\n                <!-- <Payee seqNum=\"1\"\n               addr=\"myvpa_testuserVAcR@paytm\"\n               name=\"Receiver\"\n               type=\"PERSON\"\n               code=\"0000\"> -->\n\n            <!-- <Info>\n                <Identity id=\"XYZ1234\" type=\"PAN\" verifiedName=\"Receiver\"/>\n                <Rating VerifiedAddress=\"TRUE\"/>\n            </Info>\n\n            <Ac addrType=\"ACCOUNT\">\n                <Detail name=\"IFSC\" value=\"HDFC0001234\"/>\n                <Detail name=\"ACTYPE\" value=\"SAVINGS\"/>\n                <Detail name=\"ACNUM\" value=\"10439876543210\"/>\n            </Ac> -->\n            <Amount value=\"100\" curr=\"INR\">\n                <Split name=\"PURCHASE\" value=\"100\"/>\n            </Amount>\n        </Payee>\n    </Payees>\n\n</ReqAuthDetails>",
               "options": {
                 "raw": {
                   "language": "xml"
@@ -1688,7 +1674,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<upi:RespPay xmlns:upi=\"http://npci.org/upi/schema/\">\r\n\r\n    <Head\r\n            ver=\"2.0\"\r\n            ts=\"2026-05-20T19:30:00\"\r\n            orgId=\"NPCI\"\r\n            msgId=\"123IVFOCUUM202606100655508998570021\"/>\r\n\r\n    <Txn\r\n            id=\"123IVFOCUUM202606100655508998570021\"\r\n            note=\"Payment Response\"\r\n            refId=\"REF123456\"\r\n            custRef=\"CUST123456\"\r\n            refUrl=\"https://example.com\"\r\n            ts=\"2026-05-20T19:30:00\"\r\n            purpose=\"00\"\r\n            type=\"PAY\"\r\n            subType=\"\"\r\n            initiationMode=\"00\"\r\n            orgTxnId=\"ORGTXN123\"\r\n            orgRrn=\"123456789012\"\r\n            orgTxnDate=\"2026-05-20\"\r\n            refCategory=\"00\">\r\n\r\n        <RiskScores>\r\n\r\n            <Score\r\n                    provider=\"sp\"\r\n                    type=\"TXNRISK\"\r\n                    value=\"10\"/>\r\n\r\n            <Score\r\n                    provider=\"npci\"\r\n                    type=\"TXNRISK\"\r\n                    value=\"5\"/>\r\n\r\n        </RiskScores>\r\n\r\n    </Txn>\r\n\r\n    <Resp\r\n            reqMsgId=\"123EXALAXIA202606081010446666960061\"\r\n            result=\"SUCCESS\"\r\n            errCode=\"00\"\r\n            actn=\"APPROVED\">\r\n\r\n        <Ref\r\n                type=\"PAYER\"\r\n                seqNum=\"1\"\r\n                addr=\"Tejas08062026@upi\"\r\n                regName=\"Tejas Jawale\"\r\n                acNum=\"1234567890\"\r\n                IFSC=\"HDFC0001234\"\r\n                code=\"00\"\r\n                accType=\"SAVINGS\"\r\n                settAmount=\"100.00\"\r\n                orgAmount=\"100.00\"\r\n                settCurrency=\"INR\"\r\n                approvalNum=\"APR123\"\r\n                respCode=\"00\"\r\n                reversalRespCode=\"\"/>\r\n\r\n        <Ref\r\n                type=\"PAYEE\"\r\n                seqNum=\"2\"\r\n                addr=\"payee@upi\"\r\n                regName=\"Merchant XYZ\"\r\n                acNum=\"9876543210\"\r\n                IFSC=\"SBIN0005678\"\r\n                code=\"00\"\r\n                accType=\"CURRENT\"\r\n                settAmount=\"100.00\"\r\n                orgAmount=\"100.00\"\r\n                settCurrency=\"INR\"\r\n                approvalNum=\"APR123\"\r\n                respCode=\"00\"\r\n                reversalRespCode=\"\"/>\r\n\r\n    </Resp>\r\n\r\n</upi:RespPay>",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<upi:RespPay xmlns:upi=\"http://npci.org/upi/schema/\">\r\n    <Head\r\n            ver=\"2.0\"\r\n            ts=\"2026-05-20T19:30:00\"\r\n            orgId=\"NPCI\"\r\n            msgId=\"123IVFOCUUM202606100655508998570021\"/>\r\n    <Txn\r\n            id=\"123IVFOCUUM202606100655508998570021\"\r\n            note=\"Payment Response\"\r\n            refId=\"REF123456\"\r\n            custRef=\"CUST123456\"\r\n            refUrl=\"https://example.com\"\r\n            ts=\"2026-05-20T19:30:00\"\r\n            purpose=\"00\"\r\n            type=\"PAY\"\r\n            subType=\"\"\r\n            initiationMode=\"00\"\r\n            orgTxnId=\"ORGTXN123\"\r\n            orgRrn=\"123456789012\"\r\n            orgTxnDate=\"2026-05-20\"\r\n            refCategory=\"00\">\r\n        <RiskScores>\r\n            <Score\r\n                    provider=\"sp\"\r\n                    type=\"TXNRISK\"\r\n                    value=\"10\"/>\r\n            <Score\r\n                    provider=\"npci\"\r\n                    type=\"TXNRISK\"\r\n                    value=\"5\"/>\r\n\r\n        </RiskScores>\r\n    </Txn>\r\n    <Resp\r\n            reqMsgId=\"123EXALAXIA202606081010446666960061\"\r\n            result=\"SUCCESS\"\r\n            errCode=\"00\"\r\n            actn=\"APPROVED\">\r\n        <Ref\r\n                type=\"PAYER\"\r\n                seqNum=\"1\"\r\n                addr=\"Tejas08062026@upi\"\r\n                regName=\"Tejas Jawale\"\r\n                acNum=\"1234567890\"\r\n                IFSC=\"HDFC0001234\"\r\n                code=\"00\"\r\n                accType=\"SAVINGS\"\r\n                settAmount=\"100.00\"\r\n                orgAmount=\"100.00\"\r\n                settCurrency=\"INR\"\r\n                approvalNum=\"APR123\"\r\n                respCode=\"00\"\r\n                reversalRespCode=\"\"/>\r\n        <Ref\r\n                type=\"PAYEE\"\r\n                seqNum=\"2\"\r\n                addr=\"payee@upi\"\r\n                regName=\"Merchant XYZ\"\r\n                acNum=\"9876543210\"\r\n                IFSC=\"SBIN0005678\"\r\n                code=\"00\"\r\n                accType=\"CURRENT\"\r\n                settAmount=\"100.00\"\r\n                orgAmount=\"100.00\"\r\n                settCurrency=\"INR\"\r\n                approvalNum=\"APR123\"\r\n                respCode=\"00\"\r\n                reversalRespCode=\"\"/>\r\n    </Resp>\r\n</upi:RespPay>",
               "options": {
                 "raw": {
                   "language": "xml"
@@ -1714,6 +1700,12 @@
           "response": []
         }
       ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "auth_secret_00nr",
+      "secret": true
     }
   ]
 }
